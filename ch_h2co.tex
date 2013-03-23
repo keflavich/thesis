@@ -1,0 +1,1893 @@
+\input{preface}
+%\include{preface}
+%\bibliographystyle{apj_w_etal}
+
+\chapter{\formaldehyde observations of BGPS sources previously observed with Arecibo}
+
+\section{Introduction}
+%Despite intense study, the process of forming massive stars from Giant
+%Molecular Clouds (GMCs) is still poorly understood.  
+
+% Millimeter continuum
+% studies have begun to reveal the condensations in molecular clouds that will
+% likely form into clusters of stars \citep[e.g.][]{Aguirre2011} and many
+% high-resolution studies have revealed disks around massive stars
+% \citep{Davies2010,Kraus2010,Zapata2009}.  However, the clumps revealed by
+% millimeter continuum studies are much larger and often more massive than single
+% stars and are therefore not clearly the direct progenitors of stars.  Some of the
+% disks around massive stars are massive enough that they may become
+% gravitationally unstable and fragment instead of accreting onto the central
+% star \citep[e.g.][]{Keto2010,Peters2010}.  The driving question in massive star
+% formation still remains open: how do massive stars acquire their mass?
+
+Massive stars are known to form preferentially in clustered environments
+\citep{DeWit2005}.  They therefore likely form from ``clumps,'' collections of
+gas and dust more dense and compact than Giant Molecular Clouds (GMCs) but larger and
+more diffuse than typical low-mass protostellar cores.  ``Clumps'' have been
+observed with masses ranging from $10-10^6$\msun\ (but more typically
+$10^2-10^3\msun$) and with beam-averaged densities in the range $10^3 \lesssim n(\hh) \lesssim
+10^5$ \percc\ and sizes $\sim1$ pc \citep[e.g., ][]{Rosolowsky2010,Dunham2010}.
+While giant molecular clouds  in the Galaxy have been surveyed
+\citep[e.g., ][]{Jackson2006}, the process by which these clouds condense into
+clumps and cores and the mechanisms by which they are dispersed are not
+understood. 
+
+It is still not known what sets the final mass of massive stars, but it
+is thought that they must ignite while still accreting
+\citep{mckee2007}.  Hot O and B stars emitting strongly in the ultraviolet will
+ionize their surroundings, creating density-bounded \ion{H}{2} regions.  They
+progress from hypercompact through ultracompact and compact and finally diffuse
+\ion{H}{2} region phases, during which they either dissociate or blow out their
+surrounding medium \citep{Churchwell2002,keto2007}.  The brightest sources in the
+Galactic plane in both the free-free continuum in the cm-wavelength regime and
+the dust continum in the sub-mm to mm-wavelength regime generally host \uchii\
+regions.
+
+%All massive star formation and most low-mass star formation is expected to occur
+%in GMCs \citep{McKee and Ostriker?}.  \citet{Tauber1990} and others have viewed
+%GMC structure in terms of clump distributions.... mean density in OMC n~150...
+%filling factor 0.0002 at 15 pc, 0.02 at 0.15 pc
+
+% Density gradients observed towards UCHIIs with RRLs (Keto, Zhang, Kurtz 2007)
+
+%XXXX maybe move this into a discussion section; too specific
+While the gas within \uchii\ regions is hot and ionized, the surrounding gas is
+initially molecular.  At the interface between the molecular cloud and
+the ionization front, a photon-dominated or photodissociation region appears
+\citep{Roshi2005}.  \citet{Churchwell2010} observed HCO$^+$ towards a
+sample of \uchii\ regions and noted both infall and outflow motions in
+molecular tracers towards these objects.  It should be possible to determine
+whether the \uchii\ regions still have collapsing envelopes (infall signatures)
+or only disks (outflow signatures) and thereby determine relative evolutionary
+states of the regions.
+
+Two centimeter transitions of formaldehyde, \ortho\ \oneone\ (6 cm) and
+\twotwo\ (2 cm)\footnote{All references to \formaldehyde\ in this paper,
+except where otherwise noted, are to the ortho \ortho\ population, as no para p-\formaldehyde\ 
+lines were observed}, have been used to measure the density of molecular
+clouds in massive-star-forming regions \citep[e.g., ][]{Dickel1986,Dickel1987},
+high-latitude Galactic clouds \citep[e.g., ][]{Turner1989}, the Galactic Center
+\citep[e.g., ][]{Zylka1992} starburst galaxies \citep[e.g., ][]{Mangum2008}, and molecular clouds
+in a gravitational lens \citep[e.g., ][]{Zeiger2010}.  Studies similar to our own have
+been performed by \citet{Wadiak1988} and \citet{Henkel1983}, in which bright
+continuum sources were observed in the same transitions with
+(approximately) beam-matched telescopes at $\sim$2\arcmin\ resolution. Our
+study delves deeper into the spectral line profiles and systematic uncertainties of
+\formaldehyde\ densitometry and is performed at higher spatial resolution than
+past work.
+%These transitions have been accessible to radio
+%telescopes for decades, but they have only been accessible at sub-arcminute
+%resolution (with single dishes) since the C-band receiver was installed at
+%Arecibo.  
+% (only 6 cm) pre-stellar cores \citep{Young2010},
+
+%A sample of 21 Ultracompact \ion{H}{2} (UC\ion{H}{2}) regions were observed in
+%the \formaldehyde\ \oneone\ transition with the Arecibo Observatory
+%\footnote{The Arecibo Observatory is part of the National Astronomy and Ionosphere
+%Center, which is operated by Cornell University under a cooperative agreement
+%with the National Science Foundation.}
+%by \citet{Araya2002}.  An additional 15 observations of \formaldehyde\ \oneone\
+%were observed towards suspected massive star forming regions in
+%\citet{Araya2004}.  We present follow-up observation of all 21 of the \uchii\
+%regions in \citet{Araya2002} and three of the suspected massive star forming
+%regions from \citet{Araya2004} in the \twotwo\ transition with the Green Bank
+%Telescope (GBT) \footnote{ The National Radio Astronomy Observatory operates
+%the GBT and VLA and is a facility of the National Science Foundation operated
+%under cooperative agreement by Associated Universities, Inc.  }.  The pair
+%of \formaldehyde\ lines are used together to measure the gas volume density
+%towards these targets.
+
+This paper presents a pilot study as a proof-of-concept for a much larger
+ongoing survey\footnote{GBT project code GBT10B-019} towards 400 lines of sight
+and the methodology applicable to the larger survey.
+
+In section \ref{sec:h2coobservations} we present the new observations and describe
+other data sets used in our analysis.  Section \ref{sec:models} describes the
+modeling procedure used to derive density from the \formaldehyde\ line
+observations.  Section \ref{sec:analysis} presents detailed discussion of the
+modeling and derivation of physical parameters and their uncertainties.
+Section \ref{sec:results} describes the derived and measured values. 
+%Section \ref{sec:indiv} presents a detailed discussion for each individual source.  
+Section \ref{sec:discussion} discusses the larger implications of our results.
+We conclude with a brief summary of important results.
+
+\section{Observations and Data}
+\label{sec:h2coobservations}
+\subsection{Source Selection} 
+The observed lines-of-sight included 21 sources selected from the \citet{Araya2002} \uchii\
+sample and 3 from the \citet{Araya2004} ``massive-star forming candidate''
+sample.  The sources were selected primarily on the basis of having been
+previously observed with Arecibo\footnote{The Arecibo Observatory is part of
+the National Astronomy and Ionosphere Center, which is operated by Cornell
+University under a cooperative agreement with the National Science Foundation.
+} in the \oneone\ transition of \formaldehyde\
+with the intent of demonstrating the densitometry method within the Galaxy
+rather than making systematic observations of any source class.  Nonetheless,
+the \citet{Araya2002} sample includes the majority of the bright \uchii\
+regions accessible to Arecibo.  Additionally, there are many detected GMCs
+along the line of sight to these \uchii\ regions.
+
+The \citet{Araya2004} observations included 15 pointings towards infrared dark cloud
+(IRDC) candidates and High-Mass Protostellar Object (HMPO) candidates.  The
+sources we selected from this sample include two sources classified as IRDCs
+based on MSX data and one HMPO candidate.  The selection of these sources was
+arbitrary; we were only able to observe 24 lines-of-sight in our 4 hour
+observation block.  The remaining sources will be discussed in a later paper.
+The observed lines of sight are listed in Table \ref{tab:h2comeasured_a}.
+
+% included in original... \LongTables
+% maybe use longtables if needed? http://stackoverflow.com/questions/3685832/long-tables-in-latex
+% {tab:h2comeasured_a}
+\include{Table1A_Measured}
+\include{Table1B_Measured}
+\include{Table4_Other}
+\include{Table2_Inferred}
+\include{Table3_Derived}
+
+\subsection{Green Bank Telescope}
+We observed the \formaldehyde\ \twotwo\ line at 2 cm (14.488789 GHz) with the
+Green Bank Telescope (GBT)\footnote{ The National Radio Astronomy Observatory operates
+the GBT and VLA and is a facility of the National Science Foundation operated
+under cooperative agreement by Associated Universities, Inc.  } dual-beam
+Ku-band receiver as part of project GBT09C-049.  The GBT dual-beam Ku-band
+receiver was used for 4 hours on January 18th, 2010 in beam-switched nodding
+mode.  System temperatures ranged from 27 to 38 K in the \formaldehyde\
+band centered on the  \twotwo\ line. A bandwidth of 12.5 MHz
+(258.8 \kms) and channel width of 3.052 kHz (0.063 \kms) were used with 9-level
+sampling, with receiver temperature $\approx21$K.   Three additional tunings
+were acquired simultaneously, centered between the H and He 75$\alpha$,
+76$\alpha$, and 77$\alpha$ radio recombination lines (RRLs) with the same channel widths and
+bandwidths as above at 14.1315, 14.6930, and 15.2846 GHz.  Each source was
+observed for 150 seconds in each receiver for a total on-source integration
+time of 300 seconds.  Each observation in the pair was independently inspected
+to search for emission/absorption in the off position, which was 5.5\arcmin\
+away in azimuth.  When absorption was detected in one of the off positions,
+that on/off pair was discarded if one of the detected lines was affected, but
+otherwise was noted and ignored.  Pointing and focus observations on the
+calibrator source 1822-0938 were taken at the start of and two hours into the
+observations.  
+
+The gain was assumed to be 1.91 K/Jy based on previous calibration observations
+on point sources in Ku-band; our flux density measurements will therefore be
+overestimates for extended sources.  The aperture efficiency was
+$\eta_{A}=0.671$, and the main beam efficiency $\eta_{MB}=1.32\eta_{A}=0.886$,
+so our main-beam corrected measurements could overestimate extended source flux
+densities by at most $13\%$ (ignoring atmospheric absorption).
+%(based on?  I did not observe flux calibrators.  Maybe from
+%\url{https://safe.nrao.edu/wiki/bin/view/GB/Observing/GainPerformance} or 
+%\url{https://safe.nrao.edu/wiki/bin/view/GB/PTCS/TSCAL\_090916\#gcurve}).
+The data were calibrated using the normal {\sc getnod} procedure in GBTIDL 
+\footnote{ GBTIDL (http://gbtidl.nrao.edu/) is the data reduction package
+produced by NRAO and written in the IDL language for the reduction of GBT data.
+The National Radio Astronomy Observatory is a facility of the National Science
+Foundation operated under cooperative agreement by Associated Universities,
+Inc.
+} ,
+which assumes an atmospheric opacity at zenith $\tau=0.014$ at 14.488 GHz. 
+%The
+%measured opacity ranged from 0.024-0.032 (0.017-0.023 zenith), which was not corrected,
+%resulting in a 1-2\% systematic underestimate of source flux densities in the
+%table.  All GBT spectra were converted to Jy in order to compare them directly
+%with the Arecibo spectra, which were only available in Jy.  
+
+We assume primary beam $\theta_{FWHM}=51.1\arcsec$ %=740/14.48$ 
+per the GBT
+observers manual.  We assume a conservative 10\% error in the beam area
+$\Omega=7.8\times10^{-8}$ sr, which governs the flux density received from the
+CMB over the observed area.  Beam size error should be dominated by small errors
+in focus.  By utilizing the 305 m Arecibo telescope at 6 cm and the 100 m GBT
+at 2 cm, we acquired beam-matched (FWHM$\sim 50\arcsec$) observations of the
+\formaldehyde\ \oneone\ and \twotwo\ lines.  
+
+
+
+%Question: Continuum accuracy?  Assumed to be 20\%, justified?
+
+\subsubsection{GBT Data Reduction}
+In the 24 lines of sight, 75 independent components were identified from the
+\oneone\ spectra.  These were fit with gaussians using GBTIDL's {\sc fitgauss}
+routine.  Out of these 75 components, 51 had corresponding \twotwo\ detections.
+The fitted gaussian spectral lines are listed by line of sight in Table
+\ref{tab:h2comeasured_a}.  The gaussian fits may not be representative of the
+true spectral line profile; complex spectral line profiles are discussed in Section
+\ref{sec:lineprofiles}.
+%Some of these (e.g.  G69.54-0.98) are blended or optically thick, so the
+%Gaussian fit may not be representative of the true line profile.
+
+The 2 cm continua were measured by fitting a first-order baseline in each
+reduced nodded pair excluding the line and the bandpass edges.  Figure
+\ref{fig:specexample} shows the flat baselines achieved in the observations,
+though the RRL spectrum shows an example of the artifacts seen at the edges of
+the bandpass.  The continuum error listed in the table is the RMS of only the
+data included in the baseline fit after the baseline was subtracted from the
+spectrum; the systematic error from flux calibration uncertainty is 20\% and
+dominant.  
+
+\subsection{Arecibo} 
+The Arecibo 4.829660 GHz \formaldehyde\ \oneone\ observations used in this
+project were previously presented in \citet{Araya2002} and \citet{Araya2004}
+and were kindly provided in reduced form by E. Araya.  All observations were performed
+using standard on/off position switching and 5 minute integration times in both the 
+on and off positions, resulting in off positions 1.25 degrees away from the pointing center.
+We assume a 30\% error
+in the continuum \citep[based on measured gains in the range 2.0-2.5
+as reported in][]{Araya2002} and an effective diameter of 227m ($\theta_{FWHM}
+= 56\arcsec$, $\Omega=9.0\times10^{-8}$ sr ) with
+10\% uncertainty\footnote{\url{http://www.naic.edu/$\sim$phil/sysperf/misc/hpbw\_vs\_lambda\_2004.html}}.
+
+The Arecibo spectral lines were re-fit for this paper by converting the Arecibo data
+from CLASS\footnote{CLASS is part of the GILDAS software developed by IRAM.} to
+GBTIDL's {\sc SDFITS} format\footnote{Code for the CLASS-GBTIDL conversion is available from
+\url{http://code.google.com/p/casaradio/wiki/class\_to\_gbt}}
+and using GBTIDL's {\sc fitgauss} routine.  The 6 cm continua were taken
+directly from \citet{Araya2002} Table 3.
+
+\OneColFigure{figures_chH2CO/G32.80+0.19_both}
+{ {\it Top:} The GBT \twotwo\ (red) and Arecibo \oneone\ (black) spectra of G32.80+0.19.  
+% don't reference figure too early The
+% don't reference figure too early fitted density and column to the deepest component at $\sim15 \kms$ is shown in
+% don't reference figure too early Figure \ref{fig:fitexample}.  
+{\it Bottom:} The GBT H75$\alpha$ (red) and Arecibo H110$\alpha$ (black) spectra with the GRS
+\thirteenco\ spectrum (light blue) overlaid.   The left axis is for the RRLs and the right
+axis is for the \thirteenco.  The C and He RRLs are not displayed.}
+{fig:specexample}
+{0.30}{0}
+
+\subsection{Other Archival Data}
+
+\subsubsection{Very Large Array}
+We acquired VLA archival images from the Multi-Array Galactic Plane Imaging
+Survey (MAGPIS) 6 cm Epoch 3 data set \citep{Becker2005} and the NRAO VLA
+Archive Survey (NVAS)\footnote{The NVAS is run by Lourant Sjouwerman at the
+NRAO.  It has not yet been published.}.  MAGPIS has a resolution of
+$\sim4\arcsec$ and sensitivity $\sigma\sim 2.5 $mJy/bm.  The NVAS has variable
+resolution and sensitivity since it is based on VLA archival data.  The VLA
+data was used to estimate source sizes and interferometer-to-single-dish flux
+ratios.
+%[XXXX Need estimates of beam sizes and errors for NVAS data.  Perhaps may be
+%better to include one example demonstrating that it's not necessary to include
+%a source size correction than to actually include the corrections.]
+
+\subsubsection{ Bolocam 1.1 mm }
+We extract 1.1 mm dust continuum fluxes from the Bolocam Galactic Plane Survey
+(BGPS) v1.0 release summing over a 25\arcsec\ radius aperture after subtracting
+the median in a 50-200\arcsec\ annulus to remove background
+contributions. The aperture size is selected to match the 1.1 mm data to the 
+2 and 6 cm data.  We assume a uniform 50\% systematic error in BGPS fluxes from
+combined uncertainties in the calibration and background subtraction.
+\citet{Aguirre2011} contains a complete discussion of the uncertainties in the
+BGPS. 
+%the measurement uncertainties are only $\sim50\%$, while other
+%systematics such as the temperature and opacity can result in factor of 2-4
+%changes in the estimated mass and column density.  
+We apply the
+\citet{Aguirre2011} recommended flux correction of 1.5 and aperture correction
+for a 25\arcsec\ aperture of 1.21.  Additionally, data from the Bolocam catalog
+\citep{Rosolowsky2010} was used with the flux correction and an aperture correction
+of 1.46 for 20\arcsec\ apertures.
+
+\subsubsection{Boston University / Five College Radio Observatory Galactic Ring Survey}
+The BU FCRAO GRS \citep{Jackson2006} is a survey of the Galactic plane in the
+\thirteenco\ 1-0 line with $\sim 46\arcsec$ resolution.  We extracted spectra in 25\arcsec\ radius
+apertures from the publicly available data for comparison with the \formaldehyde\ spectra.
+
+\subsubsection{GLIMPSE}
+The Galactic Legacy Infrared Mid-Plane Survey Extraordinaire
+\citep[GLIMPSE]{Benjamin2003} maps were used to examine the morphology of the
+objects in our survey in order to determine whether an IRDC was present.
+
+\section{Models and Error Estimation}
+\label{sec:models}
+A grid of large velocity gradient (LVG) models was run using both the RADEX
+\citep{VanDerTak2007} code and a proprietary code by \citet{henkel1980} with a 
+gradient of 1 \kmspc.  The
+models from the two codes were consistent to within $\sim10\%$ in predicted
+optical depth and $T_{ex}$.  Both utilized collision
+rates from \citet{Green1991} extracted from the LAMDA
+database\footnote{\url{http://www.strw.leidenuniv.nl/$\sim$moldata/}} and multiplied by
+the recommended factor of 1.6 to account for collisions with \hh\ being more
+efficient than He.  The expected accuracy is $\sim30\%$.
+\citet{Zeiger2010} demonstrated that the errors in collision rates lead to
+systematic errors $\lesssim50\%$  (0.3 dex) in the measured quantities
+(N(\formaldehyde), n$(\hh)$).  When measuring density and column, we used the
+RADEX models because of their extensively tested code and documentation.  All of the
+models used a kinetic temperature of 40 K and covered a range of 500 densities
+$\times$ 500 columns logarithmically sampled over $10^1 < n(\hh) < 10^7$ \percc\
+and $10^{11} < N(\ortho) < 10^{16} $ \persc.  The assumption $T_K=40$ K is
+reasonable in UC\ion{H}{2} regions, which should be warmer than IRDCs and other
+cold molecular clouds.  Dust temperatures measured towards UC\ion{H}{2}
+regions are around 40 K \citep{Rivera2010}.  In the foreground clouds, this
+assumption is less well supported, but as long as the temperatures are higher
+than $\sim20$ K, the models change little with temperature (Figure
+\ref{fig:modeltau}).
+
+Because of a collisional selection effect, above its critical density
+\citep[$n_{cr}(\formaldehyde\ \oneone)\approx 8\ \percc$, \ensuremath{n_{cr}(\formaldehyde\ 
+\twotwo) \approx 76\ \percc}, ][]{Mangum2008}
+\formaldehyde\ preferentially overpopulates lower states of the K-doublet
+\citep[$\Delta$J =0, $\Delta K_a=0$, $\Delta K_c = \pm1$,][]{henkel1980}.  These
+spectral lines are cooled to excitation temperatures lower than the CMB and can
+therefore be seen in absorption against it.  The \oneone/\twotwo\
+absorption line ratio is sensitive to the density of \hh\ at densities
+$\gtrsim10^{3.5}\ $ \percc, allowing measurements of the density to within
+$\sim$0.3 dex with little sensitivity to gas kinetic temperature
+\citep{Mangum2008}.  When density is `measured' with critical density based
+tracers such as CO, CS, HCN, or HCO$^+$, the estimate can be off by as much as
+2 orders of magnitude because of radiative trapping effects.  Similarly,
+measurements of density assuming spherical symmetry can be very far from the
+local values.
+
+The collision rates of \formaldehyde\ with \hh\ have been re-derived with a
+claimed accuracy of 10\% by \citet{Troscompt2009}.  \citet{Troscompt2009b}
+showed that collisions with para-\hh\ are more efficient at cooling
+\formaldehyde\ into absorption against the CMB than He or ortho-\hh\ and that
+\formaldehyde\ absorption is therefore sensitive to the Ortho/Para ratio of
+\hh.   These improved rates are not used in this paper since they are only
+computed over a more limited range of temperatures, but may be used in future
+works.
+% Note to self: point out later that 30% uncertainty has little  to no effect
+% on the results of this paper because the interesting results are comparisons
+% between different velocities within a single model
+% Additional note: Jeff Mangum says the Troscompt work is kinda crap...
+
+% \OneColFigure{Tline0_old_contours}
+% {A plot showing the parameter space in which \formaldehyde\ will be seen in 
+% absorption or emission.  The contours show where the modeled line temperature
+% $T_{line}=0$ assuming illumination only by the CMB or equivalently where the
+% line excitation temperature $T_{ex}=T_{CMB}$.  Values of temperature and
+% density higher than the displayed curves will be seen in emission (assuming no
+% background illumination besides the CMB), while values below the displayed
+% curves will be seen in absorption.  The \oneone\ line is shown in solid lines
+% from gas kinetic temperature $T_{K}=5$K (thickest) to 55K (thinnest).  The
+% \twotwo\ line is shown by dashed (red) lines over the same range; it shows a
+% much weaker variation with $T_{K}$.  The \oneone\ line only shows a strong
+% dependence on $T_{K}$ below $T_{K} = 10K$, which is approximately the lowest
+% temperature expected in molecular clumps.  
+% }
+% {fig:tline0}
+% {0.30}{0}
+
+\OneColFigure{figures_chH2CO/lineratio_vs_n_X9_legend}
+{The predicted optical depth ratio ({\it top}) and optical depth ({\it bottom}) vs. volume density
+assuming a fixed abundance  $X_{\ortho}=10^{-9}$ \perkmspc\ shows that the
+dependence of the derived density on temperature is weak.  At lower abundances,
+these curves shift to the right, providing sensitivity to moderately higher
+densities.  Our 5-$\sigma$ detection limit is generally around $\tau\sim0.01$.
+}
+{fig:modeltau}
+{0.30}{0}
+
+\subsection{Turbulence}
+\label{sec:turbulence}
+Molecular gas is often observed to have spectral line widths consistent with
+supersonic turbulence \citep{Kainulainen2009} and therefore a lognormal density
+distribution \citep{Kritsuk2007}.  Our LVG models assume constant density per
+velocity bin, so the resulting models should be smoothed by the probability
+distribution function (PDF) of the density.  For clouds with a narrow density
+distribution (logarithmic standard deviation of the density $\sigma_s \equiv
+\sigma_{ln(\rho)/ln(\bar{\rho})}\lesssim0.5$)\footnote{We use $\rho$ to
+indicate number density in this section in order to be consistent with the
+cited literature.  Because the widths are relative to a mean density, the
+scaling between mass and number density is unimportant.}, the effect of
+smoothing is smaller than other systematic errors, but for more turbulent
+clouds the density PDF width can exceed an order of magnitude \citep[e.g.,
+][]{Federrath2010} and will substantially change the derived density.  Because
+the Mach numbers of the turbulence in the observed clouds are unconstrained, we
+cannot correct for this added uncertainty.  The change in measured density is
+$|\Delta\log(\rho)|<0.25$ for $\sigma_s \le 0.5$, with a slight bias towards
+higher densities at lower optical depth ratio $\tau_{\oneone}/\tau_{\twotwo}$
+(Figure \ref{fig:turbtaurat}).  However, for $\sigma_s=1.5$, the bias exceeds
+an order of magnitude at some densities.
+
+Additionally, we consider the effects of ``gravoturbulence'', in which a
+high-density tail inconsistent with a lognormal distribution is observed.
+\citet{Kainulainen2009} report column density distributions derived from 2MASS
+extinction measurements that can be used as a proxy for the density
+distribution for a wide variety of clouds.  Non-star-forming clouds retain a
+lognormal distribution and are consistent with the analysis presented above.
+However, evolved star-forming regions develop a high-column density tail.  For
+evolved (actively star-forming) regions like Ophiucus, Orion, and Perseus,
+the high-column density tail is substantial, and \formaldehyde\ density measurements
+will be highly biased towards the highest density gas.  More quiescent regions
+like the Pipe and Coalsack nebulae are consistent with a lognormal column
+distribution to a degree that the high-column density tail would not affect
+\formaldehyde\ density measurements significantly.
+
+\OneColFigure{figures_chH2CO/lognormalsmooth_density_ratio_massweight} 
+{
+The optical depth ratio as a function of density for turbulent density
+distributions with widths specified in the legend.  The optical depth ratio
+varies more slowly with density than in the pure LVG model (the solid line is
+the same as the black 10 K line in Figure \ref{fig:modeltau}a).}
+{fig:turbtaurat}{0.30}{0}
+
+To demonstrate the effects of turbulent distributions, we calculate the optical
+depth ratio as a function of the mean density for three turbulent widths in
+Figure \ref{fig:turbtaurat}.  We compare the density that would be inferred
+from the spectral line ratio assuming no turbulence (just LVG) to the `correct'
+density including turbulent effects in Figure \ref{fig:turbcorr}.  We have also
+compared the LVG and turbulent densities to ``gravoturbulent'' density
+distributions, in which a power law tail of high-density gas begins at about
+$10^{-2}$ times the peak density \citep[e.g., ][]{Klessen2000,KimCho2011}, but
+because the density distributions in these simulations are relatively narrow,
+the effects of the high-density tail on the measured density are negligible
+except for the most turbulent cases.
+
+Figure \ref{fig:turbtaurat} is meant to demonstrate the effects of turbulence,
+but it is \emph{not} used to derive densities, since the true density
+distribution in observed clouds is unknown.  However, future measurements of
+the density distribution can be used to apply the `correction' shown in Figure
+\ref{fig:turbcorr}.
+
+%In
+%the gravoturbulent case, we represent the high-density tail as a power-law
+%starting at $n=100n_0$ with a slope $\alpha=1.3$, which is drawn directly from the
+%plots in \citet{KimCho2011}; the slope of the measured column distributions in \citet{Kainulainen2009}
+%is similar, but starts nearly at $N=N_0$. The plotted correction should be a reasonable
+%approximation of a GMC that has survived for a few free-fall times.
+
+\OneColFigure{figures_chH2CO/TurbulenceCorrection}
+{ The mean density from a lognormal density distribution plotted against the
+density derived assuming a single density per region (i.e., the directly
+LVG-derived density).   At low densities, the wider turbulent
+distributions  are heavily biased towards ``observing'' higher densities than
+the true mean density.  The distributions cut off at the low end where the
+optical depth ratio becomes a double-valued function of density; at these low
+densities, no detections are expected at our survey's sensitivity.  The cutoff
+at the high end is where the optical depth ratio becomes constant.  
+}
+{fig:turbcorr}{0.30}{0}
+
+\section{Analysis}
+\label{sec:analysis}
+
+%\include{Table1A_Measured}
+%\include{Table1B_Measured}
+%\include{Table4_Other}
+
+\subsection{Measuring Line Optical Depth}
+\label{sec:linedepth}
+In order to measure physical properties of an absorbing source, measurements
+must be obtained of the optical depths of both the \oneone\ and \twotwo\ lines.
+These measurements are presented in Tables \ref{tab:h2comeasured_a} and \ref{tab:h2comeasured_a}.
+Once an optical depth with errors is determined, the spectral line depths can be matched
+to large velocity gradient (LVG) models to determine column and spatial
+density.  The spectral line optical depth depends both on the nadir flux density of the
+absorption line and the strength of the illuminating background continuum
+source.  If the background is the CMB, the `filling factor' of the molecular
+cloud is simply its size relative to the beam size.  If there is a continuum
+source in addition to the CMB, the size of the continuum source and the
+intervening molecular cloud both affect the absorption depth.  Throughout this
+paper, we use the term `filling factor' to refer to the fraction of the beam area filled
+by the absorbing molecular cloud and `covering factor' to refer to the fraction
+of the background continuum source that is covered by the intervening molecular
+material.
+
+The VLA archival images were used to estimate the size of the illuminating
+background source.  When images at both wavelengths were available, we
+separately determined the 2 cm and 6 cm source sizes.  The source size
+determination is imprecise because we select a single source size for
+non-uniform surface brightness profiles, and in many cases the VLA observation
+did not recover the full flux density seen in single-dish measurements.
+\citet{Araya2002} estimated the interferometer-to- single-dish flux ratio at
+6 cm in this sample and found that the interferometer observations recovered
+anywhere from 3\% to 100\% of the single-dish flux.  We repeat these
+measurements at 2 cm and find that the typical recovery fraction is higher,
+$\sim40\%$ to $100\%$, although sources for which only VLA upper limits could
+be measured have recovery fractions $<1\%$. 
+
+%When calculating the line optical depth, we assumed that the absorbing
+%molecular cloud uniformly covers the illuminating background source.  We make
+%the additional assumption that the molecular absorber covers {\it only} the
+%background source and has no additional extent in the beam, such that the
+%contribution from the CMB is uniform over the \ion{H}{2} region area and zero
+%elsewhere (while the CMB is ubiquitous, with the on-off calibration strategy
+%its net contribution is zero unless it is absorbed in the on position).  This
+%assumption probably holds for the dominant line associated with the UC\ion{H}{2}
+%region, but is likely to be incorrect for diffuse clouds along the line of
+%sight.  %We have examined the assumption for clouds at $\ell < 60\degree$ by
+%%looking at the GRS data cubes at the same velocity to determine whether the
+%%cloud is extended and beam-filling.
+
+\OneColFigure{figures_chH2CO/Derived_DensityVsDensityCorrected_all} 
+{The filling factor corrected (FFC) density vs. the derived density with no
+filling factor correction.  While there are some cases where the correction
+results in an order of magnitude or more increase in the density, most points
+show a small correction.  The black line is the one-one line.  Red squares
+show where the filling factor corrected point was used, while blue circles show
+where the uncorrected point was used.  Magenta left-pointing triangles are
+limits where the filling factor correction was used, green downward triangles
+are limits where the uncorrected points were used, and orange upward triangles
+are lower limits where the filling-factor correction was used.}
+{fig:ffc}
+{0.30}{0}
+
+The optical depth measurements were ``filling factor corrected'' by assuming
+the CMB only contributed flux density over the same area as the \ion{H}{2}
+region (i.e., the foreground cloud covers the exact same patch of sky as the
+\uchii\ region).  When the \ion{H}{2} region is small (e.g., 10\% of the beam
+area or less), the contribution of the CMB to the continuum is negligible, but
+in cases of more diffuse \ion{H}{2} regions, the CMB contribution is
+significant, particularly at 2 cm.  The inferred optical depths and source areas
+are presented in Table \ref{tab:h2coinferred}.  Both ``filling factor corrected'' and
+uncorrected densities are presented in Table \ref{tab:h2coderived}.  The effect
+of the filling factor correction (FFC) on density measurements is shown in
+Figure \ref{fig:ffc}.  In a few cases, no volume density-column density
+parameter space in the models (Section \ref{sec:models}) was consistent with
+the spectral line ratio after filling factor correction: in these cases, the
+filling factor correction was not used.  Similarly, no filling factor
+correction was applied to sources without detected continuum.  These exceptions
+are noted in Table \ref{tab:h2coderived} in the ``Flag'' column.
+%These diffuse molecular clouds are more likely to be beam-filling, and
+%therefore the uncorrected (no-FFC) density measurements may be more accurate.
+%XXXX How were sources put in "FFC" or "No FFC" categories?
+
+The above definitions are summarized briefly in the following equations:
+\begin{eqnarray*}
+  S_{\nu,obs} &=& S_{\nu,cont} (1-CF e^{-\tau_{\nu}}) - S_{\nu,CMB} (FF e^{-\tau_{\nu}}) \\
+  FF &=& \Omega_{cloud} / \Omega_{beam} \\ 
+  CF &=& \Omega_{cloud} / \Omega_{continuum} \\ 
+\end{eqnarray*}
+in which CF is the ``covering factor'', FF is the ``filling factor'', and there
+is no positive contribution from the CMB because it is assumed to be removed by
+position-switching.
+
+
+The systematic uncertainties in the continuum and the filling factor result in
+similar errors in the optical depth measurement, and together dominate the
+total error budget for our measurements.  A 30\% error in the \oneone\ and 20\%
+error in the \twotwo\ continuum levels were assumed because of flux calibration
+uncertainty characteristic of the instruments. An additional 10\% error in the beam area, which sets the maximum
+coupling to the CMB (assuming a beam-filling source), was included to account 
+for focus error.
+%The beam
+%area error is probably a good estimate of the (systematic) error in the CMB
+%measurement, while the continuum errors are conservative.  
+A 20\% statistical error in the cloud filling factor was assumed for the majority of the
+survey, but it was decreased to 10\% when the ratio of continuum to CMB flux was $>0.5$ and the source
+size was small, indicating that the VLA-measured source is indeed the dominant
+continuum component in the beam.  The statistical error does not account for systematic
+errors in the geometric assumptions.  Note that changes to the filling factor
+should have a minimal effect on the derived density unless the source sizes at
+2 cm and 6 cm differ substantially, while changes in the filling factor will
+always have a large effect on the derived column density (Figure
+\ref{fig:ffcdependence}).
+
+\OneColFigure{figures_chH2CO/model_ffcdependence}
+{The dependence of derived parameters on the filling factor, assuming an
+optical depth ratio $\tau_{\oneone}/\tau_{\twotwo} =$1 (solid), 2 (dash-dot),
+or 4 (dashed).  
+The X-axis is the ``real'' optical depth, $\tau_{1-1}(real) = \tau_{1-1}(observed) / FF$.
+Assuming the same filling factor correction is applied to both
+the \oneone\ and \twotwo\ lines, filling factor correction will only move the
+measurements along the X-axis of these plots.  A decrease in the filling factor
+requires an increase in the true optical depth to maintain a constant apparent
+$\tau(observed)$, which in turn drives up the derived abundance and column density while
+leaving the volume density unchanged (except at high optical depths,
+$\tau\gtrsim0.2$).
+}
+{fig:ffcdependence}{0.30}{0}
+
+
+% have I discussed low density + high density clouds?  make a plot
+% of density measured / real density vs. relative filling factor...
+% or filling factor of the high-density stuff
+
+%The signal-to-noise in the absorption lines is excellent. In order to improve
+%the quality of our measurements, we need more accurate continuum measurements,
+%which can be accomplished with a more careful observing technique and
+%calibrator selection, or by observing sources with only the CMB as
+%illumination. Cloud size and covering measurements will also improve the
+%accuracy of the density measurements.  These can be obtained with higher
+%resolution observations or, as shown in \citet{Zeiger2010}, higher frequency
+%transitions of \formaldehyde.
+%
+%(XXXX it may be possible to correct for this... but.... is it worth it?) An
+%additional systematic uncertainty not considered in this survey is the
+%potential additional contribution of a diffuse Galactic background as a
+%backlight.   Emission that is smooth on $>11\arcmin$ scales, as is known to
+%exist throughout the plane, will be subtracted off by nodding but may still be
+%absorbed by the intervening \formaldehyde.  This signal should be small
+%compared to continuum sources and generally less than the CMB at 2 cm (average
+%in the plane is $\lesssim0.1K$), but it may be comparable to the CMB at 6 cm
+%because of rising synchrotron emission ($\sim1K$), and it will be important to
+%account for it in a larger survey.  It is possible to do this using publicly
+%available data sets such as the GPA (Langston XXXX cite) and WMAP foreground
+%maps (XXXX).
+
+%\include{Table2_Inferred}
+
+%The models predict a line optical depth as a function of density and column
+%assuming the line FWHM is 1 \kms\ and $dv/dr$ is 1 \kms pc$^{-1}$ .
+Measurements of volume and column density were taken by averaging over the regions of
+LVG model parameter space consistent with both spectral line optical depth measurements
+to within $1\sigma$.  The ``$1\sigma$'' (68\% confidence; errors are
+non-gaussian) error bars on the derived parameters ($N,n,X$) were taken to be
+the extrema of these regions.  An example of this fitting process is shown in
+Figure \ref{fig:fitexample}.  A second example demonstrating a lower-limit on the density
+(instead of a direct measurement) is shown in Figure \ref{fig:fitexample2}.  This method is not as robust as $\chi^2$ fitting,
+but because there are no free fit parameters, a statistically meaningful
+$\chi^2_\nu$ cannot be computed.
+
+In some cases, the ratio of the spectral line optical depths was consistent with low
+density ($n\lesssim 100$ \percc) and high abundances ($X(\ortho)>10^{-8}$ \perkmspc), but
+these were ruled out based on the prior assumption that extremely high
+\formaldehyde\ abundances should not be observed at very low densities, since
+it is formed at higher densities and destroyed by hard UV at low columns
+\citep[see discussion in][]{Troscompt2009b}.
+%Additionally, assuming that all
+%of the matter inferred from 1.1 mm dust observations is associated with the
+%\formaldehyde\ absorber, the beam-averaged 1.1 mm mass can be used as a lower
+%limit on the volume density; however, that assumption is most likely invalid
+%for the absorbers not directly associated with the \uchii\ region.  The use of
+%prior assumptions to rule out portions of parameter space is discussed in
+%detail in \citet{Zeiger2010}.
+
+\OneColFigure{figures_chH2CO/G32.80+0.19_0_ffc_Nvsn_notext.png} 
+{An example of the column density - density parameter space available given
+measured \oneone\ and \twotwo\ optical depths.  The dashed lines show
+abundances $\log_{10}(X(\ortho))$ \perkmspc.  The contours show the
+regions allowed by the measurements of optical depth (\oneone: black, \twotwo: grey,
+ratio: dotted);
+the middle curve is the measured value, while the pair of curves around it are
+$\pm 1\sigma$ including systematic error.  The shaded region shows the allowed
+parameter space from which the physical parameters are derived. }
+{fig:fitexample}
+{0.30}{0}
+
+\OneColFigure{figures_chH2CO/G33.13-0.09_0_ffc_Nvsn_notext.png}
+{  Same description as Figure
+\ref{fig:fitexample} but for the strongest component in G33.13-0.09.  It was
+only possible to measure lower limits on the volume and column density for this
+line; it is therefore assigned flag 8 in Table \ref{tab:h2coderived}.
+}
+{fig:fitexample2}
+{0.30}{0}
+
+
+%\include{Table3_Derived}
+
+\subsection{Systematic Errors: Absorption Geometry}
+There are potential systematic errors associated with geometric assumptions,
+i.e. the filling factor.  There are four geometric configurations possible;
+these are outlined in Table \ref{tab:systematics}.  The ``small source''
+geometry (3 and 4) is technically impossible given that the CMB is always
+present in these observations, but it is equivalent to the scenario in which
+the small illuminating compact source (\uchii) is much brighter than the CMB in
+the beam.  The second column shows the effects of applying the `true' filling
+factor correction for errors 2 and 4.  For error type 3, the optical depth will
+only be overestimated if the absorber is ``corrected'' to be smaller than the
+background source (i.e., if a correction is applied when none should have
+been).
+
+Figure \ref{fig:ffcdependence} shows the effects of incorrect geometric
+assumptions.  Type 1 and 3 errors - i.e. filling factor overcorrections -  will
+result in measurements of column and abundance that are \emph{greater} than
+the real values, while type 2 and 4 errors will result in column and abundance
+measurements that are \emph{lower} than the real values.
+
+Additionally, it is possible that an observation will include a beam-filling,
+low-density source that will contribute negligibly in \twotwo\ line absorption
+but substantially in \oneone\ absorption over most of the beam area.  This type
+of error will result in an underestimate of the volume density.
+
+Since these errors are failures of assumptions, they cannot be quantified, but
+Figure \ref{fig:ffc} shows the effects of correcting for these errors to the
+extent possible with the available data.
+
+\Table{lcc}{\formaldehyde\ Geometric Systematic Errors}
+{\colhead{Real Geometry} & \colhead{Assumed filling factor $= 1$} & \colhead{Assumed filling factor $< 1$} \\}
+{tab:systematics}
+{
+1. Beam-filling source, beam-filling absorber & \tablenotemark{a}$\tau_M=\tablenotemark{b}\tau_R$ & $\tau_M> \tau_R$ \\
+2. Beam-filling source, small absorber        & $\tau_M<\tau_R$ & $\tau_M= \tau_R$ \\
+3. Small source, beam-filling absorber        & $\tau_M=\tau_R$ & $\tau_M>=\tau_R$ \\
+4. Small source, smaller absorber             & $\tau_M<\tau_R$ & $\tau_M= \tau_R$ \\
+}
+{
+\tablenotetext{a}{$\tau_M = $ measured optical depth}
+\tablenotetext{b}{$\tau_R = $ real optical depth}
+}
+
+% \Table{ccc}{Geometric Systematic Errors}
+% {\colhead{Geometry} & \colhead{filling factor $= 1$} & \colhead{filling factor $< 1$} \\}
+% {tab:systematics}
+% {
+% 1. Beam-filling source, beam-filling absorber & \tablenotemark{a}$\tau_M=\tablenotemark{b}\tau_R$ & $\tau_M> \tau_R$ \\
+% 2. Beam-filling source, small absorber        & $\tau_M<\tau_R$ & $\tau_M= \tau_R$ \\
+% 3. Small source, beam-filling absorber        & $\tau_M=\tau_R$ & $\tau_M>=\tau_R$ \\
+% 4. Small source, smaller absorber             & $\tau_M<\tau_R$ & $\tau_M= \tau_R$ \\
+% }
+% {
+% \tablenotetext{a}{$\tau_M = $ measured optical depth}
+% \tablenotetext{b}{$\tau_R = $ real optical depth}
+% }
+
+\subsection{RRLs}
+Radio recombination lines are used to measure the velocity of the \uchii\ regions.
+The recombination lines 75-77$\alpha$ were independently fitted with gaussians
+because the signal-to-noise in each spectrum with a detection was high. Out of our 24
+spectra, there were 21 H detections, 13 He detections, and 12 C detections;
+Table \ref{tab:rrls76} shows the fitted parameters using the 76$\alpha$ lines
+(75$\alpha$ and 77$\alpha$ were also measured but are not reported for
+brevity).  For some of the analysis in later sections, we additionally use the
+deeper and more careful RRL study by \citet{Roshi2005}, who observed 17 of our
+sample in the 89-92$\alpha$ lines.  We attempted to measure carbon RRLs in the
+\citet{Araya2002} spectra, who only measured hydrogen RRLs.  We detected one
+carbon line in G61.48 and tentatively ($\sim2\sigma$) detected another three in
+G32.80, G34.26, and G45.45; we report the low-significance detections in these
+sources because of corresponding detections of C75-77$\alpha$.
+
+We compare the central velocities of the H and C $\alpha$ lines to the
+velocities of the \formaldehyde\ absorption lines on a case-by-case basis in
+Figures \ref{fig:g33pt13spectrum}-\ref{fig:g61.48+0.09spectrum}.  The spectral line
+profiles are used to fit the observations into the models discussed in detail
+in Sections \ref{sec:lineprofiles} and \ref{sec:scenarios}.
+
+\include{Table_RRLs76}
+
+%\include{Table_RRLs}
+
+% We derived electron
+% temperatures using Equation 1 from \citet{Quireza2006},
+% \begin{equation}
+%     \left(
+%     \frac{T_e^∗}{K}
+%     \right)
+%     = \left[ 7103.3 \left( \frac{\nu_L}{\textrm{GHz}} \right)^{1.1}
+%     \left(\frac{T_C}{T_L(\textrm{H+})}\right)
+%     \left(\frac{\Delta\nu(\textrm{H+})}{\kms}\right)^{-1}
+%     \left(1+\frac{n(^4\textrm{He+})}{n(\textrm{H+})}\right)^{-1}
+%     \right]^{0.87}
+% \end{equation}
+% which assumes local
+% thermodynamic equilibrium, negligible pressure broadening, and a simple planar
+% structure of the \ion{H}{2} region.  These assumptions are not robust and there is a
+% strong dependence of the line-to-continuum ratio on the region geometry
+% \citep{Lockman1978}, so the derived electron temperatures are only used for
+% comparison within our own sample (see figure \ref{fig:TvT}).  
+% 
+% \Figure{Derived_TAveVsT110}
+% {Comparison of the electron temperature derived from the 75-77$\alpha$ lines
+% and the 110$\alpha$ line using the assumptions of \citet{Quireza2006}.  The
+% lack of correlation demonstrates the unreliable nature of these assumptions,
+% confirming the caveats brought up in \citet{Lockman1978}. [XXXX Is this
+% interesting enough to keep?  If not, I should probably eliminate the above
+% paragraph that refers to this figure too]}
+% {fig:TvT}{0.5}{0}
+% 
+% The Helium/Hydrogen line ratio ranged from 0.03 to 0.11 with an average $<He/H>
+% = 0.074 \pm 0.025$, consistent with previous works
+% \citep[e.g.][]{Churchwell1974}.  The Carbon/Hydrogen ratio was much more
+% scattered, ranging from 0.005 to 0.095.  Excluding the highest point,
+% G60.88-0.13, the average is $<C/H> = 0.014 \pm 0.005$.  However, the carbon
+% lines are not expected to come from the same parcels of gas as the hydrogen
+% because of carbon's lower ionization energy, and there were many
+% non-detections, so the carbon emission is probably not from the \ion{H}{2}
+% region but may be from a local photon-dominated region.
+
+
+\section{Results}
+\label{sec:results}
+\subsection{Derived Properties}
+The average properties of the spectral line components associated with the \uchii\ regions
+and the other spectral lines representing molecular clouds are
+shown in Table \ref{tab:properties}.  The table includes the mean and median
+only of spectral lines with both \oneone\ and \twotwo\ detections that yielded
+measurements of density; upper and lower limits are not included.  The full
+results are presented in Table \ref{tab:h2coderived}.
+
+\Table{cccccccc}
+{Inferred properties}
+{
+          &  \uchii &&& Other Lines (GMC)&&& \\
+\hline
+%          &  \hline    &&& \hline     &&& \\ % can't have 2 \hlines not separated by \\
+Parameter & Median\tablenotemark{a} & Mean \tablenotemark{a} & RMS \tablenotemark{a} & Median \tablenotemark{b} & 
+Mean \tablenotemark{b} & RMS \tablenotemark{b} & KS PTE \\}
+{tab:properties}
+{
+log(\hh~Density) (\percc)          &       4.95 &       4.91 &       0.27 &       4.49 &       4.61 &       0.32 &      0.022 \\
+log(\ortho~Column) (\persc)         &      12.59 &      12.59 &       0.44 &      11.86 &      11.83 &       0.20 &    6\ee{-6} \\
+$X(\ortho)$                         &     -10.84 &     -10.80 &       0.46 &     -11.16 &     -11.26 &       0.45 &      0.028 \\
+% unscaled version log(\hh Density) (\percc)      &       5.19 &       5.17 &       0.30 &       4.69 &       4.81 &       0.33 &     0.014 \\
+% unscaled version log(\ortho\ Column) (\persc)   &      12.98 &      12.94 &       0.50 &      12.03 &      12.00 &       0.24 &   2.2e-06 \\
+% unscaled version $X(\formaldehyde)$ \perkmspc  &     -10.82 &     -10.71 &       0.51 &     -11.22 &     -11.30 &       0.48 &    0.0039 \\
+} {
+\tablenotetext{a}{Spectral line components associated with \uchii\ regions}
+\tablenotetext{b}{Other spectral lines (associated with line-of-sight molecular clouds)}
+}
+
+There is statistical evidence that the deepest spectral line components have higher
+\formaldehyde\ column and/or abundance than the other (GMC) components (Table
+\ref{tab:properties}).  It is unlikely that this difference could be caused by
+underestimates of the optical depths in the GMC components (type 2 and 4
+errors, see Table \ref{tab:systematics}) because the filling factor correction
+should tend to cancel out these errors.  However, it is possible that, in those
+cases where the \ion{H}{2} emission and the CMB emission in the beam are the
+same order of magnitude, type 1 errors have occurred: the \ion{H}{2} region
+absorber is much larger than the \ion{H}{2} region and a significant fraction
+of the spectral line depth comes from absorption against the CMB; this error
+should have little effect on the derived density (see Figure
+\ref{fig:ffcdependence}) but may lead to overestimates of the derived column
+density.  
+
+Each identified Gaussian component was associated with an UC\ion{H}{2} region
+if it was within 5 \kms\ of the RRL peak, since RRLs are assumed to be
+generated in the UC\ion{H}{2} regions.  Any spectral lines blended with the
+\uchii\ \formaldehyde\ lines were also associated with the \uchii\ region.
+Other velocity components, including those without corresponding RRL
+detections, were assumed to be from GMCs along the line of sight or part of the
+larger cloud not directly associated with the UC\ion{H}{2} region; 29
+components were associated with UC\ion{H}{2} regions and 46 were associated
+with unrelated line-of-sight GMCs (Table \ref{tab:other}).
+
+The density difference between the two populations is significant by a
+Kolmogorov-Smirnov (KS) test with $\sim2\%$ probability of being drawn from the
+same distribution (the `probability to exceed' or PTE in Table
+\ref{tab:properties}). This result is in contradiction to the results of
+\citet{Wadiak1988}, who found no significant density difference between ``warm
+clouds'' and ``cold clouds'' selected and observed in the same manner (though
+with larger beams).  The difference is likely because the larger beam sizes in
+their study and a failure to include the continuum contribution of the CMB
+(which is more substantial in a larger beam, especially at 2 cm), resulting in
+a type 3 error and an underestimate of density for their ``warm clouds'' in
+particular.
+
+%The inferred column densities of \hh\ are as high as $N(\hh)=10^{24.1}
+%\persc$, and the highest measured lower-limit is $N(\hh)>10^{24.0}$.  The
+%densities measured ranged from $10^{4.5}$ to $>10^{6.3}$ \percc: the
+%UC\ion{H}{2} regions appear to be associated with moderate to high density gas,
+%one to two orders of magnitude greater than the surrounding ``clump''.  In the
+%cases in which it was not possible to measure a density because of the line
+%properties, it is likely that both the column and volume density are much
+%higher.
+
+The measured \hh\ densities do not display any trend with heliocentric distance
+over the range 2-14 kpc, contrasing with mm-continuum surveys of star forming
+regions that tend to measure lower densities at greater distances
+\citep{Reid2010}.  The lack of correlation in Figure \ref{fig:densvsdist}
+demonstrates the strength of the \formaldehyde\ densitometry method: the
+properties of star-forming gas can be explored throughout the galaxy with
+distance bias largely removed.   Similarly, no trend with
+Galactocentric distance was readily apparent.
+
+\OneColFigure{figures_chH2CO/Derived_DensityVsDistance}
+{Derived density plotted against kinematic distance.  No trend is obvious, demonstrating
+that the \formaldehyde\ densitometer is not biased by source distance.
+Black squares represent GMCs along the line of sight; red triangles represent
+UC\ion{H}{2} regions.}
+{fig:densvsdist}{0.30}{0}
+
+Densities were measured within a range $10^4\ \percc\ \lesssim n(\hh)
+\lesssim10^6$ \percc\ due to sensitivity cutoffs at low densities and
+thermalization of the spectral line ratio (ratio $\rightarrow$ 1) at high densities (see 
+Section \ref{sec:strengthsweaknesses} for a discussion of the limitations of the
+densitometer).  On the high density end, a lower limit on the density remains
+interesting, as densities $n(\hh)\gtrsim10^6$ \percc\ are close to those of low-mass
+protostellar cores and are a strong indication of runaway gravitational
+collapse, since such high densities are rarely observed in non-star-forming
+regions.  On the low density end, it should be possible to detect the \twotwo\
+transition with sensitivity improvements $\sim2-10\times$, a consideration that
+will govern the allocated time-on-source for future \twotwo\ observations.
+
+\subsection{Free-free Contribution to 1.1 mm Flux Density Measurements}
+It is expected that all young star-forming regions should be dust-rich and
+therefore bright at 1.1 mm.  We therefore compare the BGPS 1.1 mm, GBT 2 cm,
+and Arecibo 6 cm continuum measurements for sources covered by the BGPS in
+Figure \ref{fig:MassVsCm}.  For a flat-spectrum \citep[$\alpha \approx -0.1$,
+$\tau_{ff}<<1$;][]{rohlfs} free-free continuum source, the 2 cm flux density
+should be $1.34\times$ the 1.1 mm flux density.  For an optically thick source,
+$S_{1.1 mm} = 330~S_{2 cm}$.
+
+The objects targeted in our survey include 9 of the 13 brightest ($S_{1.1 mm,40\arcsec}>1.5$
+Jy) sources in the range $32<\ell<48$, and 11 of 26 with $S_{1.1mm,
+40\arcsec}>1.0$ Jy. We use flux density measurements from the 40\arcsec\ apertures in the BGPS catalog
+because they are most appropriate for determining peak brightness of point-like
+sources \citep{Rosolowsky2010}.  Out of the sample within the BGPS survey area,
+6 of 15 sources have free-free fractions of at least 30\%, but potentially much higher if 
+the free-free emission is not optically thin.  Since the sample was selected from
+well-known \uchii\ regions, these (rather incomplete) statistics are a warning
+that most of the brightest 1.1 mm emission sources in the BGPS are likely to be
+active \uchii\ regions and therefore may include a significant contribution
+from free-free emission to their measured flux densities (Figure
+\ref{fig:freefreefraction}).  The same warning applies to other mm-wavelength galactic
+plane surveys, though the contamination should be less severe at shorter wavelengths.
+
+\FigureTwo{figures_chH2CO/Derived_BGPSVs2cm_brightest_fit}{figures_chH2CO/Derived_BGPSVs6cm_brightest_fit}
+{Bolocam 1.1 millimeter flux density versus the cm continuum flux density at 2
+cm (left) and 6 cm (right).  The BGPS 1.1 mm flux density is moderately
+correlated with both cm continuum measurements; the legend shows the regression
+parameter.  The expectation for optically-thin free-free
+emission ( $\alpha = -0.1$, dotted) and for intermediate spectral index emission
+($\alpha > 0$, dashed) are shown to illustrate that some sources have
+significant free-free contributions at 1.1 mm (the optically thick case is not
+shown for either 2 or 6 cm because it does not fit on the plot).
+The legend shows the predicted flux densities for a given spectral index
+$\alpha$, the regression parameter $r$, and its likelihood $p$.  The brighter
+sources are likely to be less optically thick in the free-free continuum than
+the faint sources. }
+{fig:MassVsCm}{1}
+
+\OneColFigure{figures_chH2CO/Derived_FreeFreeFraction1.1mm_brightest}
+{The distribution of free-free contributions to the 1.1 mm flux density
+assuming the \uchii\ region is optically thin at 2 cm, $f_{ff} = (S_{2
+cm}/1.34)/S_{1.1 mm}$.  While 9 sources are either dust-dominated or optically
+thick at 2 cm, 6 sources have free-free contributrions of 30\% or greater.  The
+other sources in the sample were missing 1.1 mm flux density measurements
+because they are outside the BGPS survey area.
+}
+{fig:freefreefraction}{0.30}{0}
+
+In order to evaluate the impact of this conclusion on the BGPS, we examine the
+flux distribution of 6 cm continuum sources from the MAGPIS survey compared to
+the BPGS in the same area, $5<\ell<42$ and $|b|<0.42$, which is the full range
+of the MAGPIS survey excluding the galactic center, where the BGPS catalog
+follows a different flux distribution \citep{Bally2010}.  
+
+In Figure
+\ref{fig:contfluxdistr}, we plot histograms of the MAGPIS 6 cm flux density and
+the BGPS 40\arcsec\ aperture flux density along with the best-fit power-law
+distribution line \footnote{The power law was fit using the python translation
+of the \citet{Clauset2009} power-law fitter provided at
+\url{http://code.google.com/p/agpy/wiki/PowerLaw}.  The fitter computes the
+maximum likelihood value of the power-law $\alpha$ and the cutoff of the
+distribution, below which a power law is no longer valid either because of
+incompleteness or a change in the underlying distribution.}.  Since the 6 cm
+power-law distribution is
+shallower than the 1.1 mm distribution, the 6 cm sources can dominate at high
+flux densities, although the power-law fit for the 6 cm sources significantly
+overpredicts the highest-flux bins and therefore the power-law is not an acceptable fit
+above $S_{6 cm}>1$ Jy \footnote{We have tested the consistency of the two data
+sets with a low-cutoff power-law distribution by the Monte-Carlo process
+described in \citet{Clauset2009}.  The BGPS 40\arcsec\ aperture flux densities
+are consistent with a power-law distribution at the $p=0.64$ level, while the
+MAGPIS 6 cm fluxes are inconsistent, with $p<0.001$ (where p measures the
+probability that the data are drawn from a low-cutoff power-law distribution) }.
+The dashed line in Figure \ref{fig:contfluxdistr} shows the best-fit power-law
+distribution of the MAGPIS flux densities scaled down by
+0.67, which is the expected decrement for an optically thin free-free source 
+from 6 cm to 1.1 mm
+(spectral index $\alpha=-0.1$).  
+
+Figure \ref{fig:contfluxdistr}b shows the
+ratio of the BGPS to the MAGPIS best-fit power-law distribution, indicating
+that the free-free contamination fraction is only large ($\sim10\%$) at values
+much greater than the valid range of the 6 cm power law fit, which overpredicts the
+number of sources at $S_{6 cm} \approx 1 $ Jy.  However, if any
+of these sources are \emph{not} optically thin at 6 cm, this fraction could be
+much larger.  Additionally, these numbers only describe the sources in which
+\emph{all} of the 1.1 mm flux is free-free emission; the implication remains
+that a large number of 1.1 mm sources have a substantial (if not dominant)
+free-free contribution.  
+
+Finally, we emphasize that unless a large fraction of 6 cm sources are
+optically thick in free-free continuum, the lower flux-density BGPS
+dust-continuum sample should be negligibly contaminated by free-free emission
+sources, but the brightest BGPS sources may have a significant free-free
+contribution.
+
+\FigureTwo{figures_chH2CO/fluxdistribution_6cm_1mm_fits}{figures_chH2CO/fluxdistribution_6cm_1mm_fits_ratio}
+{{\it Left:} Histograms of BGPS 1.1 mm 40\arcsec\ aperture flux densities (red)
+and the MAGPIS 6 cm flux densities (black), and their respective best-fit
+power-law distributions ($\alpha(1.1 mm)=2.41\pm0.03$, $\alpha(6
+cm)=1.72\pm0.03$).  The dashed black line shows the MAGPIS best-fit power-law
+scaled down to the expected flux density at 1.1 mm assuming all sources are
+optically thin.  Both distributions appear to be reasonably well-fit by
+power-laws above a cutoff (presumably set by completeness), although the power-law
+significantly over-predicts the number of sources with $S_{6 cm}>1$Jy.  The
+histograms are binned by 0.1 dex, and while the best-fit $\alpha$ and $x_{min}$
+values are independent of the binning scheme, the normalization is not.
+{\it Right:} The ratio of the number of MAGPIS 6 cm sources to BGPS 1.1 mm
+sources as a function of flux density for the best-fit power laws.  Only 10 1.1
+mm sources are detected above 5 Jy (in 40\arcsec\ apertures), so even the
+brightest detected 1.1 mm sources are not purely free-free, but they probably 
+have a substantial free-free component.}
+{fig:contfluxdistr}{1}
+
+\subsection{Distances}
+\label{sec:distances}
+We measure a kinematic distance to each source using the \citet{Reid2009}
+rotation curve.  We resolved the Kinematic Distance Ambiguity (KDA) towards
+each line of sight using a variety of methods described below.  The method
+in \citet{Sewilo2004} allows a resolution in favor of the far
+distance for \uchii\ regions with an intervening molecular absorption line at
+more positive velocities in the first Galactic quadrant.  Associations with
+infrared dark clouds (IRDCs) can resolve the KDA in favor of the near distance.
+We compare our KDA resolutions to \citet{Anderson2009}, with whom we agree on
+all common sources except for G33.13-0.09, which we place at the far distance
+based on the \citet{Sewilo2004} method.  The derived distances are listed in
+Table
+\ref{tab:other}.
+
+% Distance determination was necessary to measure total dust mass using the 1.1
+% mm continuum from the BGPS.  A correlation between the millimeter-derived mass
+% and the 2 cm / 6 cm continuum ratio (alternately, the spectral index $\alpha$
+% from the relation $S_\nu \propto \nu^\alpha$) is observed for the UC\ion{H}{2}
+% regions (Figure \ref{fig:MassVsAlpha}).  Note that the Y-axis is dependent
+% on distance, but the X-axis is not directly dependent on distance.  However, if
+% the typical source has both a diffuse, extended \ion{H}{2} component and a
+% compact \uchii\ component, the measured 6 cm flux would be expected to increase
+% more with distance more than the 2 cm flux.  However, the two highest 2 cm / 6
+% cm ratios are observed in very distant objects ($S_2/S_6=1.7$ for G32.80+0.19
+% at 12.9 kpc and G45.07+0.13 at 7.6 kpc), suggesting that the spectral index
+% measurements are not substantially affected by diffuse \ion{H}{2}
+% contamination.
+
+% are these two paragraphs in disagreement?
+% The correlation implies that objects with steeper spectral indices (higher
+% continuum optical depths at higher frequencies) have higher masses. Since
+% ultracompact \ion{H}{2} regions are expected to evolve from high to low optical
+% depths as they expand \citep{Churchwell2002}, the data are consistent with a
+% scenario in which massive stars blow out their host dust clump as they evolve
+% from \uchii\ regions to diffuse \ion{H}{2} regions.
+
+%Curiously, the most dust-dominated sources have the shallowest radio spectral
+%indices, which would normally indicate an optically thin free-free spectrum
+%(Figure \ref{fig:MassVsAlpha}).  However, the most compact \uchii\ regions are
+%expected to be the most optically thick and the youngest.  What's going on
+%here? XXXX
+
+
+%Previous figure shows that 1.1mm mass is probably dominated by free-free emission
+% \Figure{figures_chH2CO/Derived_MassVsContinuumRatio_brightest}
+% {Bolocam 1.1 millimeter-derived mass assuming T$_{dust}=40$K versus the cm
+% continuum flux ratio (or spectral index) for the sources within the BGPS with
+% cm continuum detections at both 2 and 6 cm.  The systematic error range for the
+% mm mass estimates is $\sim0.5$ dex because of temperature, calibration, and
+% distance uncertainty, but the statistical errors are relatively small
+% ($\sim0.1$ dex).  An evolutionary sequence from positive to negative spectral
+% index and high to low dust mass is consistent with the standard \uchii\
+% evolutionary sequence \citep{Churchwell2002}.}
+% {fig:MassVsAlpha}{0.5}{0}
+
+\subsubsection{Size Estimates}
+\label{sec:sizecomp}
+%We compare the mass estimated from the 1.1 mm continuum with a mass inferred
+%from the \formaldehyde\ measurement.  The \formaldehyde-derived density can
+%be used to infer a mass given a size scale and an assumption about geometry.
+%For simplicity, we assume all clumps are spherical, which immediately makes our
+%measurements at best order-of-magnitude estimates.
+
+We estimate the source size using two methods.  First, we use the VLA
+measurements of \uchii\ region sizes.  As stated in Section
+\ref{sec:linedepth}, the VLA size measurements are very uncertain and are
+simplifications of an evidently complicated geometry.  We estimate a spherical
+radius $r=\sqrt{area/\pi}$.  Second, we assume the gas traced by \formaldehyde\
+and the BGPS 1.1 mm images are the same and get a `size scale'
+$r=2 N_{mm}(\hh)/n(\hh)$ where $n(\hh)$ is derived from the \formaldehyde\ line
+ratio.
+
+The sizes derived from the two methods are plotted against each other in Figure
+\ref{fig:sizecomp}.  The sizes estimated from the two different methods are not
+well correlated and disagree by around an order of magnitude in most sources.
+The disagreement could be because of poor VLA-based size estimates, substantial
+1.1 mm emission from low-density gas, or incorrect dust temperature or opacity
+estimates.  While additional line-of-sight GMCs could in principle contribute
+to the $N/n$ size estimate, the disagreement for sources even without
+associated GMCs prevents this hypothesis from fully explaining the
+disagreement.  Therefore, any quantities derived from the size - i.e.
+mass, which depends on $r^3$ - are even less constrained.  We therefore do not
+derive any quantities dependent on the intrinsic source size.
+%We therefore only
+%compare the 1.1 mm derived clump mass to other derived properties.
+
+\OneColFigure{figures_chH2CO/Derived_SizeUCHIIvsSizeNn_brightest}
+{A plot of the two derived sizes discussed in Section \ref{sec:sizecomp}.  The
+two size estimates are at best very weakly correlated.  Because of the
+substantial disagreement between the two methods, we choose not to explore any
+parameters with a strong dependence on the size.  The plotted point size
+indicates the number of associated line-of-sight GMCs, which in principle could
+lead to an overestimate of the $N/n$ size because of additional mass included in
+the 1.1 mm continuum measurement.}
+{fig:sizecomp}{0.30}{0}
+
+%The two sources with the smallest clump masses, G41.74+0.10 and G35.58+0.07,
+%fall significantly below
+
+% The higher derived masses could also indicate higher
+% temperatures at steeper spectral indices (the masses are plotted assuming a
+% uniform temperature $T_{dust}=40 K$), but that explanation does not fit with
+% expectations that optically thinner \ion{H}{2} regions should heat their
+% surroundings more.  
+
+%XXXX The above paragraph is a very shallow discussion of a much more involved
+%topic.  However, I would prefer not to expand it much for sake of paper brevity
+%(and my own personal lack of knowledge - I would need to ready for ~2 weeks on
+%this topic before writing a more useful discussion).  John in particular - do
+%you have any recommendations on concise additions that could improve this
+%discussion?  Otherwise, anyone, recommendations on how the discussion can be
+%improved so it doesn't sound quite so superficial?  I'd rather not remove it
+%because it is the most direct use of the BGPS 1.1mm data.
+
+\section{Discussion}
+\label{sec:discussion}
+\subsection{Comparison to extragalactic observations}
+\label{sec:exgal}
+
+%The column densities \perkmspc\ measured in the starburst galaxy sample of
+%\citet{Mangum2008} are more consistent with the non-UC\ion{H}{2} sample than
+%the \uchii\ sample in our small survey.  The densities measured in some of the
+%starburst galaxies are quite high and comparable to the upper end of our
+%UC\ion{H}{2} sample (Figure \ref{fig:exgalcolden}).
+%% Ben says this is not worth discussing...
+%The density measurement of the gravitational lense B0218+357 in
+%\citet{Zeiger2010} $2\times10^3 < n(\hh) < 1\times10^4$, is closer to the low
+%density line-of-sight clouds than the UC\ion{H}{2} regions in our sample. 
+% However,
+% the column measurement $2.5\times10^{13} < N_{\formaldehyde} < 8.9\times10^{13}$ is
+% towards the high end of both distributions. 
+% This discrepancy implies a higher 
+% \formaldehyde\ abundance in the molecular clouds seen in B0218+357 than in 
+% Galactic molecular clouds, which is surprising.
+We compare our measured column and volume densities to a selection of starburst
+galaxies from \citet{Mangum2008} in Figure \ref{fig:exgalcolden}.  All of the
+extragalactic observations have much lower column densities per \kms\ than we
+measure in the main lines of most \uchii\ regions, but similar volume densities.
+This discrepancy can be easily explained by a difference in the area filling factor
+of molecular clouds in observations of galaxies and \uchii\ regions.  In a
+galaxy, the total area filling factor of molecular clouds per \kms\ (which is
+similar but not identical to the volume filling factor) is likely
+to be $<1$, even in extreme starbursts; although the galaxy may appear to be
+uniformly filled with molecular gas in projection, at any given velocity it is
+likely to have significant gaps of ionized or neutral atomic gas.  In contrast,
+an \uchii\ region should be completely embedded in a molecular cloud that is
+much larger than the free-free emitting continuum region, so the covering
+factor of molecular gas should be $\sim1$.
+ 
+It is therefore interesting to note that Arp 220, possibly the most extreme nearby
+example of a starburst galaxy, has nearly the same column per channel as the
+low end of the \uchii\ regions, suggesting that it is analagous to a scaled-up
+\uchii\ region to within a factor of a few; the measured density in Arp 220 is
+consistent with only the highest-density \uchii\ regions.  M82, on the other
+hand, has a bright continuum background analagous to an \uchii\ region, but a
+correspondingly low filling factor, implying that it consists of many 
+compact but bright sources with a total filling factor 0.001-0.1.
+Alternatively, the density and column measurements are consistent with M82
+being dominated by quiescent GMCs, but that is unlikely given the starburst
+nature of the galaxy. % porosity? 
+
+%Arp 220's density is close to that of two \uchii\ regions, G34.26+0.15 and
+%G61.48+0.09.  However, Arp 220, unlike the \uchii\ regions, shows \formaldehyde\ \oneone\
+%in emission, which does not happen when observing \formaldehyde\ against a bright 
+%background.  It is notable that these two sources both also have strong carbon
+%RRLs.  If Arp 220 really is a scaled-up \uchii\ region, it would be reasonable to
+%expect 
+
+The gravitational lens source B0218+357 is a different scenario.  Its low
+density is consistent with that of a non-star-forming GMC, while its column per
+\kms\ is comparable to the Galactic sample.  This source is therefore likely to
+be a sightline through a `normal' quiescent molecular cloud in its host galaxy,
+similar to the narrow beam of an \uchii\ region through the Galactic disk.
+\citet{Zeiger2010} note that there is a range of covering factors cited in the
+literature, which can affect the measured density and column, but should not
+affect the conclusion that the B0128+357 cloud's density is not consistent with
+that of massive-star forming regions.  The low-density gas is detected partly
+because the \citet{Zeiger2010} data are 3.5$\times$ more sensitive than ours 
+with a background continuum source of similar brightness.
+
+\OneColFigure{figures_chH2CO/Derived_DensityVsColumn_ExgalCompare_all_colored}
+{Comparison of the UC\ion{H}{2} sample (blue circles are measurements, blue
+triangles are lower limits on volume density with poorly constrained column
+densities), the GMC sample (red squares), secondary lines associated with
+\uchii\ regions (black stars) and the extragalactic sample of
+\citet{Mangum2008} (green squares).  The errorbars on the
+Galactic data points are excluded for clarity.  The observed galaxies have
+similar densities to the Galactic \uchii\ sample, but significantly lower
+column densities, suggesting that the molecular gas in these galaxies has a
+filling factor $<<1$.  The lack of direct density measurements of UCHII regions
+at high densities is due to the presence of a dominant background source; in Arp 220 a
+direct measurement of density was possible because \formaldehyde\ was seen in
+emission.}
+{fig:exgalcolden}
+{0.30}{0}
+
+\subsection{Line Profiles}
+\label{sec:lineprofiles}
+Despite the many systematics discussed above that can affect \formaldehyde\
+absorption measurements with a compact illumination source, it is possible to
+directly compare the properties of gas along a given line of sight without most
+of these hindering factors.  Since most of our spectra have kinematically
+resolved spectral line profiles, it is possible to make many density measurements at
+different velocities towards each source.  An example of this type of analysis
+is shown in Figure \ref{fig:g3280densspec}.  An example demonstrating the need for
+this type of analysis is shown in Figure \ref{fig:G70compare}, in which two lines
+well-fit by gaussian profiles nonetheless display a density gradient because the
+line centers are significantly offset; the figure also demonstrates that the offset
+cannot be accounted for by any instrumental effects.
+
+Of our sample, 18 of the 24 observed lines-of-sight had high enough signal-to-noise spectra 
+(S/N$\gtrsim5$ in at least four adjacent 0.4 \kms\ channels in both lines) to
+measure the density in many velocity bins.  Of these, 12 have different peak
+velocities in the \oneone\ and \twotwo\ lines, indicating density gradients in
+the molecular gas with velocity.  Figure \ref{fig:g3280densspec}b is an example
+density-velocity plot.%, and others are shown in Section \ref{sec:sources}.  
+
+We have classified each high S/N spectrum as {\it gradient}, {\it envelope}, or
+{\it single} based on spectral line morphology.  The {\it gradient} classification was used
+for gaussian or nearly gaussian lines in which the \oneone\ and \twotwo\ line
+centers were offset, indicating a gradient in the density with velocity; the
+color listed in the table indicates the direction of \emph{increasing} density.  The {\it
+envelope} classification was used for flat profiles on the wings of deeper
+gaussian lines.  The {\it single} classification was used for lines where the
+\oneone\ and \twotwo\ velocities matched.  Low S/N spectra were not classified.
+Classifications are given in Table \ref{tab:other}.
+
+Of the 12 sources with density gradients, 6 show an increased density towards
+the red and 5 towards the blue.  One source, G45.12+0.13, shows a slight
+increase towards the red over a broad (8 \kms) velocity range, but a sharp
+increase towards the blue over only 1 \kms\ and is therefore classified as {\it
+other}.
+
+Figures \ref{fig:g33pt13spectrum}-\ref{fig:g61.48+0.09spectrum} show the `main
+line' (associated with the \uchii\ region) profile and the associated density,
+column, and abundance velocity profiles.  The density, column, and abundance
+measured for each main line via the gaussian fit technique are shown
+overplotted on the profiles with blue squares.  In all cases, the gaussian fit
+measurement of density is consistent with the individual channels nearby and
+the gaussian fit measurements of column and abundance are consistent with the
+peak column and abundance.  The consistency of adjacent velocity bins confirms
+the validity of associating gaussian components in observations of whole
+galaxies \citep[e.g., ][]{Mangum2008} or kpc-scale regions, since on these scales
+the \oneone\ and \twotwo\ lines should be blended by kinematics to have the
+same shape.
+
+\Figure{figures_chH2CO/G32.80+0.19_densityspectrum.png}
+{ % can't use \\ for newline here: results in weird tex errors
+Plot of the derived parameters per velocity bin for the main line of
+G32.80+0.19; the full spectrum is shown in Figure \ref{fig:specexample}.  The
+density peak around 16 \kms\ is slightly redshifted of the H and C RRL velocity
+centers, although the C RRLs are blueshifted of the H
+RRLs, indicating that the PDR has been accelerated towards us along the line of
+sight.  The blueshifted emission tail is suggestive of an outflow.  This source
+cannot therefore be easily classified under any of the scenarios in Section
+\ref{sec:scenarios}, but is consistent with components of scenarios 2 and 3. 
+{\it a.} The spectra of G32.80+0.19.  The GBT \twotwo\ spectrum (red solid) has
+been smoothed to a resolution of 0.38 \kms\ to match the Arecibo (black dashed)
+spectral resolution.   Labeled vertical bars indicate the measured velocity centers
+of H and C RRLs from this work, \citet{Roshi2005}, and \citet{Churchwell2010}. 
+{\it b.} The measured densities in each spectral bin.  The Y-scale is in log$_{10}$
+units. Error bars include a 10\% systematic uncertainty in the continuum and
+therefore errors in adjacent channels are not independent.  Limits are
+indicated by triangles.  Bins with no information above the 1-$\sigma$ noise
+cutoff are left blank.  The increase of density towards higher velocities led us
+to classify this source as a {\it red gradient} in Table \ref{tab:other}. 
+{\it c.} The measured column densities per spectral bin.  Because these column
+densities are derived from a large velocity gradient code, they are in
+\perkmspc\ units.
+{\it d.} The measured abundances per spectral bin.  The column and abundance are 
+somewhat degenerate, but it is possible in some cases to place tight constraints
+on the total \ortho\ column while only placing upper limits on abundance
+and density.  The abundance must also be interpreted \perkmspc. 
+In plots {\it b} through {\it d}, the blue square with error bars
+represents the measured value from Table \ref{tab:h2coderived} using gaussian
+fits to the lines.
+}
+{fig:g3280densspec}
+{0.25}{0}
+
+\OneColFigure{figures_chH2CO/compare_G70.3_spectra.png}
+{Comparison of G70.29+1.60 (top) and G70.33+1.59 (bottom) spectra as observed
+by Arecibo (black) and GBT (red/grey).  Note that in G70.29+1.60, the \twotwo\
+line is shifted towards the blue of the \oneone\ line, while in G70.33+1.59 the
+line centers match well.}
+{fig:G70compare}
+{0.3}{0}
+
+
+\subsection{Comparison of RRLs and \formaldehyde\ lines}
+\label{sec:scenarios}
+We compare the density spectra with the fitted RRL centroids and attempt to
+interpret these spectra in the context of various simple models of \ion{H}{2}
+region interaction with molecular clouds.  The simple models described below
+may actually be short-lived but recurring stages in the normal life cycle of a
+collapsing clump that is forming massive ($M\gtrsim10 \msun$) stars
+\citep{Peters2010}.
+
+% INTERPRETATION OF $X_{\formaldehyde}$:
+% Assuming a constant \formaldehyde\ abundance, the \formaldehyde\ abundance per
+% \kms\ per pc should be higher for slower and higher-density gas.  It should
+% therefore be particularly low in outflows.
+
+We consider five simple models of embedded \uchii\ regions.  For each scenario,
+we include a brief description of the model and an analysis of the
+observational consequences in terms of C and H RRL velocities and
+velocity-density structure.  We assume that the carbon RRLs are only detected
+if seen in the foreground of a bright source.  This assumption is based on
+predictions that C RRLs will be amplified by an order of magnitude even in the
+presence of a weak background \citep{Natta1994}.   It is backed by a strong
+correlation between the continuum and the C RRL intensity  \citep{Roshi2005}.
+We also assume that lower-frequency RRLs will have a stronger stimulated
+emission component than higher-frequency RRLs \citep{Lockman1978}.  All
+\formaldehyde\ absorption is assumed to be against the \uchii\ region in this
+section.  The scenario that describes a given spectrum is listed in the figure
+caption for each spectrum and in Table \ref{tab:other}.
+%We then include a list of observed objects that may fit the described model.
+
+\OneColFigure{figures_chH2CO/UCHII_stationaryuniform_scenario1_spectra}
+{Scenario 1: An \uchii\ region forms and begins expanding spherically
+in a uniform density gas cloud.  A cartoon of the geometry seen by the observer
+is shown on the left side of the figure, with arrows indicating expansion and
+darkness of the gray shading indicating relative density.  The white region
+around the central star is the ionized \uchii\ region.  On the right side, a
+cartoon of the relative velocity and width of the RRLs and \formaldehyde\ lines
+is shown.  The relative heights of the \formaldehyde\ lines is representative
+of the observed density;  black is \oneone\ and red is \twotwo.  The narrow
+emission line with a ? above it indicates a possible blueshifted carbon RRL;
+its height has no physical meaning.  In this scenario, the hydrogen
+recombination and \formaldehyde\ lines should occur at the same velocity, and
+the \formaldehyde\ lines should show relatively low-density (high
+\oneone/\twotwo\ ratio) and modest spectral line widths.  A blueshifted carbon
+RRL may form, but is not guaranteed.}
+{fig:scenario1}
+{0.15}{0}
+
+\OneColFigure{figures_chH2CO/UCHII_insideoutcollapse_scenario2_spectra}
+{Scenario 2: An \uchii\ region forms from a gravitationally unstable cloud
+undergoing inside-out collapse.  See Figure \ref{fig:scenario1} for a complete
+description of the figure.  The highest density should correspond to the
+highest-velocity infall, so the \twotwo\ line peak should be redshifted of the
+\oneone\ line peak.  The hydrogen recombination line may align with a
+low-density cloud but should be blueshifted of the infalling gas.  The carbon
+RRL should be redshifted from the hydrogen RRL and blueshifted from the
+\formaldehyde\ line.}
+{fig:scenario2}
+{0.15}{0}
+
+\OneColFigure{figures_chH2CO/UCHII_outflow_scenario3_spectra}
+{Scenario 3: An \uchii\ region expanding in a uniform medium ejects a bipolar
+outflow.  Presumably the bipolar outflow comes from a disk-accreting source.
+See Figure \ref{fig:scenario1} for a complete
+description of the figure.
+The outflow (indicated by the cones emitting from the central source) should
+have lower column density but could have high or low volume density.  It will be 
+observed as high-velocity blueshifted absorption in a line wing.  Carbon
+recombination line emitting regions may be destroyed by the outflowing
+material.  As in the simple scenario 1, the hydrogen recombination line should
+be at the same velocity as the molecular cloud.}
+{fig:scenario3}
+{0.15}{0}
+
+\OneColFigure{figures_chH2CO/UCHII_triggered_scenario4_spectra}
+{Scenario 4: An \uchii\ region expanding in a uniform medium sweeps up and
+accelerates material that undergoes triggered star formation.  Because the
+highest-density material is the swept up material, it should be the most
+blueshifted.  See Figure \ref{fig:scenario1} for a complete description of
+the figure.  The orange and yellow circles are meant to indicate triggered star
+formation.}
+{fig:scenario4}
+{0.15}{0}
+
+\OneColFigure{figures_chH2CO/UCHII_foreground_scenario5_spectra}
+{Scenario 5: An \uchii\ region is seen behind a high-density, turbulent gas
+cloud.  The turbulence drives large spectral line widths, while the high density makes
+the \oneone\ and \twotwo\ line depths very close.   The RRL velocity could in
+principle be at any velocity relative to the foreground turbulent cloud.  See
+Figure \ref{fig:scenario1} for a complete description of the figure.  In this case,
+the ?'s indicate an uncertain velocity for the hydrogen RRLs; a carbon RRL is not
+expected because the \ion{H}{2} region is not necessarily interacting with the
+molecular gas.}
+{fig:scenario5}
+{0.15}{0}
+
+
+\begin{itemize}
+    \item SCENARIO 1: STATIC
+        \\* In a uniform medium with no bulk motions (i.e., no collapse), a massive star
+      ignites and generates an expanding \ion{H}{2} region.  Figure \ref{fig:scenario1}.
+
+%OBSERVATIONAL CONSEQUENCES:
+  \begin{enumerate}
+    \item Lower frequency RRLs are blueshifted from higher-frequency RRLs
+      because of an increased stimulated emission component \citep{Lockman1978}
+    \item A carbon RRL should be seen at the same velocity as or blueshifted from
+      the hydrogen RRL line center. 
+    \item Molecular gas closest to the \ion{H}{2} region should have the
+      highest density because of compression by the expanding \ion{H}{2}
+      region.  It will be at a similar velocity or blueshifted from the H RRLs.
+%-Near the PDR, the \formaldehyde\ abundance (relative to \hh) should drop
+%as \formaldehyde\ is preferentially dissociated
+\end{enumerate}
+%POSSIBLE EXAMPLES:
+%G37.87?,G45.12,G45.47,G50.32
+
+
+  \item SCENARIO 2: COLLAPSE
+      \\* A massive star ignites while spherically accreting from a
+    molecular cloud undergoing bulk (inside-out) collapse.  Figure \ref{fig:scenario2}.
+
+%  OBSERVATIONAL CONSEQUENCES:
+  \begin{enumerate}
+    \item The \formaldehyde-measured density should peak at the velocities
+      most redshifted relative to the hydrogen RRLs.  Inside-out collapse
+      dictates that the highest densities should be infalling at the highest
+      speeds.
+    \item The C RRL velocity should be between the \formaldehyde\ and H RRL
+      velocity since the PDR will be decelerated by radiation and gas pressure
+      from the \ion{H}{2} region
+    \item Since the accreting star should be at approximately the rest
+      velocity of the cloud, there should be little to no gas blueshifted from
+      the RRL velocity
+\end{enumerate}
+%POSSIBLE EXAMPLES:
+%G33.13,G33.92,G34.26,G35.58?,G45.07,G45.45,G60.88
+
+  \item SCENARIO 3: OUTFLOW
+      \\* An accreting massive star generates a massive outflow with
+    a significant component along the line of sight. Figure \ref{fig:scenario3}.
+
+%OBSERVATIONAL CONSEQUENCES:
+  \begin{enumerate}
+    \item Substantial low-column, low-abundance \perkms\ gas should be observed
+      at velocities blue of the RRL velocities.  Densities can range from low
+      to high.  Covering factors may be low.
+    \item No carbon RRL is expected from the outflow, though if the flow is
+      accelerated by ionization pressure a C RRL should be observed blueshifted of
+      the H RRL velocity.
+\end{enumerate}
+%POSSIBLE EXAMPLES:
+%G43.89
+
+
+\item SCENARIO 4: SWEEPING
+    \\* An expanding \ion{H}{2} region pushes on a low-density
+  envelope, possibly triggering a new stage of star formation as in the ``collect and
+  collapse'' scenario.  This scenario is similar to \#1 but with either a
+  higher-density envelope or with more gas swept up (i.e., \#4 may represent
+  a more evolved region).  Figure \ref{fig:scenario4}.
+
+%OBSERVATIONAL CONSEQUENCES:
+  \begin{enumerate}
+    \item The hydrogen RRLs should be red of the dense gas and the carbon
+      RRLs.  The expanding \ion{H}{2} region should accelerate the dense gas
+      blue along the line of sight.
+    \item A low-density envelope should persist at the same velocity as the
+      \ion{H}{2} region
+\end{enumerate}
+%POSSIBLE EXAMPLES:
+%G35.20,G61.48
+
+\item SCENARIO 5: FOREGROUND CLUMP
+    \\* A high density, highly turbulent or high mass and rotating clump of gas
+  is in front of the \uchii\ region or surrounds it.  This physical situation may exist
+  in all of the above and provides alternate explanations for any spectral line wings.  Figure \ref{fig:scenario5}.
+%OBSERVATIONAL CONSEQUENCES:
+  \begin{enumerate}
+    \item Moderate density gas from a molecular cloud will result in high
+      column but moderate density at the center velocity
+    \item Wide wings of high density gas will exist both blue and redshifted of
+      the highest-column point
+  \end{enumerate}
+%  POSSIBLE EXAMPLES: (G45.45)
+
+\end{itemize}
+
+
+%A few sources remain unclassified after examining these models.  Some of these
+%show the signatures of both outflow and infall (scenarios 2 and 3): G32.80,
+%G35.57-0.03, and G48.61.  Some sources, G69.54, G70.29, and G70.33, had
+%peculiar profiles that did not fit under any of the described categories.
+%Others, G41.74, IRAS 20051, IRDC 1923, and IRDC 1916 had inadequate S/N to
+%classify their velocity/density profiles.
+
+
+%Because of the degeneracy of scenario 5 with others, we do not classify any
+%sources as exhibiting signatures of that scenario.  However, we emphasize
+%that velocity structure in dense clouds could reproduce most of the above scenarios, 
+%though some only under XXXX conditions....
+
+
+% This section could use some expansion - C RRLs are only expected to be seen on
+% the front side because they are caused by stimulated emission
+% \citet{Roshi2005}.  Why would we see redshifted high density material and no
+% CRRL in some cases, but redshifted with CRRL in others?  I could imagine
+% infall + radiation -> PDR for the case with the CRRL, but infall + continuum
+% but NO PDR?  \emph{What other explanations for these profiles exist?}
+
+\subsection{The Filling Factor of Molecular Clouds}
+\label{sec:gmcdensity}
+We have measured the density in 19 line-of-sight molecular clouds in addition
+to the 18 measurements of densities around \uchii\ regions (we only include
+measurements, not limits, in these counts).  The measured density from the
+\formaldehyde\ line ratio can be compared to other measures of density, e.g.
+the mean molecular cloud density measured by \citet{Roman-Duval2010} from the
+BU-FCRAO GRS.  It is clear from Figure \ref{fig:denshist} that the average
+density in GMCs is typically $\sim2-3$ orders of magnitude lower than densities
+measured in our sample of line-of-sight GMCs.
+
+\citet{Roman-Duval2010} point out that the mean densities they measure are
+significantly below the critical density of \thirteenco,
+$n_{cr}=2.7\ee{3}$ \percc, indicating that they do not resolve the high-density
+clumps that make up the GMCs.  Our data indicate that a typical GMC consists of
+$n\sim3\ee{4}$ \percc\ gas (the median of our GMC subsample excluding upper
+limits), substantially higher than the critical density of \thirteenco.  Taking
+the ratio of the median density in the \citet{Roman-Duval2010} catalog to that
+in our sample, we derive a volume filling factor of $5\ee{-3}$ of dense gas in
+molecular clouds.  
+
+%Our sample may be highly biased since we have selected sightlines based on the
+%presence of \uchii\ regions.  However, the unassociated line-of-sight
+%foreground clouds should be effectively blindly selected, since their presence
+%along the line of sight has nothing to do with the background \uchii\ region.
+%They should therefore represent typical sightlines through GMCs, but this
+%assertion will be tested more rigorously with the large-scale galactic plane
+%survey.  
+
+\OneColFigure{figures_chH2CO/DensityHistogram}
+{Histograms of the GMC and \uchii\ subsamples from our data plotted along with
+the GMC-averaged densities from the \thirteenco\ \citet{Roman-Duval2010} GRS
+measurements arbitrarily scaled to fit on this plot.  The measured densities in
+\uchii\ regions are significantly (by a KS test) higher than densities in GMCs.
+The \formaldehyde-measured densities in GMCs are 2-4 orders of magnitude higher
+than volume-averaged densities of GMCs from the GRS, suggesting that GMCs
+consist of very low volume-filling factor ($\sim5\ee{-3}$) high-density
+($n(\hh)\sim3\ee{4}$ \percc) clumps. In Section \ref{sec:gmcdensity}, we argue
+that the observed difference is most likely not a selection effect imposed by
+the different gas tracers.  The
+GMC upper limits shown are $3-\sigma$ upper limits, and all are consistent with
+the measured GMC densities.
+}
+{fig:denshist}
+{0.30}{0}
+
+We measured an additional 20 upper limits towards GMCs, all of which are
+consistent with high densities ($n(\hh)>10^4$ \percc), but could represent a sample
+of lower density ($n(\hh)\sim10^3$ \percc) gas, in which case our `measurement' of
+the cloud volume filling factor is biased to be too low.  In order to test for
+this bias, we need to acquire more sensitive observations of the upper-limit
+systems.  However, we continue analysis below based on the assumption that the
+cloud filling factor measurement is realistic, i.e. assuming that the density upper
+limit measurements have densities consistent with the other observed GMCs.
+%This can be done by observing sightlines in
+%which there is no uncertainty about the background source (e.g., sightlines
+%with absorption only against the CMB), by resolving the emission and absorption
+%(e.g., with the EVLA), or by observing an additional \formaldehyde\ line.
+
+%If we take the volume filling factor at face value, it does a reasonable job of
+%explaining the CO ``X-factor'' measurement of cloud mass.  One hypothesis
+%(CITE?) for the effectiveness of the X-factor in measuring mass is that it
+%effectively counts unresolved, optically thick clumps of gas.  This hypothesis
+%is consistent with a very low volume filling factor of dense gas, since
+%high-density ($n\gtrsim10^4$ \percc) gas clumps become optically thick in \twelveco\ at column
+%densities $N\sim4\ee{20}$ or size scales $l\lesssim0.01$ pc (at these scales and densities,
+%the clumps are Jeans-stable even at the CMB temperature).  However, the
+%similarity of the GRS \thirteenco\ and \formaldehyde\ \oneone\ spectral line
+%profiles in Figures \ref{fig:g33pt13spectrum}-42 \ref{fig:g61.48+0.09spectrum}
+%suggests that there must be many (hundreds-thousands) of these clumps within
+%any $\sim50\arcsec$ beam.
+
+Can a medium with supersonic turbulence produce the same density measurements
+without having to invoke high-density clumping?  Below about
+$n(\hh)\approx10^5$ \percc, measurements of density in a turbulent medium are biased
+towards higher densities, i.e. the densities we report may be overestimates for
+GMCs since they have a median density $n(\hh)=10^{4.49}$ \percc.  For turbulent
+density PDFs with logarithmic widths $\sigma_{ln(\rho)/ln(\bar{\rho})} \lesssim
+1.5$, the overestimate is no more than 0.4 dex, and therefore can only bring
+the filling factor up by a factor $<3$.  As discussed in Section
+\ref{sec:turbulence} and Figure \ref{fig:turbcorr}, a high-density tail could
+create a larger discrepancy ($\sim 0.5$ dex).  However, at the measured
+densities, these are extreme upper limits on the `turbulent correction', and
+therefore (gravo)turbulence alone cannot account for the measured densities.
+
+What clumping properties are required to reproduce the observed density?  As
+long as the clumps are all optically thin in the \formaldehyde\ absorption
+lines, the spectral line optical depths and ratio are independent of clumping.  However,
+a large number of low-density ($n(\hh)\approx10^{3.5}$ \percc) clumps optically
+thick in the \oneone\ line and thin in the \twotwo\ line would appear to have a
+higher density.  This phenomenon could only occur at densities
+$\lesssim10^{4.5}$ \percc, where the \oneone\ absorption line is much stronger
+than the \twotwo\ line, and column densities $10^{14} \persc \gtrsim
+N(\ortho) \gtrsim 10^{13.5} $ \persc\ per clump (at higher columns, both
+lines are optically thick; at lower columns, both lines are optically thin).
+Assuming a typical \formaldehyde\ abundance (ortho+para) $X_{\formaldehyde}=10^{-9}$, the
+required spherical clump radius would be $\sim0.3 $ pc, which would be
+Jeans-unstable at the assumed density and temperature (40 K) and is therefore
+unlikely to persist for long time periods \footnote{However, the lifetime of
+such clumps in a turbulent medium in which small-scall turbulence supports the
+clumps against collapse is unconstrained.}. We therefore regard a collection
+of optically thick clumps in the \formaldehyde\ \oneone\ line to be 
+unlikely; clumps optically thick in both lines are even less likely following
+the same line of reasoning.
+
+% Given that the \formaldehyde-derived densities are accurate independent of
+% clumping, we can examine typical properties of the clumps using their typical
+% observed CO properties.  We first use the observation that GMCs are generally
+% optically thick in the \twelveco\ 1-0 line.  At density $n(\hh)=10^{4.5}$ \percc,
+% \twelveco\ becomes optically thick at a column density $N(\hh)\approx7\ee{16}
+% $ \persc, which corresponds to a size-scale $L\sim0.008$ pc assuming a CO
+% abundance $X_{CO}=1\ee{-4}$.  
+% %Any clumps larger than about 0.01 pc would therefore be optically thick in \twelveco.  
+% The Jeans length in a 50 K, $n=10^4 $ \percc\ molecular medium is $\sim0.3$ pc,
+% % (lower temperatures or higher densities would reduce this number),
+% which serves as a practical upper size
+% limit to the clumps at the measured densities, since the free-fall time under
+% these conditions is $\sim2\ee{5}$ years (i.e., short compared to the lifetime
+% of GMCs).  Clumps would have to be $\gtrsim0.4$
+% pc in diameter to be optically thick in \thirteenco\ (assuming
+% $X_{\thirteenco}=X_{\twelveco}/60$), so optically thick \thirteenco\ clumps
+% would not be expected to survive long enough to be observed along arbitrary
+% sightlines.
+
+% The size scales resolved in our survey span a large range from 0.015 pc to 1 pc
+% (Figure \ref{fig:sizecomp} shows the size scale range for the \uchii\
+% subsample).  There is a wide range of line-widths even for very small
+% size scales; for the larger line widths, we are likely probing GMC-scale objects
+% along the whole line of sight.  For the smaller line widths, particularly those
+% below $\sigma_{FWHM}=1 \kms$, the probed size scales....
+% There is a density-linewidth relation... hmmm
+%
+% the Goodman 1998 "Transition to Coherence" takes place in this regime...
+% Goodman 1998 also has upper size scales of 0.2-0.3 pc for "coherent cores" - 
+% could GMCs simply be collections of coherent cores?  
+% Also, the "smallest eddy that persists" is 0.008 pc - exactly equal to the
+% size scale of optically thick 12CO clumps
+
+% An intriguing result of the densities observed in GMCs is that the largest
+% clumps in molecular clouds are constrained to be smaller than 0.3 pc at these
+% high densities, implying an upper mass limit of about 200 \msun.  In a
+% triggered star formation scenario in which pre-existing clumps are crushed, it
+% would therefore be unlikely to form compact clusters or individual stars with
+% masses $>200\msun$ from GMCs.
+
+% One compelling example consistent with this explanation is Figure \ref{fig:specexample},
+% in which three distinct \formaldehyde\ line components are observed to be associated with
+% a single, relatively smooth \thirteenco\ line.  The three \formaldehyde\ components all 
+% have densities $n\approx10^{4.5}$ \percc.  The approximate size-scale probed by the \uchii\
+% sightline at the distance of these clouds is 0.7 pc, while the beamsize of the \thirteenco\
+% observation is 2 pc.
+
+The combination of the observed large spatial scales (and therefore low
+volume-averaged density) of GMCs and the high densities measured along
+essentially arbitrary sightlines through these GMCs suggests that GMCs are not
+consistent with a purely turbulent medium with a lognormal density
+distribution.  The observations also require a more substantial high-density
+tail than typically seen in gravoturbulent simulations, i.e. they require a
+clumpier medium.
+
+Alternatively, it is possible that \formaldehyde\ is chemically enriched in
+high-density pockets within a turbulent medium, which would imply that
+\formaldehyde\ observations probe different gas than CO.  No such mechanism has
+been proposed on theoretical grounds, and the timescales for enhancement would
+have to be very short \citep[intermittent density enhancement occurs on
+timescales much shorter than the dynamical timescale; ][]{Kritsuk2007}, so we
+regard this possibility as unlikely but include it for completeness.
+
+Another alternative is that the \thirteenco\ systematically underestimates the
+mass or overestimates the volume of the cloud, resulting in an underestimate of
+the cloud density.  Sub-thermal excitation of \thirteenco\ in the low-density
+parts of the cloud can lead to an underestimate of the mass \citep[][Section
+9.3]{Roman-Duval2010}.  Since the cloud sizes were derived using an assumed
+spherical symmetry, but molecular gas is typically observed in filamentary
+structures, the densities in \citet{Roman-Duval2010} are likely to be lower
+limits on the mean density in the molecular gas.  While both of these factors
+bring the \formaldehyde\ and \thirteenco\ densities into closer agreement, it
+is difficult to quantify these effects.
+
+%There have been many studies of the structure of molecular clouds in the
+%contexts of clumpy clouds, turbulent clouds (Kritsuk, Goodman, others), fractal
+%clouds (Elmegreen)... our measurement weakly suggests that GMCs do not follow
+%the structure distribution predicted by purely turbulent (i.e., lognormally
+%distributed) density.   XXXX This paragraph is essential if I am to include this
+%section, but I need to fill it out more...
+
+% \subsection{Feeding massive star formation}
+% (remove this section unless it is completed)
+% 
+% Do massive stars form from `coherent cores' with subsonic turbulence like
+% low-mass stars, or do they accrete their mass directly from a supersonically
+% turbulent, clumpy medium like a GMC?  \citet{Goodman1998} and
+% \citet{Pineda2010} have shown that in low-mass star-forming regions, a coherent
+% core in which the nonthermal velocity dispersion is less than the thermal
+% dispersion is the most likely predecessor to a protostar.  However, it is not
+% known whether massive stars ever go through a coherent core phase.  In
+% particular, for the most massive stars known with individual or multiple
+% stellar systems massing $\sim100\msun$, it would be impossible to form a
+% gravitationally stable coherent core at densities similar to those observed in
+% B5 \citep[$n\sim10^4-10^5$]{Pineda2010}.
+% 
+% The line widths we observe around the \uchii\ regions are all clearly
+% supersonic, as is expected since the expanding \uchii\ region should directly
+% drive turbulence.  However, there is some remote chance that the \formaldehyde\ 
+% densitometer could be used to search for, or rule out, such a transition.
+% Because of the rarity of high-mass star-forming regions, it is likely that there
+% are no analogs to the coherent core in our local neighborhood (e.g., within 1 kpc), 
+% in which only the Orion and Cepheus GMCs have formed massive stars (??).  At
+% greater distances, it is extremely difficult to find isolated regions in which to
+% perform such a test.  
+% 
+% We therefore suggest that `coherence' should be sought around hypercompact
+% \ion{H}{2} regions, in which a massive star has formed a very small \ion{H}{2}
+% region, but has not fed back enough on its birth environment to disrupt any
+% coherent structures...
+% 
+% In our spectra, there are hints of `sharp' density transitions with velocity.
+% If similar could be observed in space....
+% 
+% What would an uchii in a turbulent field look like?  In a coherent field?
+% 
+% If massive stars form from coherent clumps, an upper mass limit is implied,
+% but if not, there is no obvious mass cutoff...
+
+% \subsection{Other Results}
+% Three sources were observed with potentially optically thick \formaldehyde\
+% spectra: G37.87-0.40, G45.12+0.13, and G69.54-0.98.  These are interesting
+% targets for follow-up observations and are discussed in more detail in 
+% Section \ref{sec:sources}.
+
+\subsection{Strengths and Weaknesses of the \formaldehyde\ K-doublet Densitometer}
+\label{sec:strengthsweaknesses}
+The dynamic range of a spectral line as a tracer of a physical quantity is an
+important consideration when designing an experiment.  We have demonstrated
+only a modest dynamic range in density measurements using the \oneone\ and
+\twotwo\ lines in absorption against bright background sources: above
+$n(\hh)\approx10^{5.6}$ \percc, we are only able to set lower limits on the
+density because the spectral line ratio asymptotes to 1 , and below $n(\hh)\approx10^4$
+\percc, the \twotwo\ line optical depth drops to very low levels (Figure
+\ref{fig:modeltau}). 
+
+The lower limits on density at $n(\hh)\gtrsim10^{5.6}$ \percc\ can only be modestly
+improved upon by using higher K-doublet transitions (e.g.  \threethree) when
+observing \formaldehyde\ in absorption against bright continuum sources.
+However, when observing anomolous absorption against the CMB, an additional
+density diagnostic is the transition from absorption to emission at higher
+densities, which expands the sensitivity of the \oneone/\twotwo\ pair to
+$n(\hh)\approx10^{6.5}$ \percc.
+
+The low-density end can only be probed by more sensitive observations of
+the \twotwo\ line.  Because the \formaldehyde\ line depths become negligible
+below $n(\hh)\approx10^3$ \percc, the densitometer is not a useful probe below these
+densities.  However, at such low densities, even within a molecular cloud,
+it is questionable whether any molecular probes are reliable, as even CO will be
+underabundant in these environments \citep[e.g., ][]{Glover2010}.
+
+As noted in \citet{Mangum2008} and \citet{Zeiger2010}, the K-doublet
+densitometer has the advantage that line detection only depends on the
+brightness of the background source and the gas density.  It can therefore be
+used nearly independent of distance when observing clouds against the CMB or
+bright illuminating background sources.  The \citet{Zeiger2010} measurements
+are more sensitive than any presented in our study because of longer
+integration times and the selection of a bright illuminating background source
+despite their target being at a distance z=0.68.  Following this line of
+reasoning, any bright synchrotron or free-free source can be used to
+sensitively probe the density of a line-of-sight molecular cloud in the Galaxy.
+The observation will have angular resolution limited only by the size of the
+background source as long as it is much brighter than the CMB in the beam.
+
+%Weaknesses:
+%Low formaldehyde abundance at low A_V - harder to probe low densities
+%Limited dynamic range
+%Sensitive to continuum source size, brightness determination
+
+
+\section{Conclusions}
+\label{sec:h2coconclusions}
+We have presented a pilot study to measure molecular gas densities in clouds
+along 24 lines of sight in the \formaldehyde\ \oneone\ and \twotwo\ transitions
+primarily toward \uchii\ regions .  We have shown that the \formaldehyde\
+densitometer is robust within reasonable ranges of turbulent density
+distributions, most cloud geometries, and different cloud clumping properties.
+We have presented the methodology and discussed the errors intrinsic to the
+\formaldehyde\ densitometer.
+
+Gas volume densities were measured toward 14 of the 24 sources using the
+best-fit gaussian profiles; density limits were measured for the remaning 10.
+In 18 sources, it was possible to estimate the density in each 0.4 \kms-wide
+channel centered on the main line.  Of these, 12 showed some sign of a density
+gradient with velocity, 5 appeared to have a single-valued density (i.e. only a
+single spectral line component well-fit by a gaussian), and one, G69.54-0.98,
+had a spectral line optical depth that was beyond our ability to model.  
+% this is not shown The measured spatial densities are uniformly higher than the
+% this is not shown beam-averaged densities measured with the BGPS 1.1 mm data.
+
+Velocity-density gradients have been used to fit 18 sources with simple
+models of \uchii\ regions embedded in molecular clouds.  We have found some  
+examples consistent with inside-out collapse onto the \uchii\ region,
+ \uchii\ region expansion, and bulk outflow.  \formaldehyde\
+absorption provides a unique probe of the physical conditions around \uchii\
+regions because it is only seen in absorption against the continuum background
+(for sources much brighter than the CMB), giving different constraints than mm
+and sub-mm spectral lines that are seen both in front of and behind the \uchii\ region.
+
+The measurements of serendipitously detected line-of-sight GMCs revealed
+densities $\sim200$ times higher than volume-average densities measured using
+\thirteenco.  The high density measured suggests that GMCs consist of many
+sparsely distributed high-density clumps and have density distributions
+inconsistent with the lognormal distribution predicted by supersonic turbulent
+models.  The implied density distribution is also more skewed to high densities
+than predicted by typical gravoturbulent simulations.  Alternatively, the 
+\thirteenco-based mean densities may be lower than the mean densities within
+the molecular gas either because they underestimate the mass or overestimate
+the volume of GMCs.
+
+The density measurements show that UC\ion{H}{2}s are associated with
+high-density ($n(\hh)>10^{4.5}$ \percc) gas, and UC\ion{H}{2}s are associated with
+higher column and volume densities than other line-of-sight molecular clouds,
+in contradiction with previous results \citep{Wadiak1988}.  
+
+The 6 cm, 2 cm, and 1.1 mm flux density measurements are strongly correlated
+and in most objects in our sample the 1.1 mm flux density has a substantial ($>30\%$) contribution 
+free-free continuum emission.  This result implies that the
+brightest sources detected in the BGPS have significant free-free emission.
+A comparison to the 6 cm MAGPIS survey suggests that the sample of 1.1 mm
+sources below about 3 Jy is not significantly contaminated by pure free-free
+emission sources.  
+%While other surveys (e.g., ATLASGAL, HiGAL, JPS) at shorter wavelengths should be less
+%affected by free-free emission because of rising dust emissivity with frequency, the
+%free-free contribution in the brightest sources in these surveys may still be
+%substantial.
+
+% Observed density gradients include both increasing density toward the red and
+% the blue.  These two scenarios require different physical explanations, since
+% in both cases the \formaldehyde\ absorber must be in front of the continuum
+% source.
+
+% A correlation is observed between 1.1 mm -derived dust mass and 2 cm / 6 cm
+% Spectral index. This correlation is consistent with the hypothesis that massive
+% Stars clear out their dust envelopes as they evolve from ultracompact to
+% Diffuse \ion{H}{2} regions.
+
+Comparison of the density measurements in our sample to the starburst sample of
+\citet{Mangum2008} suggest that the molecular gas volume filling factor in most of
+these galaxies is small ($\sim 0.01$), but in Arp 220 it is quite high
+($\gtrsim 0.1$).  The physical properties measured by \formaldehyde\ in Arp 220
+are similar to those in \uchii\ regions.  Although velocity-density gradients
+are observed in our sample, we argue that kinematic spectral line blending
+should uphold the assumption of a single spectral line profile in galaxies as
+robust for radiative transfer purposes.
+
+\section{Acknowledgements}
+We thank Jim Braatz for assistance with data acquisition and processing,
+Esteban Araya for providing us with reduced data, and our referee Jeff Mangum
+for a helpful and timely review.  This work was supported by the National
+Science Foundation through NSF grant AST-0708403 to John Bally and AST-0707713
+to Jeremy Darling.  This research has made use of the SIMBAD database, operated
+at CDS, Strasbourg, France.  This research made use of pyspeckit, an
+open-source spectroscopic toolkit hosted at \url{http://pyspeckit.bitbucket.org}.
+
+
+% {\it Facilities:} \facility{GBT}, \facility{Arecibo}, \facility{VLA},
+% \facility{FCRAO}, \facility{CSO}
+
+% BU FCRAO GRS:
+% This publication makes use of molecular line data from the Boston
+% University-FCRAO Galactic Ring Survey (GRS). The GRS is a joint project of
+% Boston University and Five College Radio Astronomy Observatory, funded by the
+% National Science Foundation under grants AST-9800334, AST-0098562, &
+% AST-0100793.
+%
+% MAGPIS:
+% RHB and DJH acknowledge the support of the National Science Foundation under
+% grants AST-05-07663 and AST-05-07598, respectively. RHB's work was supported
+% in part under the auspices of the US Department of Energy by Lawrence
+% Livermore National Laboratory under contract W-7405-ENG-48. DJH was also
+% supported in this work by NASA grant NAG5-13062. RLW acknowledges the support
+% of the Space Telescope Science Institute, which is operated by the
+% Association of Universities for Research in Astronomy under NASA contract
+% NAS5-26555.
+
+%\section{Appendix: Individual Source Discussion}
+
+%\bibliography{h2co_pilot}
+% \subimport{/Users/adam/work/h2co/pilot/paper/}{source_discussion}
+\input{solobib}
+\end{document}

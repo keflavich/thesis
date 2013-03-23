@@ -1,0 +1,129 @@
+\input{preface}
+\chapter{\formaldehyde observations of BGPS sources not previously observed with Arecibo}
+
+
+\section{Abstract} 
+
+Given our success with the simple 4-hour GBT observation of $\sim20$ sources,
+it was decided that a large-scale survey of BGPS sources accessible to Arecibo
+and the GBT would be productive.  We therefore selected 400 pointings in the
+Arecibo-accessible declination range, 137 of which are in the outer galaxy
+($172<\ell<207$) and the others in the inner galaxy ($31<\ell<65$).
+
+The selected sources included \emph{all} peaks in the outer galaxy regions,
+including the newly observed regions from the BGPS \vtwo survey.
+
+As of the thesis defense, all of the data for the large survey has been reduced,
+but the analysis and interpretation is ongoing.  We report here only initial
+results from the outer galaxy component of the large survey.
+
+Further follow-up projects based on these observations, in particular VLA
+observations of the W51 star forming complex, have been approved and are
+queued for observation.
+
+The following section describes portions of the \formaldehyde observations focusing
+on the outer galaxy in detail.
+
+\subimport{/Users/adam/work/h2co/outergal/paper/}{h2co_outergal.tex}
+
+
+\section{\formaldehyde Mapping}
+We were lucky enough to be awarded \emph{double} the time we asked for on the GBT,
+allowing us to observe large areas in mapping mode.  
+Naturally, we picked the brightest and best-known regions for mapping studies.
+
+In the inner galaxy, we mapped out an area $\sim50\arcmin\times20\arcmin$ centered
+on the W51 massive star forming complex.  This region is ideally suited to study from Arecibo,
+the GBT, and the VLA, since it is at declination +14 and is one of the brightest continuum
+sources in the Galactic plane.  It also turns out to be the nearest proto-massive cluster
+at a VLBI-parallax-measured distance of 5.1 kpc (see Chapter \ref{ch:ympc} for a discussion
+of massive proto-clusters).  The simple reduction of this data is nearly complete, but 
+analysis has not yet begun.
+
+In the outer galaxy, we targeted two regions: the Sh 255 complex in Gem OB1 and
+the Sh 233-IR/IRAS 05358 complex I studied for my Comps II project.  We made
+small ($\sim 5\arcmin\times 5\arcmin$) maps of these objects in order to
+evaluate the density profiles and determine what systematic biases may have
+been present in our single-pointing observations.  These outer galaxy sources
+are both at $D<2$ kpc, so our resolution is $\lesssim 0.5 pc$ and we therefore
+have some marginal hope of discovering dense cores without diluting their
+signal too badly.
+
+\subsection{\formaldehyde maps of S233IR}
+For the S233IR region, we were able to create a density map, but found the
+surprising and counterintuitive result that the density was smallest at the
+peak of the BGPS 1.1 mm emission.  The ``envelope'' is at a nearly constant density
+$n\sim10^{3.5}\percc$, but the core is either at a low density (which is effectively
+ruled out on other considerations) or is significantly self-absorbed.  It turns out 
+that \formaldehyde \twotwo \emph{emission} fills in the absorption.
+
+Figure \ref{fig:s233irmulti} shows the mapping results for the S233 IR region, where
+`envelope' densities are measured to be $n\sim10^{3.3}-10^{3.7} \percc$, but the `core'
+density is more weakly constrained to be $10^{4.5}\percc < n < 10^{5.5}\percc$ based
+on the presence of \formaldehyde \twotwo emission and the absence of \oneone emission.
+The lack of a direct measurement makes density profile measurement with the current
+observations impossible. 
+
+The moderate densities observed in the envelopes are nonetheless an order of
+magnitude higher than typical volume-averaged GMC densities
+\citep{Roman-Duval2010} as was previously noted for ordinary GMCs with
+\formaldehyde detections in \citet{Ginsburg2011}. 
+
+Perhaps most interesting is the contrast between the two BGPS sources shown 
+in Figure \ref{fig:s233irmulti}.  In \citet{Ginsburg2009}, I examined primarily
+S233IR, but its neighboring region G173.58+2.45 is also a well-studied proto-cluster.
+Unlike S233IR, which has a B1/B2 10 \msun star that is probably still accreting,
+G173.58 contains no massive stars and has an upper mass limit $M\lesssim4 \msun$
+\citep{Shepherd2002}.  The \formaldehyde observations reveal that the density in this
+clump is $\sim10^{3.6} \percc$, substantially less than the expected $n\sim10^5 \percc$
+in the massive-star forming S233IR.
+
+The BGPS data show this difference as well, but less strikingly.  In the BGPS
+data, the inferred masses of S233IR and G173 are 840 and 190 \msun,
+respectively, though lower by a factor of $\sim2$ in each when considering only
+their condensed $r\lesssim0.4$ pc cores.  Their densities differ by a smaller
+amount using the BGPS data and assuming spherical symmetry, with peak densities
+$n\sim10^{4.1}$ in G173 and $n\sim10^{4.8}$ in S233IR.  The density difference
+reinforces the conclusion drawn from the \formaldehyde data, but also show that its
+density measuring power is greater, since the spherical symmetry assumption is known
+to be flawed.
+
+% S233IR:
+% peak column: 6.09*2.08e22*(np.exp(13.01/20)-1)  = 1.16e23
+% h2co column: "%e" % (6.09*2.08e22*(np.exp(13.01/20)-1) * 1e-9)  = 1.16e14
+% total flux = 220 / 23.8 = 9.24
+% mass is then 9.2 * 1.8**2 * 14.3 * (np.exp(13.01/20)-1)  = 400 msun (600 by other measures; close enough)
+% radius ~30 arsec ~ 0.3pc
+% n ~ 6.7e4, 10^4.8
+% TOTAL flux/mass, in full aperture, is 471/23.8=19.7 Jy, or 840 msun
+%
+% G173:
+% flux ~62 Jy/bm, /ppbeam = 2.6 Jy ~ 2.6 * 1.8**2 * 14 = 120 msun
+% TOTAL 107 Jy/beam /ppbeam=4.5 -> 190 msun
+% radius = 40 arcsec = 0.35 pc
+% density = 120 * 2e33 / (4/3*np.pi*(0.35*3.08e18)**3) / ( 2.8 * 1.67e-24 ) = 1.3e4
+
+\Figure{figures_chH2CO/S233IR_multipanel}
+{The S233IR / IRAS 05358+3543 region and its neighbor G173.58+2.45.
+{\it Top left:} The \formaldehyde density map covering densities
+$10^2 \percc<n<10^5 \percc$ from grey to green.  The grey areas show
+regions of low density ($n<10^3$ \percc), while green show high-density
+regions ($n\gtrsim10^3.5$ \percc).  The `hole' at the peak of the contours
+is likely very high density, $n>10^5$ \percc.
+{\it Top center: } The \formaldehyde \oneone absorption map.
+{\it Top right: } The \formaldehyde \twotwo absorption map.
+Note the lack of absorption at the contour peak: this is probably \twotwo emission
+filling in \twotwo absorption, indicating a high $n\gtrsim10^5$ \percc density.
+{\it Bottom left: } CO 3-2 map.
+{\it Bottom center: } The BGPS v2.0 1.1 mm emission map, with contours at 0.2, 1.0, and 3.0 Jy.
+These contours are shown on all of the other maps for reference.
+{\it Bottom right: } SO $5_6-4_5$ map.  This line has a very high critical density $n\sim3.5\ee{6}$ \percc
+and an upper level energy $T_U=35$ K.
+Its morphology, with a hole at the peak of the dust emission, backs the claim that the density is highest
+in the area around the dust peak.}
+{fig:s233irmulti}{0.2}{0}
+
+
+
+\input{solobib}
+\end{document}
