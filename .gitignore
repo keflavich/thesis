@@ -3,3 +3,14 @@
 *lot
 *bbl
 *aux
+ipython_log*py
+*untracked
+*conflict*
+*.pdf
+*.toc
+*blg
+*dvi
+*ps
+*.1
+*gz
+ulem*
