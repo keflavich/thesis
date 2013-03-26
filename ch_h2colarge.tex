@@ -123,7 +123,35 @@ Its morphology, with a hole at the peak of the dust emission, backs the claim th
 in the area around the dust peak.}
 {fig:s233irmulti}{0.2}{0}
 
+\subsection{W51}
+The W51 survey was completed in September 2011.  The data reduction process
+presented unique challenges: at C-band, the entire region surveyed contains
+continuum emission, so no truly suitable `off' position was found within the
+survey data.  Similarly, \formaldehyde is ubiquitous across the region, so it
+was necessary to `mask out' the absorption lines when building an off position.
+This was done by interpolating across the line-containing region with a
+polynomial fit.  
 
+\Figure{figures_chH2CO/a2705.20120915.b0s1g0.00000_offspectra.png}
+{An example of the \formaldehyde line masking procedure for building an
+Off spectrum}{fig:h2comask}{1}{0}
+
+The W51 data are converted into ``optical depth'' data cubes by dividing the
+integrated \formaldehyde absorption signature by the measured continuum level.
+These $\tau$ cubes are then fit with the RADEX models used for other
+\formaldehyde fitting.  However, there are multiple velocity components in W51,
+so I used a two-component (unconstrained) fit for each pixel, which is
+frequently unstable but in the case of W51 looks to have produced reasonable
+results.
+
+A first interesting note is that a local cloud at $v_{lsr}\sim5 \kms$ is
+detected in \formaldehyde \oneone across most of the cloud and only weakly
+detected at \twotwo, with $\tau_{\oneone}/\tau_{\twotwo} \approx 2$, curiously
+implying a fairly high density $n\sim10^{4.5}-10^5$ with a very low column
+$N_{\formaldehyde}\sim10^{11.5}$ or $N_{\hh} \sim 10^{20.5}$.  This measurement
+is consistent with observations from \citet{Ginsburg2011} of high density in GMCs.
+However, GMCs are generally thought of as being low-density clouds, so this
+result may be surprising.
 
 \input{solobib}
 \end{document}
