@@ -133,8 +133,10 @@ This was done by interpolating across the line-containing region with a
 polynomial fit.  
 
 \Figure{figures_chH2CO/a2705.20120915.b0s1g0.00000_offspectra.png}
-{An example of the \formaldehyde line masking procedure for building an
-Off spectrum}{fig:h2comask}{1}{0}
+{An example of the \formaldehyde line masking procedure for building an Off
+spectrum.  The line-containing regions for each polarization are shown in cyan
+and purple, with the interpolated replacement in red and green.
+}{fig:h2comask}{0.4}{0}
 
 The W51 data are converted into ``optical depth'' data cubes by dividing the
 integrated \formaldehyde absorption signature by the measured continuum level.
@@ -145,13 +147,18 @@ frequently unstable but in the case of W51 looks to have produced reasonable
 results.
 
 A first interesting note is that a local cloud at $v_{lsr}\sim5 \kms$ is
-detected in \formaldehyde \oneone across most of the cloud and only weakly
-detected at \twotwo, with $\tau_{\oneone}/\tau_{\twotwo} \approx 2$, curiously
-implying a fairly high density $n\sim10^{4.5}-10^5$ with a very low column
-$N_{\formaldehyde}\sim10^{11.5}$ or $N_{\hh} \sim 10^{20.5}$.  This measurement
-is consistent with observations from \citet{Ginsburg2011} of high density in GMCs.
-However, GMCs are generally thought of as being low-density clouds, so this
-result may be surprising.
+detected in \formaldehyde \oneone across most of the cloud and not detected at
+\twotwo, with $\tau_{\oneone}/\tau_{\twotwo} \gtrsim 3$, implying a
+very low column
+$N_{\formaldehyde}\sim10^{11.5}$ or $N_{\hh} \sim 10^{20.5}$.  
+The cloud is seen in \thirteenco as a very weak, diffuse feature, and in HI absorption
+as a very sharp, deep (self)-absorption feature.
+% This density measurement
+% is consistent with observations from \citet{Ginsburg2011} of high density in
+% GMCs.  However, GMCs are generally thought of as being low-density clouds, so
+% this result may be surprising.
+
+%FIGURE: mcmc column vs density 
 
 \input{solobib}
 \end{document}
