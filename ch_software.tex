@@ -1,0 +1,105 @@
+\input{preface}
+\chapter{Software developed during this thesis}
+\section{Preface}
+Software development is severely underappreciated in astronomy.  It is not
+particularly difficult for expert developers to make production-level codes
+useable by a large community, but that level of support is rarely provided to
+astronomers.  For the majority of major telescope facilities, data reduction is
+left entirely to the user, which leads to major delays in science and prevents
+re-use of archival data.  The JCMT and STSCI have been exceptions to this rule
+- they have supported significant groups of software developers with the goal
+of producing useable archive data products.  Similarly, the NRAO has recently
+taken on a greater level of software support for ALMA and EVLA products,
+producing fully pipeline-reduced data for observers.  Unfortunately, the NOAO
+has instead cut funding to their software developers, leaving IRAF as a
+relatively unsupported hulk of a code that everyone still uses. 
+
+In this section, I summarize the codes I've written primarily for performing
+reduction of data not supported by any standard reduction software.  The text
+is kept to brief summaries because, for most of these codes, there is extensive
+documentation available at the links provided.
+
+\section{The BGPS pipeline}
+\label{sec:bgpspipeline}
+\url{https://code.google.com/p/bgpspipeline/} \\
+The BGPS pipeline is described in Chapter \ref{ch:v2} and \citet{Aguirre2011}.
+It was created to deal with bright 1.1mm emission in ways not well-supported 
+by the original Bolocam pipeline.  In the end, it did essentially the same
+things, but implemented a few new features.  A great deal of time and effort
+went towards making the pipeline operate in memory instead of on disk; in
+retrospect, that was not a particularly wise use of my time.  However, it
+allowed some signal-processing features to be added to the BGPS pipeline that
+could not be included in the original Bolocam pipeline.  
+
+\section{PySpecKit}
+\url{http://pyspeckit.readthedocs.org/} \\
+PySpecKit was written in collaboration with Jordan Mirocha \citep{Ginsburg2012c}.
+It grew from a need to perform interactive spectral plotting and fitting within python.
+
+IRAF has very useful interactive plotting and fitting tools, specifically
+\texttt{splot}, but it is not easy to extend the fitting code to use models
+such as those generated from RADEX grids.  It also does not readily yield
+publication-quality plots.
+
+PySpecKit has been used in one form or another in all of my papers except
+\citep{Ginsburg2012a}.  It provides a flexible interface for fitting
+arbitrarily models to data and plotting the models and fits in a sensible way.
+
+\section{TripleSpec Mapping Pipeline}
+\url{https://code.google.com/p/agpy/source/browse/trunk/iraf/pipeline_jhk.cl} \\
+IRAF is still the only software capable of efficiently fitting and performing
+geometric transforms of images, which is necessary for both world coordinate
+corrections and two-dimensional spectroscopy.  These limitations will, hopefully,
+be alleviated with new packages being build for astropy.
+
+The standard TripleSpec pipeline is the SPEXTOOL data pipeline written by Michael
+Cushing.  This pipeline is useful for deep spectra of single objects, but not
+for spatially-resolved spectroscopy.
+
+I created a data pipeline to reduce TripleSpec data entirely within IRAF.  It
+produces a complete 2D spectrum that is wavelength and flux calibrated.  It
+includes sky-line subtraction capabilities, but these are not as effective as
+in the IDL-based pipeline.  This limitation is in part because the IRAF
+pipeline does not take advantage of (or require) the fast-switching approach
+typically used to acquire high-fidelity infrared data.
+
+This approach is uniquely useful for mapping bright spectroscopic lines, in
+particular from outflows, as demonstrated in \citet{Ginsburg2009}.  Allison
+Youngblood has begun using this pipeline in conjunction with my map-making
+pipeline to make wide-field spectroscopic data cubes using the full NIR JHK
+spectrum in the W51 and Orion OMC 1 fields.
+
+\section{Arecibo and GBT mapping codes}
+\url{https://code.google.com/p/casaradio/source/browse/branches/gbtidl/ginsburg/} \\
+\url{https://code.google.com/p/casaradio/source/browse/branches/aoidl/ginsburg/} \\
+\url{https://code.google.com/p/casaradio/source/browse/branches/python/ginsburg/} \\
+
+Making maps with Arecibo and GBT was not natively supported, but neither was it
+particularly difficult.  The linked codes in this section are re-usable
+pipeline-like functions for calibrating and combining GBT and Arecibo spectra.
+
+\section{Image Registration}
+\url{http://image-registration.rtfd.org}\\
+The problem of image registration in astronomical imaging and spectroscopy is
+well-studied, but the existing solutions are not all good.  If you want to know
+the offset between two images that contain no point sources, it is
+straightforward to determine the peak of the cross-correlation between those
+images.  However, if you need to know the offset to sub-pixel accuracy
+\emph{and} you want to know the error on that measurement, existing methods are
+either misleading or inaccurate.
+
+A detailed demonstration of the different methods and their various
+(dis)advantages using monte-carlo experiments as a baseline for what the true
+errors on a measurement of a simulated map should be is shown at this URL:
+\url{http://nbviewer.ipython.org/urls/raw.github.com/keflavich/image_registration/master/examples/Cross%2520Correlation.ipynb}.
+The tests are not reproduced here for brevity.
+
+\section{Power-Law fitting}
+\url{https://plfit.readthedocs.org/en/latest/}\\
+A maximum-likelihood approach to power-law distribution fitting for data with a
+lower cut-off (e.g., a completeness limit) was implemented by
+\citet{Clauset2007}.  I wrote a translation of his code into python (and
+fortran and c).  It was used in most of the publications in this thesis.
+
+\input{solobib}
+\end{document}
