@@ -1,5 +1,6 @@
 \input{preface}
 \chapter{\formaldehyde observations of BGPS sources not previously observed with Arecibo}
+\label{ch:h2colarge}
 
 
 \section{Preface} 
@@ -144,7 +145,8 @@ These $\tau$ cubes are then fit with the RADEX models used for other
 \formaldehyde fitting.  However, there are multiple velocity components in W51,
 so I used a two-component (unconstrained) fit for each pixel, which is
 frequently unstable but in the case of W51 looks to have produced reasonable
-results.
+results.  Note that there was \emph{no} \formaldehyde emission detected anywhere
+in the W51 region.
 
 A first interesting note is that a local cloud at $v_{lsr}\sim5 \kms$ is
 detected in \formaldehyde \oneone across most of the cloud and not detected at
@@ -178,8 +180,44 @@ speed is very high).
 \FigureTwo{figures_chH2CO/W51_H2CO_2parfit_v1_densityvelocity.png}
 {figures_chH2CO/W51_H2CO_2parfit_v2_densityvelocity.png}
 {Density and Velocity fits to the W51 Arecibo and GBT \formaldehyde 
-data cubes.  \todo{Describe why yellow is wrong}}
+data cubes.  The yellow regions in the top panel correspond to \oneone
+detections and \twotwo nondetections, indicating upper limits $n<10^{3.8}$
+(68\% confidence) or $n<10^{4.3}$ (99.7\% confidence).}
 {fig:w51h2cofits}{1}
+
+There is a large area where \oneone was detected, but \twotwo was not.  Our
+sensitivity allows us to place a modest upper limit on the gas density, with
+$3-\sigma$ upper limits $\lesssim10^{4.3}$ \percc (but the most likely
+densities are $10^2 < n < 10^4$ \percc).  Figure \ref{fig:w51MCMCcompare} shows
+a particular model for a spectrum that is especially unconstrained.  The
+\oneone/\twotwo optical depth in this object is $\sim10-20$, indicating that
+the volume density must be low.
+
+\FigureTwo{figures_chH2CO/MCMC_DensColplot_67_64.png}{figures_chH2CO/spec67_64_bestfit_MCMC.png}
+{Plots demonstrating upper limit fits.  The left plot shows the allowed
+parameter space from MCMC sampling of the data given the RADEX model.  The
+right plot shows the `best-fit' model to the optical depth spectra, which is
+clearly unconstrained by the relatively insensitive \twotwo\ spectrum.  The
+sensitivity in the \oneone line is better in large part because of brighter 6
+cm background across the whole W51 region.  Despite the lack of constraint on the
+volume density, there is a reasonably strong constraint on the column density.}
+{fig:w51MCMCcompare}{1}
+
+The molecular gas is concentrated near, but not exactly on, the bright cm
+peaks.  W51 IRS2 has a massive clump of gas at 65 \kms, and W51 e2 has a
+similar clump.  However, e2 also seems to have a very dense ($n>10^5 \percc$)
+infalling clump.  The spectra, along with multicomponent fits, are shown in
+Figure \ref{fig:w51hiispectra}.
+
+\FigureTwo{figures_chH2CO/W51_bestfit_spec53_49_IRS2.png}{figures_chH2CO/W51_bestfit_spec53_49_W51e2.png}
+{Plots of the optical depth spectra centered on W51 IRS2 (left) and W51 e2, an
+ultracompact HII region (right).  IRS2 shows high-density gas with a slight
+hint of infall, but otherwise a somewhat vanilla spectrum.  W51e2 has a large,
+high-density red shoulder, indicating high-density gas at the most red velocity
+in the system.  Because this is foreground gas, that high-density gas
+\emph{must} be moving towards the \uchii region.}
+{fig:w51hiispectra}{1}
+
 
 \input{solobib}
 \end{document}
