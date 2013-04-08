@@ -39,14 +39,14 @@ the GBT, and the VLA, since it is at declination +14 and is one of the brightest
 sources in the Galactic plane.  It also turns out to be the nearest proto-massive cluster
 at a VLBI-parallax-measured distance of 5.1 kpc (see Chapter \ref{ch:ympc} for a discussion
 of massive proto-clusters).  The simple reduction of this data is nearly complete, but 
-analysis has not yet begun.
+analysis has only begun.
 
 In the outer galaxy, we targeted two regions: the Sh 255 complex in Gem OB1 and
 the Sh 233-IR/IRAS 05358 complex I studied for my Comps II project.  We made
 small ($\sim 5\arcmin\times 5\arcmin$) maps of these objects in order to
 evaluate the density profiles and determine what systematic biases may have
 been present in our single-pointing observations.  These outer galaxy sources
-are both at $D<2$ kpc, so our resolution is $\lesssim 0.5 pc$ and we therefore
+are both at $D<2$ kpc, so our resolution is $\lesssim 0.5 $pc and we therefore
 have some marginal hope of discovering dense cores without diluting their
 signal too badly.
 
@@ -124,6 +124,8 @@ Its morphology, with a hole at the peak of the dust emission, backs the claim th
 in the area around the dust peak.}
 {fig:s233irmulti}{0.2}{0}
 
+% tried subtracting "envelope" from "core" and still got absorption
+
 \subsection{W51}
 The W51 survey was completed in September 2011.  The data reduction process
 presented unique challenges: at C-band, the entire region surveyed contains
@@ -163,15 +165,15 @@ as a very sharp, deep (self)-absorption feature.
 %FIGURE: mcmc column vs density 
 
 I successfully made density maps of the W51 cloud, though because the velocity
-structure is quite complicated, I need to fit two components to most of the
+structure is quite complicated, it was necessary to fit two components to most of the
 map.  Two-component fits are never particularly stable, so it was necessary to
 restrict the parameters being fitted, and even then the results aren't
 perfectly reliable.  Despite those caveats, there are some reliable fits,
 particularly towards the `core' of W51 Main / W51 IRS 2.  There are two
-high-density components with $n\sim10^5-10^5.5$ at different velocities evident
+high-density components with $n\sim10^5-10^{5.5}$ \percc at different velocities evident
 in Figure \ref{fig:w51h2cofits}.  The southern component, centered on W51 Main,
 has $v_{LSR}\sim56-59$.  The northern component, a strip going through IRS 2
-and towards the west, peaks around $v_{LSR}\sim68-69$.  A 10 \kms difference
+and towards the west, peaks around $v_{LSR}\sim68-69$ \kms.  A 10 \kms difference
 between two extremely dense components, both which are necessarily in the
 foreground of the HII region, is shocking (probably, anyway, unless the sound
 speed is very high).
@@ -179,7 +181,7 @@ speed is very high).
 
 \FigureTwo{figures_chH2CO/W51_H2CO_2parfit_v1_densityvelocity.png}
 {figures_chH2CO/W51_H2CO_2parfit_v2_densityvelocity.png}
-{Density and Velocity fits to the W51 Arecibo and GBT \formaldehyde 
+{Density and velocity fits to the W51 Arecibo and GBT \formaldehyde 
 data cubes.  The yellow regions in the top panel correspond to \oneone
 detections and \twotwo nondetections, indicating upper limits $n<10^{3.8}$
 (68\% confidence) or $n<10^{4.3}$ (99.7\% confidence).}
