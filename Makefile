@@ -81,3 +81,11 @@ introduction:
 	${BIBTEX} introduction
 	${LATEX} introduction.tex
 
+
+ch_software: 
+	@rm -f ch_software*.aux ch_software*.bbl ch_software*.blg ch_software*.dvi ch_software*.log ch_software*.lot ch_software*.lof
+	${LATEX} ch_software.tex
+	${BIBTEX} ch_software
+	${LATEX} ch_software.tex
+	${BIBTEX} ch_software
+	${LATEX} ch_software.tex

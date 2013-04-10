@@ -73,6 +73,7 @@
 \newcommand{\ceighteeno}{\ensuremath{\textrm{C}^{18}\textrm{O}}\xspace}
 \def\ee#1{\ensuremath{\times10^{#1}}}
 \newcommand{\degrees}{\ensuremath{^{\circ}}}
+% can't have \degree because I'm getting a degree...
 \newcommand{\lowirac}{800}
 \newcommand{\highirac}{8000}
 \newcommand{\lowmips}{600}
@@ -216,6 +217,7 @@
 }
 
 \def\Table#1#2#3#4#5#6{
+%\renewcommand{\thefootnote}{\alph{footnote}}
 \begin{deluxetable}{#1}
 \tablewidth{0pt}
 \tabletypesize{\footnotesize}
@@ -228,5 +230,45 @@
 \bigskip
 #6
 \end{deluxetable}
+%\renewcommand{\thefootnote}{\arabic{footnote}}
+}
+
+%\def\tablenotetext#1#2{
+%\footnotetext[#1]{#2}
+%}
+
+\def\LongTable#1#2#3#4#5#6#7#8{
+% required to get tablenotemark to work: http://www2.astro.psu.edu/users/stark/research/psuthesis/longtable.html
+\renewcommand{\thefootnote}{\alph{footnote}}
+\begin{longtable}{#1}
+\caption[#2]{#2}
+\label{#4} \\
+
+ \\
+\hline 
+#3 \\
+\hline
+\endfirsthead
+
+\hline
+#3 \\
+\hline
+\endhead
+
+\hline
+\multicolumn{#8}{r}{{Continued on next page}} \\
+\hline
+\endfoot
+
+\hline 
+\endlastfoot
+#7 \\
+
+#5
+\hline
+#6 \\
+
+\end{longtable}
+\renewcommand{\thefootnote}{\arabic{footnote}}
 }
 
