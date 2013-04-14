@@ -31,6 +31,16 @@ retrospect, that was not a particularly wise use of my time.  However, it
 allowed some signal-processing features to be added to the BGPS pipeline that
 could not be included in the original Bolocam pipeline.  
 
+\subsection{Pyflagger}
+\url{http://agpy.googlecode.com/svn/trunk/agpy/pyflagger.py}\\
+Pyflagger was originally intended as an interactive data-flagger for Bolocam
+data, and was used as such, but it ended up being a complete data visualization
+tool as well, implementing nearly the entire pipeline process within itself so
+that each step could be easily visualized.  Much of the pipeline debugging and
+methodology development was performed using pyflagger.  The interactive
+flagging involves key and mouse commands to the \texttt{matplotlib} GUI.
+Pyflagger uses the \texttt{idlsave} package to read IDL save files.
+
 \section{PySpecKit}
 \url{http://pyspeckit.readthedocs.org/} \\
 PySpecKit was written in collaboration with Jordan Mirocha \citep{Ginsburg2011c}.
