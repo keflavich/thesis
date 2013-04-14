@@ -272,3 +272,13 @@
 \renewcommand{\thefootnote}{\arabic{footnote}}
 }
 
+\def\TallFigureTwo#1#2#3#4#5#6{
+\begin{figure*}[htp]
+\epsscale{#5}
+\subfigure[]{ \includegraphics[width=#6]{#1} }
+\subfigure[]{ \includegraphics[width=#6]{#2} }
+\caption{#3}
+\label{#4}
+\end{figure*}
+}
+
