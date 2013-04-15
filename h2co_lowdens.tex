@@ -1,3 +1,4 @@
+%\input{preface}
 \section{Non-star-forming, low column-density clouds in absorption}
 In \citet{Ginsburg2011a}, we noted that the \formaldehyde densitometer revealed
 volume densities much higher than expected given the cloud-average densities
@@ -51,9 +52,10 @@ The highest \thirteenco contours are observed as a modest IRDC, but no dust
 emission peaks are observed at 500 \um or 1.1 mm.  This is an indication that
 any star formation, if present, is weak - no clusters are presently forming
 from this cloud.   It resembles, in that respect, the California molecular
-cloud.
+cloud.  However, it is much smaller, with $M\approx8.3\ee{3}\pm3.2\ee{3} \msun$
+compared to California's $\sim10^5$.
 
-\Figure{figures_chH2CO/W49_RGB_aplpy.png}
+\Figure{figures_chH2CO/W49_RGB_40kms_aplpy.png}
 {The G43 40 \kms cloud.  The background image shows Herschel SPIRE 70 \um (red),
 Spitzer MIPS 24 \um (green), and Spitzer IRAC 8 \um (blue) in the background with
 the \thirteenco integrated image from $v=36 \kms$ to $v=43 \kms$ at contour levels of
@@ -74,9 +76,14 @@ the measured continuum.
 
 \FigureTwo{figures_chH2CO/G43.16-0.03_40kms_h2codensfit.png}
 {figures_chH2CO/G43.17+0.01_40kms_h2codensfit.png}
-{Optical depth spectra of the \oneone and \twotwo lines towards the two W49 lines
-of sight.  The fitted parameters, along with the statistical 1-$\sigma$ errors,
-are shown in the legend.}
+{Optical depth spectra of the \oneone and \twotwo lines towards the two W49
+lines of sight.  The fitted parameters, along with the statistical 1-$\sigma$
+errors, are shown in the legend.  The optical depth ratio falls in a regime
+where temperature has very little effect and there is no degeneracy between low
+and high densities \citep[see Figure 2 of][]{Ginsburg2011a}.  For the right line,
+it is also unaffected by lognormal turbulence, i.e. no matter what the width of
+the density distribution, the measured density remains unchanged \citep[see
+Figure 3 of][]{Ginsburg2011a}.}
 {fig:h2codensg43}{1}
 
 The density measurements are very precise, with $n\approx2.11\times10^4 \pm
@@ -133,3 +140,29 @@ gravitational collapse, the free-fall times are shorter by an order of
 magnitude than usually assumed.  The long lifetimes of GMCs therefore implies
 that the cloud cannot be undergoing gravitational collapse, but instead
 maintains a turbulent equilibrium.
+
+It also demonstrates that density-based star-formation thresholds do not
+independently predict star formation \citep{Parmentier2011}.  Star formation
+cannot simply be driven by the free-fall time of gas, since apparently much of
+the gas above $n>10^4$ \percc is not in free-fall.
+
+% 3c111 is in california, not 3c123
+% \subsection{Comparison to 3C123 and the California Nebula}
+% The radio source 3C123, an active galactic nucleus, is often used as a flux
+% calibrator for radio telescopes.  We used it for that purpose in our GBT
+% observations, and detected the \twotwo line.  \citet{Liszt1995a} detected the
+% \oneone line with the NRAO 43m telescope.  The line ratio in front of 3C123 is
+% approximately $\tau_{1-1}/\tau_{2-2} \approx 10$, which indicates a density
+% $n\approx10^{3.6}$ \percc.  This density is significantly lower than in the
+% W49 40 \kms cloud, but still higher than expected in an inactive GMC
+% \citep[which this is][]{Harvey2013a}.
+%
+% 3c111 may have VLBA, VLA observations
+
+
+% A low filling-factor may have major impact on analyses of the distribution
+% functions of column density that have recently become popular
+% \citep[e.g][]{Kainulainen2009}.
+
+%\input{solobib}
+%\end{document}
