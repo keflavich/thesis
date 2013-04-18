@@ -89,3 +89,11 @@ ch_software:
 	${LATEX} ch_software.tex
 	${BIBTEX} ch_software
 	${LATEX} ch_software.tex
+
+h2co_lowdens: 
+	@rm -f h2co_lowdens*.aux h2co_lowdens*.bbl h2co_lowdens*.blg h2co_lowdens*.dvi h2co_lowdens*.log h2co_lowdens*.lot h2co_lowdens*.lof
+	${LATEX} h2co_lowdens.tex
+	${BIBTEX} h2co_lowdens
+	${LATEX} h2co_lowdens.tex
+	${BIBTEX} h2co_lowdens
+	${LATEX} h2co_lowdens.tex
