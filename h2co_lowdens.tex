@@ -3,22 +3,22 @@
 In \citet{Ginsburg2011a}, we noted that the \formaldehyde densitometer revealed
 volume densities much higher than expected given the cloud-average densities
 from \thirteenco observations.  The densities were higher even than typical
-turbulence.  However, this argument was made on the basis of a statistical argument;
-here we attempt to demonstrate that the clumps in GMCs are of very high density
-in individual clouds.
+turbulence will allow.  However, this argument was made on the basis of a
+statistical argument; here we attempt to demonstrate that the clumps in GMCs
+are of very high density in individual clouds.
 
 In order to detect low-column-density clouds, we must use bright background
 illumination sources at 2 and 6 cm, i.e. HII regions.  There are a few dozen of
 these within the inner Galactic plane, including the sources observed in
 \citet{Ginsburg2011a} and the majority of the bright sources in the BGPS
-\citep{Ginsburg2012}.
+\citep{Ginsburg2013}.
 
 As an example case-study, we examine G43.17+0.01, also known as W49.  In the
 large survey, we observed two lines of sight towards W49, the second at
 G43.16-0.03.  Both are very bright continuum sources, and two GMCs are easily
 detected in \formaldehyde absorption and \thirteenco emission.  Figure
 \ref{fig:w49fullspec} shows the spectrum dominated by W49 itself, but with
-clear absorption components.  The continuum level subtracted from the spectra
+clear foreground absorption components.  The continuum level subtracted from the spectra
 are 73 K at 6 cm and 11 K at 2 cm for the south component, and 194 K at 6 cm
 and 28 K at 2 cm for the north component.
 
@@ -31,22 +31,23 @@ spectrum is offset by 1 K for clarity.  The GBT \twotwo spectra are multiplied
 by a factor of 9 so the smaller lines can be seen.
 }{fig:w49fullspec}{1}
 
-We focus on the ``foreground'' lines at $\sim40 \kms$ and $\sim65 \kms$, since
+We focus on the ``foreground'' lines at $\sim40$ \kms and $\sim65$ \kms, since
 they are not associated with the extremely massive W49 region.  It is difficult
 to assess the level of star formation within these clouds, since they lie
 directly along the line of sight to W49, but additional \formaldehyde spectra
 of the surrounding sources that are bright at 8-1100 \um show that they are all
-at the velocity of W49.  
+at the velocity of W49 and therefore are not associated with these foreground
+clouds.  
 
 The 40 \kms cloud is observed in its outskirts, not at the peak of the
 \thirteenco emission.  The cloud structure is vast, spanning $\sim0.6\degrees$, 
 or $\sim60$ pc at $D=2.8$ kpc \citep{Roman-Duval2009a}.  It is detected in \oneone
-absorption at all 6 locations observed in \formaldehyde, but \twotwo is only
-detected in front of the W49 HII region because of the higher signal-to-noise at
-that location.  The detected \thirteenco and \formaldehyde lines are fairly
-narrow, with \formaldehyde FWHM $\sim1.3$-$2.8$ \kms and \thirteenco widths
-from 1.8-5.9 \kms.  The \thirteenco lines are 50\% wider than the \formaldehyde
-lines.
+absorption at all 6 locations observed in \formaldehyde (Figure
+\ref{fig:40kmscloud}), but \twotwo is only detected in front of the W49 HII
+region because of the higher signal-to-noise at that location.  The detected
+\thirteenco and \formaldehyde lines are fairly narrow, with \formaldehyde FWHM
+$\sim1.3$-$2.8$ \kms and \thirteenco widths from 1.8-5.9 \kms.  The \thirteenco
+lines are 50\% wider than the \formaldehyde lines.
 
 The highest \thirteenco contours are observed as a modest IRDC, but no dust
 emission peaks are observed at 500 \um or 1.1 mm.  This is an indication that
@@ -70,14 +71,14 @@ optical depth infrared dark cloud associated with this GMC.}
 
 The \formaldehyde densitometer measurements are shown in Figure \ref{fig:h2codensg43}.
 The figures show optical depth spectra, given by the equation
-$$\tau = -\log\left(\frac{S_\nu + 2.73}{\bar{S_\nu} + 2.73}\right)$$
-where $S_\nu$ is the spectrum (with continuum included) and $\bar{S_\nu}$ is
+$$\tau = -\log\left(\frac{S_\nu + 2.73}{\bar{C_\nu} + 2.73}\right)$$
+where $S_\nu$ is the spectrum (with continuum included) and $\bar{C_\nu}$ is
 the measured continuum.
 
 \FigureTwo{figures_chH2CO/G43.16-0.03_40kms_h2codensfit.png}
 {figures_chH2CO/G43.17+0.01_40kms_h2codensfit.png}
 {Optical depth spectra of the \oneone and \twotwo lines towards the two W49
-lines of sight.  The fitted parameters, along with the statistical 1-$\sigma$
+lines of sight, G43.16 (left) and G43.17 (right).  The fitted parameters, along with the statistical 1-$\sigma$
 errors, are shown in the legend.  The optical depth ratio falls in a regime
 where temperature has very little effect and there is no degeneracy between low
 and high densities \citep[see Figure 2 of][]{Ginsburg2011a}.  For the right line,
@@ -86,11 +87,12 @@ the density distribution, the measured density remains unchanged \citep[see
 Figure 3 of][]{Ginsburg2011a}.}
 {fig:h2codensg43}{1}
 
-The density measurements are very precise, with $n\approx2.11\times10^4 \pm
-0.17\ee{4}$ \percc and $n\approx 1.98\times10^4 \pm 0.32\ee{4}$ \percc for
+The density measurements are very precise, with $n\approx1.56\times10^4 \pm
+0.14\ee{4}$ \percc and $n\approx 1.98\times10^4 \pm 0.32\ee{4}$ \percc for
 G43.17+0.01 and G43.16-0.03 respectively.  At this level of precision, the 
 density measurements are dominated by systematics - especially gas temperature
-and collision rate uncertainties - which limit the accuracy to $\sim50\%$
+and collision rate uncertainties - which limit the accuracy to $\sim50\%$ using
+the \citet{Green1991} rates
 \citep{Zeiger2010}.  Nonetheless, the density is much higher than the
 \thirteenco-measured cloud-average density $n\approx 400$ \percc
 \citep[for cloud GRSMC\_G043.04-00.11;][]{Roman-Duval2010a}, with
@@ -98,7 +100,7 @@ $n_{\formaldehyde}/n_{\thirteenco} \approx 50$.
 
 Since the W49 line of sight is clearly on the outskirts of the cloud, not
 through its core, such a high density is unlikely to be an indication that
-this line of sight corresponds to a centrally condensed density peak.  Using
+this line of sight corresponds to a centrally condensed density peak (e.g., a core).  Using
 Figure 4 of \citet{Ginsburg2011a}, we can `turbulence-correct' the density
 measurements, but even in the most extreme case with a turbulent density
 distribution lognormal width $\sigma_s = 1.5$, the correction is only a factor
@@ -164,5 +166,5 @@ the gas above $n>10^4$ \percc is not in free-fall.
 % functions of column density that have recently become popular
 % \citep[e.g][]{Kainulainen2009}.
 
-\input{solobib}
+%\input{solobib}
 \end{document}
