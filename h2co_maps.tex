@@ -75,7 +75,7 @@ to be flawed.
 % radius = 40 arcsec = 0.35 pc
 % density = 120 * 2e33 / (4/3*np.pi*(0.35*3.08e18)**3) / ( 2.8 * 1.67e-24 ) = 1.3e4
 
-\Figure{figures_chH2CO/S233IR_multipanel}
+\Figure{figures/S233IR_multipanel}
 {The S233IR / IRAS 05358+3543 region and its neighbor G173.58+2.45.
 \textit{Top left:} The \formaldehyde density map covering densities
 $10^2 \percc<n<10^5 \percc$ from grey to green.  The grey areas show
@@ -97,6 +97,7 @@ in the area around the dust peak.}
 
 % tried subtracting "envelope" from "core" and still got absorption
 
+
 \subsection{W51}
 The W51 survey was completed in September 2011.  The data reduction process
 presented unique challenges: at C-band, the entire region surveyed contains
@@ -106,7 +107,7 @@ was necessary to `mask out' the absorption lines when building an off position.
 This was done by interpolating across the line-containing region with a
 polynomial fit (Figure \ref{fig:h2comask}).  
 
-\Figure{figures_chH2CO/a2705.20120915.b0s1g0.00000_offspectra.png}
+\Figure{figures/a2705.20120915.b0s1g0.00000_offspectra.png}
 {An example of the \formaldehyde line masking procedure for building an Off
 spectrum.  The line-containing regions for each polarization are shown in cyan
 and purple, with the interpolated replacement in red and green.
@@ -150,8 +151,8 @@ foreground of the HII region, is shocking (probably, anyway, unless the sound
 speed is very high).
 
 
-\FigureTwo{figures_chH2CO/W51_H2CO_2parfit_v1_densityvelocity.png}
-{figures_chH2CO/W51_H2CO_2parfit_v2_densityvelocity.png}
+\FigureTwo{figures/W51_H2CO_2parfit_v1_densityvelocity.png}
+{figures/W51_H2CO_2parfit_v2_densityvelocity.png}
 {Density and velocity fits to the W51 Arecibo and GBT \formaldehyde 
 data cubes.  The yellow regions in the top panel correspond to \oneone
 detections and \twotwo nondetections, indicating upper limits $n<10^{3.8}$
@@ -166,7 +167,7 @@ a particular model for a spectrum that is especially unconstrained.  The
 \oneone/\twotwo optical depth ratio in this object is $\sim10-20$, indicating that
 the volume density must be low.
 
-\FigureTwo{figures_chH2CO/MCMC_DensColplot_67_64.png}{figures_chH2CO/spec67_64_bestfit_MCMC.png}
+\FigureTwo{figures/MCMC_DensColplot_67_64.png}{figures/spec67_64_bestfit_MCMC.png}
 {Plots demonstrating upper limit fits.  The left plot shows the allowed
 parameter space from MCMC sampling of the data given the RADEX model.  The
 right plot shows the `best-fit' model to the optical depth spectra, which is
@@ -182,7 +183,7 @@ similar clump.  However, e2 also seems to have a very dense ($n>10^5 \percc$)
 infalling clump.  The spectra, along with multicomponent fits, are shown in
 Figure \ref{fig:w51hiispectra}.
 
-\FigureTwo{figures_chH2CO/W51_bestfit_spec53_49_IRS2.png}{figures_chH2CO/W51_bestfit_spec53_49_W51e2.png}
+\FigureTwo{figures/W51_bestfit_spec53_49_IRS2.png}{figures/W51_bestfit_spec53_49_W51e2.png}
 {Plots of the optical depth spectra centered on W51 IRS2 (left) and W51 e2, an
 ultracompact HII region (right).  IRS2 shows high-density gas with a slight
 hint of infall, but otherwise a somewhat vanilla spectrum.  W51e2 has a large,
@@ -191,5 +192,5 @@ in the system.  Because this is foreground gas, that high-density gas
 \emph{must} be moving towards the \uchii region.}
 {fig:w51hiispectra}{1}
 
-%\input{solobib}
+\input{solobib}
 \end{document}

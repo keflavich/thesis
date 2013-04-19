@@ -23,13 +23,13 @@ mwe:
 	${BIBTEX} mwe
 	${LATEX} mwe.tex
 
-.PHONY : %.tex
-%.tex :
-	${PDFLATEX} $@
-	${BIBTEX} $(basename @)
-	${PDFLATEX} $@
-	${BIBTEX} $(basename @)
-	${PDFLATEX} $@
+#.PHONY : %.tex
+#%.tex :
+#	${PDFLATEX} $@
+#	${BIBTEX} $(basename @)
+#	${PDFLATEX} $@
+#	${BIBTEX} $(basename @)
+#	${PDFLATEX} $@
 
 
 ch_h2colarge: 

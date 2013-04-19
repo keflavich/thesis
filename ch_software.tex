@@ -2,18 +2,20 @@
 \chapter{Software developed during this thesis}
 \label{ch:software}
 \section{Preface}
-Software development is severely underappreciated in astronomy.  It is not
+Software development is often underappreciated in astronomy.  It is not
 particularly difficult for expert developers to make production-level codes
 useable by a large community, but that level of support is rarely provided to
-astronomers.  For the majority of major telescope facilities, data reduction is
-left entirely to the user, which leads to major delays in science and prevents
-re-use of archival data.  The JCMT and STSCI have been exceptions to this rule
-- they have supported significant groups of software developers with the goal
-of producing useable archive data products.  Similarly, the NRAO has recently
-taken on a greater level of software support for ALMA and EVLA products,
-producing fully pipeline-reduced data for observers.  Unfortunately, the NOAO
-has instead cut funding to their software developers, leaving IRAF as an
-under-supported hulk of a code that everyone still uses. 
+astronomers.  
+
+% For the majority of major telescope facilities, data reduction is
+% left entirely to the user, which leads to major delays in science and prevents
+% re-use of archival data.  The JCMT and STSCI have been exceptions to this rule
+% - they have supported significant groups of software developers with the goal
+% of producing useable archive data products.  Similarly, the NRAO has recently
+% taken on a greater level of software support for ALMA and EVLA products,
+% producing fully pipeline-reduced data for observers.  Unfortunately, the NOAO
+% has instead cut funding to their software developers, leaving IRAF as an
+% under-supported hulk of a code that everyone still uses. 
 
 In this section, I summarize the codes I've written primarily for performing
 reduction of data not supported by any standard reduction software.  The text
@@ -61,7 +63,7 @@ arbitrarily models to data and plotting the models and fits in a sensible way.
 IRAF is still the only software capable of efficiently fitting and performing
 geometric transforms of images, which is necessary for both world coordinate
 corrections and two-dimensional spectroscopy.  These limitations will, hopefully,
-be alleviated with new packages being build for astropy.
+be alleviated with new packages being built for astropy.
 
 The standard TripleSpec pipeline is the SPEXTOOL data pipeline written by Michael
 Cushing.  This pipeline is useful for deep spectra of single objects, but not
