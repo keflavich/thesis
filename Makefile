@@ -97,3 +97,11 @@ h2co_lowdens:
 	${LATEX} h2co_lowdens.tex
 	${BIBTEX} h2co_lowdens
 	${LATEX} h2co_lowdens.tex
+
+h2co_maps: 
+	@rm -f h2co_maps*.aux h2co_maps*.bbl h2co_maps*.blg h2co_maps*.dvi h2co_maps*.log h2co_maps*.lot h2co_maps*.lof
+	${LATEX} h2co_maps.tex
+	${BIBTEX} h2co_maps
+	${LATEX} h2co_maps.tex
+	${BIBTEX} h2co_maps
+	${LATEX} h2co_maps.tex
