@@ -15,6 +15,7 @@ thesis:
 	${LATEX} thesis.tex
 	${BIBTEX} thesis
 	${LATEX} thesis.tex
+	cp thesis.pdf thesis_`date +%Y-%m-%d_%H:%M:%S`.pdf
 
 mwe:  
 	${LATEX} mwe.tex

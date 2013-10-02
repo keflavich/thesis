@@ -14,8 +14,8 @@ thesis is therefore somewhat scattered: some of the observations reported here
 were taken as `follow-up' to the BGPS before it was completed.
 
 This document primarily consists of a number of published papers centered
-around a common theme of radio and millimeter observations of the Galaxy, but
-without an obvious common driving question.  I have therefore added
+around a common theme of radio and millimeter observations of the Galaxy, with
+the common driving question being `How do stars form?'  I have therefore added
 thesis-specific introductions to each section to describe where they fit in to
 the bigger picture of this document.  I've also included sections describing
 work that is not yet published but (hopefully) soon will be.
@@ -126,14 +126,18 @@ would also be unstable at smaller scales and would therefore be likely to fragme
 into many lower-mass cores.
 
 The two main competing theoretical extremes to get around this problem are
-known as the ``turbulent core'' and ``competitive accretion'' models.  In the
-former, an additional support mechanism, turbulence, prevents fragmentation in
-massive cores, allowing a single core with $M_{core}>M_J(thermal)$ to form into a
-single stellar system.  By contrast, the competitive accretion model, in its
-most extreme form, asserts that all stars start their lives as $\sim M_J$ cores
-which exist within a collapsing cloud.  They are then able to accrete
-additional material from the cloud and grow from their minimum mass to populate the
-initial mass function (see Section \ref{sec:massfunctions}).
+known as the ``turbulent core''
+\citep{McKee2003a,Krumholz2005a,Krumholz2009a,Tan2006a,McKee2007a} and
+``competitive accretion''
+\citep{Klessen2000a,Bonnell2002a,Bonnell2004a,Bonnell2006a,Bonnell2008a}
+models.  In the former, an additional support mechanism, turbulence, prevents
+fragmentation in massive cores, allowing a single core with
+$M_{core}>M_J(thermal)$ to form into a single stellar system.  By contrast, the
+competitive accretion model, in its most extreme form, asserts that all stars
+start their lives as $\sim M_J$ cores which exist within a collapsing cloud.
+They are then able to accrete additional material from the cloud and grow from
+their minimum mass to populate the initial mass function (see Section
+\ref{sec:massfunctions}).
 
 Neither theory is presently able to account for feedback from the formed stars.
 Massive stars drastically affect their environment when they turn on, which can
@@ -311,7 +315,7 @@ The mass function of these clumps has yet to be determined.
 
 The mass function of GMCs was determine from CO emission towards the Galactic
 plane and in nearby galaxies (e.g., M33) where they can be resolved.  The CMF
-was measured in nearby clouds where 30\arcsec\ beams easily resolve $\sim0.1$
+was measured in nearby ($D<500$ pc) clouds where 30\arcsec\ beams easily resolve $\sim0.1$
 pc cores.  However, clumps are only found in large numbers in the Galactic
 plane, where distances are uncertain.  They cannot be resolved in other
 galaxies (or at least, could not prior to ALMA).
@@ -339,10 +343,10 @@ massive stars.  In normal galaxies, cluster
 populations are consistent with a Schechter distribution: a power-law
 $\alpha\sim2$ with an exponential cutoff at large masses.
 
-$$N(M)dM = C M^{-2} e^{-M} dM$$
+$$N(M)dM = C \left(\frac{M}{M_*}\right)^{-2} e^{-(M/M_*)} dM$$
 
 Since clusters are not drawn from the same parent distribution as GMCs (which
-have $\alpha\sim1$, so $N(M) dM = C M^{-1} dM$), it is plausible that their
+have $\alpha\sim1$, so $N(M) dM \sim C M^{-1} dM$), it is plausible that their
 precursors are, instead, the intermediate-scale `clumps' observed in the
 millimeter continuum.  However, the clump mass function has yet to be measured,
 so even this first step of determining plausibility is incomplete.
@@ -358,11 +362,11 @@ clusters, however, are both the most easily observed and the longest lived, and
 therefore provide some of the most useful tools for understanding stars.
 
 As with massive stars, massive clusters are rare.  Only a handful of young
-massive clusters are known within our Galaxy, the most prominent being NGC
+massive clusters (YMCs) are known within our Galaxy, the most prominent being NGC
 3603, the Arches cluster, and Westerlund 1 \citep{PortegiesZwart2010}.  These
 are the only locations in the galaxy known to be forming multiple stars near
 the (possible) upper stellar mass limit.  Despite their importance, 
-only a handful of these clusters are known and the population of such clusters
+the population of such clusters
 is effectively unconstrained.  The incomplete knowledge of clusters is due to
 extinction and confusion within the Galactic plane at wavelengths where
 the stars are directly observable.
