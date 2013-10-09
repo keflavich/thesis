@@ -1,0 +1,825 @@
+\input{preface}
+%\include{preface}
+\chapter{Bound HII regions and Young Massive Protoclusters}
+\label{ch:ympc}
+
+\section{Preface}
+During a visit from Eli Bressert, we discussed methods of identifying the
+precursors to young massive clusters.  A central idea was that the primary
+unbinding energy comes from ionized gas, so that if a region could remain
+bound against the pressure provided by ionized gas, it would proceed to
+high star formation efficiency.  This notion resulted in two papers: the theory
+paper \citep{Bressert2012} and the observational paper \citep{Ginsburg2012a}.
+The observational paper, which summarizes the population of proto-YMCs discovered
+in the BGPS, is reproduced here.
+
+Since this paper is a Letter, a great deal of the work that went in to this
+chapter is hidden in a few short phrases.  In particular, the search for
+distances to the candidate source occupied an enormous amount of time and will
+be the limiting factor in future searches for candidate proto-clusters.
+
+Since its publication, parts of the proposed follow-up work were carried out by
+another group.  At the end of this chapter, I incorporate their new data to
+enhance our results and re-measure the Cluster Formation Rate $1 < CFR < 3$
+\permyr ($1-\sigma$) more accurately.
+
+\subsection{Abstract}
+    
+We search the $\lambda=1.1$ mm Bolocam Galactic Plane Survey for clumps
+containing sufficient mass to form $\sim10^4~\msun$ star clusters.
+%by identifying
+%compact ($r\lesssim2.5$ pc) massive ($M_{\rm clump}>10^4$ \msun) dust clumps.  
+\ncandidates\ candidate massive proto-clusters  are identified in the first Galactic quadrant outside
+of the central kiloparsec.  This
+sample is complete to clumps with mass M$_{\rm clump}>\mmin$ and radius
+$r\lesssim2.5$ pc.  The overall Galactic massive cluster formation rate is
+$CFR({\rm M}_{\rm cluster}>10^4) \lesssim \CFR\  \permyr$, which is in
+agreement with the rates inferred from Galactic open clusters and M31 massive
+clusters.  We find that all massive proto-clusters in the first quadrant are
+actively forming massive stars and place an upper limit of
+$\tau_{starless}<\tsuplim$~Myr on the lifetime of the starless phase of massive
+cluster formation.  If massive clusters go through a starless phase with all 
+of their mass in a single clump, the lifetime of this phase is very short.
+
+
+
+
+\section{Introduction}
+
+The Milky Way contains about 150 Globular clusters (GCs) with masses of $10^4$
+to over $10^6$ \msun\ and tens of thousands of open clusters containing from
+100 to over $10^4$ stars.  However, young massive clusters containing
+$\gtrsim10^4~\msun$ of stars are rare, with only a handful known
+\citep{PortegiesZwart2010}. While no GCs have formed in the Milky Way within
+the last 5 Gyr, open clusters that survive many crossing times continue to
+form.   A few of these clusters have stellar masses greater than $10^4$
+M$_{\odot}$ and therefore qualify as young massive clusters
+\citep[YMCs;][]{PortegiesZwart2010}.   YMCs must either form from clumps having
+masses greater than and sizes comparable to the final cluster  or be formed
+from a larger, more diffuse reservoir, in which case massive protocluster
+clumps may be rare or nonexistent  \citep{Kennicutt2012}.
+
+
+%We assume an evolutionary sequence
+%from `starless' to `starry' with gas present, after which the gas will be
+%ejected, leaving behind a  massive cluster that will live for $\sim100$
+%Myr \citep{PortegiesZwart2010}.  We distinguish `massive clusters' from
+%lower-mass open clusters with $M<10^4$ \msun\ as they may form by different
+%mechanisms.
+
+%\todoeli{Check to make sure this is in agreement with your paper: }
+Massive proto-clusters (MPCs) are massive clusters (M$_{\rm cluster}>10^4$ \msun)
+in the process of forming from a dense gas cloud.  In \citet{Bressert2012}, we
+examine the theoretical properties of MPCs: MPCs are assumed to form from
+massive, cold starless clumps analagous to pre-stellar cores
+\citep{Williams2000}.  In this paper, we refer to two classes of objects:
+starless MPCs, which have very low luminosity and do not contain OB stars, and
+MPCs, which are gas-rich but have already formed OB stars.  The only
+currently known starless MPC is G0.253+0.016, which lies within the dense
+central molecular zone and is subject to greater environmental stresses than
+similar objects in the Galactic plane \citep{Longmore2012}.
+
+Because massive clusters contain many massive stars, at some point during their
+evolution ionization pressure will prevail over protostellar outflows as the
+dominant feedback mechanism.  Other sources of feedback are less than
+ionization pressure up until the first supernova explosion
+\citep{Bressert2012}.  These proto-clusters must have masses
+M$_{\rm clump}>{\rm M}_{*}/SFE$ \footnote{We define a star formation efficiency
+$SFE={\rm M}_{\rm *,final} / {\rm M}_{\rm gas,initial}$.}, or about $3\ee{4}$ \msun\ for an assumed
+SFE=30\% (an upper limit on the star formation efficiency),
+confined in a radius $r\lesssim2.5$ pc, in order to remain bound against
+ionization feedback.  These properties motivate our search for proto-clusters
+in the Bolocam Galactic Plane Survey \citep[BGPS;][
+\url{http://irsa.ipac.caltech.edu/data/BOLOCAM_GPS/}]{Aguirre2011}.
+
+
+The distinction between relatively short-lived `open clusters' and long-lived
+($t\gtrsim1$ Gyr) bound clusters occurs at about $10^4$ \msun
+\citep{PortegiesZwart2010}.  Clusters with ${\rm M}_{\rm cluster} < 1\ee{4} \msun$~will
+be destroyed by interactions with giant molecular clouds over the course of a
+few hundred million years after they have dispersed their gas
+\citep{Kruijssen2011}, while clusters with ${\rm M}_{\rm cluster}\gtrsim10^4 \msun$ may
+survive $\gtrsim 1$ Gyr.  Closer to the Galactic center, within approximately a
+kiloparsec, all clusters will be destroyed on shorter timescales by strong
+tidal forces or interactions with molecular clouds.
+%Because the lower-mass clusters are destroyed on shorter
+%timescales, it is difficult to get a complete census of their population;
+%assessing their birth rate may be the best way to determine their overall
+%population.
+
+In the Galaxy, there are few known massive clusters.
+\citet{PortegiesZwart2010} catalogs a few of them, of which NGC 3603, Trumpler
+14, and Westerlund 1 and 2 are the likely descendants of the objects we
+investigate.  These clusters have $r_{eff} \lesssim 1$ pc, $M\sim10^4$ \msun,
+and ages $t\lesssim4$ Myr.  We present a census of their ancestral analogs.
+
+% Bound open clusters and massive clusters may predominantly form from clumps with
+% gravitational escape speeds greater than the sound-speed in photo-ionized gas.
+% \S\ 2 uses the BGPS to identify
+% candidate dense, massive clumps which may be progenitors to young massive
+% clusters. Any clump for which  M$_{\rm clump} \times {\rm SFE}(30\%) > 10^4$
+% \msun\ is considered to be a young massive proto-cluster (MPC). \ncandidates\ 
+% candidates are sufficiently massive to produce clusters similar to  NGC 3603.
+% \S\ 4 discusses these results and \S\ 5 provides concluding remarks.
+
+
+\section{Observations and Analysis}
+\label{sec:ympcobservations}
+
+\subsection{The Bolocam Galactic Plane Survey}
+\begin{figure*}
+    \includegraphics[width=7in]{{figures_chboundhii/candidates_galacticplot_26.0kpc_10kmsun}.png}
+\caption{
+\label{fig:galplot}
+Plot of the massive proto-cluster (MPC) candidates
+overlaid on the Galactic plane.  
+%Only sources with $M>1000 \msun$ are included; above
+%this cut 
+%The symbol size is proportional to the log of the source mass.
+The green circle represents the galactic center, and the yellow $\odot$ is the
+Sun.
+A 15 kpc radius disc centered on the Galactic Center indicates the approximate
+extent of Galactic star formation.  The white region indicates the coverage of
+the
+Bolocam Galactic Plane survey and our source selection limits based on distance
+and longitude.  The inner cutoff (light grey) is the nearby incompleteness
+limit set by the Bolocam spatial filtering;  the catalog includes sources but
+is incomplete in this region.  The red dashed circle traces the solar circle.
+Blue filled circles represent initial candidates that passed the mass-cutoff
+criterion $M(20K)>\mmin$; red stars are those with $M(20K) > 3\ee{4} \msun$.
+In the legend, $M_4$ means mass in units of $10^4 \msun$.  
+%Empty squares represent flux-cut candidates that failed the mass cutoff
+%criterion.  
+%The diamonds are sources from the \citet{Faundez2004} SIMBA survey
+%of southern IRAS sources subject to the same cutoffs applied to the Bolocam
+%data: filled (green) sources have $M>\mmin$. The central yellow star is the
+%Galactic Center. The empty stars are massive clusters
+%\citep{PortegiesZwart2010}.
+%\todome{Add legend for size-mass}
+% Done
+}
+\end{figure*}
+
+The BGPS is a 1.1 mm survey of the first quadrant of the Galactic plane in the
+range $-0.5 < b < 0.5$ with resolution $\sim33\arcsec$ sensitive to a maximum
+spatial scale of $\sim120\arcsec$ \citep{Aguirre2011,Ginsburg2012}.  The BGPS `Bolocat' v1.0 catalog
+includes sources identified by a watershed decomposition algorithm and flux
+measurements within apertures of radius 20\arcsec, 40\arcsec, and 60\arcsec\
+\citep{Rosolowsky2010}.
+
+We searched the BGPS for candidate MPCs in the 1st quadrant ($6 < \ell < 90$;
+5991 sources).  The inner 6 degrees of the Galaxy are excluded because physical
+conditions are significantly different from those in the rest
+of the galaxy  \citep{YusefZadeh2009} and the BGPS is confusion-limited in 
+that region.
+
+\subsection{Source Selection \& Completeness}
+\label{sec:selection}
+We identify a flux-limited sample by setting our search criteria to
+include all sources with ${\rm M}_{\rm clump}>10^4$ \msun\ in a 20\arcsec\ radius out to 26 
+kpc, or a physical radius of 2.5 pc at that distance.  The radius cutoff is
+motivated by completeness and physical considerations: the cutoff of 26 kpc includes
+the entire star forming disk in our targeted longitudes, and $r=2.5$ pc corresponds
+to the radius at which a $3\ee{4}$ \msun\ mass has an escape speed $v_{esc}=10$ \kms, i.e.
+ionized gas will be bound. 
+The maximum radius and minimum mass imply a minimum mean density
+$\bar{n}=6\times10^3~\percc$, which implies a maximum free-fall time $t_{ff}<0.65$~Myr.
+%These limitations guide our analysis in Section \ref{sec:discussion}.
+
+Using the Bolocat v1.0 catalog, we first set a flux limit on the sample by assuming
+the maximum distance of $d=26$ kpc and imposing a mass cutoff of ${\rm M}_{\rm clump}\geq10^4$ \msun\ 
+inside a 20\arcsec\ (2.5 pc) radius aperture.  Following equation 19 in
+\citet{Aguirre2011}:
+\begin{equation} 
+    {\rm M}_{\rm gas}\approx 14.3 \left( e^{13.0/T_d}-1 \right)
+        \left({S_\nu\over 1\; {\rm Jy}} \right)
+        \left(\frac{D}{{\rm 1~kpc}}\right)^{2} \msun 
+\end{equation}   
+and assuming $T_{dust}=20$K, the implied flux cutoff is 1.13 Jy \footnote{As
+per \citet{Rosolowsky2010}, \citet{Aguirre2011}, and \citet{Ginsburg2012}, a
+factor of 1.5 calibration correction and 1.46 aperture correction are required
+for the 20\arcsec\ radius aperture fluxes reported in the catalog.  These
+factors have been applied to the data. }, above which \nsample\ `flux-cutoff'
+candidates were selected in the Bolocat v1.0 catalog.  Cutoffs of 4.3 Jy for
+the 40\arcsec\ and 10.2 Jy for the 60\arcsec\ Bolocat v1.0 apertures were used
+to select more nearby candidates inside the same physical radius, but no
+sources were selected based on these larger apertures.
+
+%By measuring flux within an aperture, we are measuring the mass within a given
+%radius, which means that the source may be substantially smaller than we
+%assume.  The identified sources may therefore have higher escape velocities
+%than the minimum $\sim10~\kms$ required.
+
+% redundant? We applied a $M_{\rm clump} > 10^4$ \msun\ cutoff at
+%the maximum distance of 17.5 kpc; we are therefore complete to a progenitor
+%mass of $1\times10^4$ \msun.
+
+The BGPS is insensitive to scales larger than 120\arcsec\
+\citep[][]{Ginsburg2012}\footnote{\citet{Ginsburg2012} presents v2.0 of the
+BGPS}.  As a result, the survey is incomplete below a distance $$D_{min} =
+\mindist \left(\frac{r_{cluster}}{2.5 \textrm{pc}}\right) \textrm{kpc} $$ from
+the Sun.  Within this radius, alternate methods must be sought to determine the
+total mass within $r_{cluster} < \rcluster$ pc.  Although the sample is
+incomplete for $D < \mindist$ kpc, sources that have sufficient mass despite
+the 120\arcsec\ spatial filtering are included.
+
+%We are
+%able to identify some sources within this cutoff distance because they have
+%enough mass in a smaller radius, but we are not complete at
+%$D<\mindist$ kpc.
+%Luckily, a great deal is known
+%about nearby proto-clusters, and it is possible to determine the masses of many using
+%alternate methods such as near and mid-infrared extinction.  These nearby star-forming
+%regions are discussed in Section \ref{sec:nearcand}.
+
+Distances to BGPS-selected candidates were determined primarily via literature
+search.  Where distances were unavailable, we used velocity measurements from
+\citet{Schlingman2011} and assumed the far distance for source selection.  We
+then resolved the kinematic distance ambiguity towards these sources by
+searching for associated near-infrared stellar extinction features from the
+UKIDSS GPS \citep{Lucas2008}.
+%and distances from \citet{EllsworthBowers2012} where
+%literature distances were unavailable \footnote{\citet{EllsworthBowers2012} combine radial velocity measurements with 
+%a variety of kinematic distance ambiguity resolution methods to measure a distance likelihood function for each source.
+%We use the maximum likelihood distance from this method.}. 
+Most literature distances were determined using a
+rotation curve model and some method of kinematic distance ambiguity
+resolution. Because the literature used different rotation curve models, there
+is a $\sim10\%$ systematic error in distance resulting in a $\sim20\%$
+systematic error in mass. We used the larger
+40\arcsec\ radius apertures to determine the flux for sources at
+$D<\middistcut$ kpc and 60\arcsec\ radius apertures for sources at $D<\mindist$
+kpc (corresponding to $r<\rcluster$ pc).
+
+% In addition, we used the radial velocity measurements from
+% \citet{Schlingman2011} and \citet{Shirley2012} to determine a maximum mass for
+% each source by assuming the source is at the far kinematic distance. This
+% assures our survey's completeness even if the distances acquired from the above
+% methods prove incorrect.  Even assuming the far distance for all flux-cutoff
+% candidates, there are no additional sources with $M>3\times10^4$ \msun, though 
+% there were a handful with $M>10^4 \msun$.
+
+
+The masses were computed assuming a temperature $T_{dust}=20$K, opacity
+$\kappa_{271.1 GHz} = 0.0114~\mathrm{cm}^2 \mathrm{g}^{-1}$, and gas-to-dust
+ratio of 100  \citep{Aguirre2011} \footnote{$T_{dust}=20$K is more appropriate
+for a typical pre-star-forming clump than an evolved HII-region hosting one
+\citep[e.g.]{Dunham2010}. However, because we are interested in cold
+progenitors as well as actively forming clusters, the selection is based on
+$T_{dust}=20$K, which is more inclusive. }.  The mass estimate drops by a
+factor of $2.38$ if the temperature assumed is doubled to $T_{dust}=40$K.  
+
+\citet{Ginsburg2011} notes that significant free-free contamination, as high as
+80\%, is possible for some 1.1 mm sources, so the selected candidates may prove
+to be more moderate-mass and evolved proto-clusters.  We used the NRAO VLA
+Archive Survey \citep[NVAS;][]{Crossley2008} to estimate the free-free
+contamination for the sample.  For most sources, the free-free contamination
+inferred from the VLA observations is small ($<20\%$), but for a subset the
+contamination was $\sim20-35\%$ assuming that the free-free emission is
+optically thin.  Corrected masses using the measured free-free contamination
+and higher dust temperatures are listed in Table \ref{tab:candidates}; these
+are reasonable lower limits on the total mass of these regions.  All of the
+contamination estimates are technically lower limits both because of the
+assumption that the free-free emission is optically thin and because the VLA
+filters out large-scale flux.  However, in most cases, the emission is likely
+to be dominated by optically thin emission \citep[evolved HII regions tend to
+be optically thin and bright, while compact HII regions are optically thick but
+relatively faint;][]{Keto2002} and for most sources VLA C or D-array
+observations were used, and at 3.6 and 6 cm the largest angular scale recovered
+is 180-300 \arcsec, greater than the largest angular scale in the BGPS.  
+
+Applying a cutoff of M$_{\rm clump} > 10^4$ \msun\ left \ncandidates\
+protocluster candidates out of the original \nsample.  The more stringent cut
+M$_{\rm clump} > 10^4 / SFE \approx 3\ee{4}$ \msun\ leaves only \nMPC\ MPCs . 
+% All of the \nsample\
+% `flux-cutoff' candidates with $M>10^3$ \msun\ are shown in \figref{fig:galplot}
+% providing context of their location in the Galaxy. 
+
+The final candidate list contains only sources with $M(20K)>10^4 \msun$ (the
+completeness limit; see Table \ref{tab:candidates}).  The table lists
+their physical properties, their literature distance, their mass (assuming $T_{dust}=20
+\textrm{~and~} 40 K$ and a free-free subtracted lower-limit) ,
+%\todome{Discuss varying dust opacity?  Martin et al 2011} 
+% Ignored.  Unnecessary.
+and their inferred escape speed ($v_{esc} = \sqrt{2 G M(20K) / r}$) assuming a
+radius equal to the aperture size at that distance.  The table also includes
+measurements of the IRAS luminosity in the 60 and 100 \um\ bands within the
+source aperture.
+%The literature search
+%revealed that all candidates are known massive-star-forming regions.
+
+\subsection{Source Separation}
+These \ncandidates\ candidates include some overlapping sources.
+There are two clumps in W51 separated by about 1.5 pc and 4.5 \kms\ along the
+line of sight that are each independently massive enough to be classified as
+MPCs, but are only discussed as a single entity because they are likely
+to merge if their three-dimensional separation is similar to their projected
+distance.  The candidates in W49 are more widely separated, about 4.4 pc and 7
+\kms\ along the line of sight, but could still merge.
+
+Additionally, 9 of the \ncandidates\ are within 8.7 kpc, so the mass
+estimates are lower limits.  These are promising candidates for follow-up, but
+cannot be considered complete for population studies.  If our radius restriction
+is dropped to 1.5 pc, the minimum complete distance drops to 5.2 kpc and the
+three lowest-mass sources in Table \ref{tab:candidates} no longer qualify, but
+otherwise the source list remains unchanged.  Our analysis is therefore robust
+to the selection criteria used.
+%(except the W51 pair, which meets
+%the selection criteria despite its proximity).
+
+% Not really interesting?
+% \subsection{Line Widths}
+% To back up the claim that these proto-clusters cannot be unbound by ionization
+% pressure, we examine the line widths in dense gas tracers.  Using a tracer that
+% measures the internal motions  of the gas in the gravitational potential, we
+% expect the approximately gaussian line-width to represent the quasi-equilibrium
+% state of the gas (i.e., if the line width is changing, it is doing so slowly
+% relative to the star formation process).  Because the line widths are much
+% larger than the sound speed in the neutral gas, the observed clouds must be
+% gravitationally bound, otherwise they would expand and their linewidths would
+% drop to the sound speed on a dynamical timescale.
+% %\todojohn{This is in keeping with results on GMCs, i.e. that they are in equilibrium.
+% %Is there a better way to state it?  Are there other results / theoretical arguments that
+% %should be cited?}
+% 
+% Heterodyne observations of HCO$^+$ 3-2 and N$_2$H$^+$ 3-2 data from
+% \citet{Schlingman2011} are presented in Table \ref{tab:candidates}.  With
+% critical densities $\gtrsim 2\ee{6}$ \percc, these both trace dense gas and therefore
+% are limited to the proto-cluster region.  However, HCO$^+$ has frequently been
+% observed in self-absorption, so the N$_2$H$^+$ widths are more reliable.
+% We report the FWHM of single-component fits.  In order to mitigate the effects
+% of self-absorption on the line fitting, we report HCO$^+$ line widths fitted by
+% ignoring the central self-absorbed pixels; the channel selection was done by
+% eye.
+% All of the candidates selected as proto-massive-cluster candidates have
+% $v_{internal} \approx v_{esc} > v_{ionized}$, confirming their candidacy.
+
+%In Table 1 we provide a grading scheme to quantify the quality of the
+%candidates. Candidates associated with a grade of {\bf A} will form a $\gtrsim
+%10^4$ \msun\ cluster, even if $T_{dust}=40$K and SFE = 30\%, where it's mass is
+%reduced from the estimates shown in Table 1 by a factor of 2.38. The two latter
+%grades, {\bf B} and {\bf C}, follow the same assumptions and the candidates
+%masses will fall down to $\sim 10^4$ \msun\ and $<10^4$ \msun, respectively. 
+
+
+
+% \subsection{Nearby Candidates}
+% \label{sec:nearcand}
+% Because the BGPS is insensitive to large angular scales, we must resort to
+% other methods for determining protocluster masses in nearby star-forming
+% regions.
+% The strongest candidates within 5.8 kpc are M17, NGC 7538, W3, S255, W43, W33, G34.15, and others?  While these
+% regions are all known to be forming massive stars and have total gas reservoirs
+% with $M>10^5$\msun, their large spatial extents mean that they are all more likely
+% to form OB associations than bound clusters.  However, some are likely to be MPs...
+
+%In the 3-6 kpc range, W43, W33
+
+%For example, in the W3 region, no clumps have velocity dispersions
+%$\sigma_{FWHM} > 6$ \kms, implying that none can keep ionized gas bound
+%\citep{Bieging2011}.
+
+% We searched the BGPS for candidate MPCs in the 1st quadrant ($6^o < \ell <
+% 90^o$). Using the Bolocat catalog we marked sources with flux densities in a
+% 20\arcsec\ aperture that yield a mass $M_{\rm clump}\geq 3\times 10^{4}$ \msun\
+% at a distance of 17.5 kpc or less ($20\arcsec\ = 1.7 $ pc at 17.5 kpc)
+% assuming $T_{dust}=20$K. We applied a $M_{\rm clump} \times {\rm SFE}(30\%) >
+% 10^4$ \msun\ cutoff at the maximum distance of 17.5 kpc; we are therefore
+% complete to a progenitor mass of $3\times10^4$\msun. These criteria led to a
+% flux-density cutoff of 3.2 Jy, above which 16 candidates were detected in the
+% Bolocat catalog. Distances to these candidates were determined via a
+% literature search. The final candidate list is given in Table 1 along with
+% their physical properties of measured line widths from N$_2$H+, their
+% literature distance, their mass (assuming $T_{dust}=20 K$), and their
+% inferred escape speed ($v_{esc} = \sqrt{2 G M / r}$) assuming a radius equal
+% to the aperture size at that distance.  The literature search also revealed
+% that all of our candidates are known star-forming regions, so our list
+% contains no contaminants.  
+% 
+% With distance determinations to these candidates, we were able to compute
+% masses assuming a temperature $T_{dust}=20$K, opacity \citep{Aguirre2010},
+% and gas-to-dust ratio of 100 \footnote{$T_{dust}=20$K is more appropriate for
+% a typical pre-star-forming clump than an evolved HII-region hosting one
+% \citep[e.g.][]{Dunham2009}. However, because we are interested in cold
+% progenitors as well as actively forming clusters, we estimate the masses of
+% the cluster progenitor candidates using $T_{dust}=20$K or $T_{dust}=40$K to
+% reflect whether the environment is cold and quiescent or actively forming
+% stars. }
+% The mass estimate drops by a factor $2.38$ if the temperature assumed is
+% doubled to $T_{dust}=40$K. Additionally, for more nearby sources, larger
+% apertures (corresponding to the same physical radius) were used to include
+% more source flux. Applying a cutoff of M$_{\rm clump} \times {\rm SFE}(30\%)
+% > 10^4$ \msun\ left 2 MPCs out of the 16. All of the 16 flux-cutoff
+% candidates are shown in Figure \ref{fig:galplot} providing context on where
+% they are in the Galaxy. 
+% 
+% In Table 1 we provide a grading scheme to quantify the quality of the candidates. Candidates associated with a grade of {\bf A} will form a $\gtrsim 10^4$ \msun\ cluster, even if $T_{dust}=40$K and SFE = 30\%, where it's mass is reduced from the estimates shown in Table 1 by a factor of 2.38. The two latter grades, {\bf B} and {\bf C}, follow the same assumptions and the candidates masses will fall down to $\sim 10^3$ \msun\ and $<10^3$ \msun, respectively. 
+
+%\subsection{IRAS luminosities}
+%We can and should derive IRAS luminosities for the candidates (this is trivial)
+%and compare them to the IRAS luminosity function in the GP.  We can then
+%extrapolate the observations to the southern hemisphere and be TRULY complete.
+
+\section{Results}
+% \subsection{Proto-Cluster Mass Function}
+% \choppingblock
+% In order to measure a mass function, we need better detection statistics than
+% are provided by our \nMPC\ MPCs.  We note that our observations are complete to
+% $M>5000\msun$ in the range $5.8 < D < 12.4$ kpc \todome{Is the 5000 \msun\
+% cutoff used anywhere else?  I don't think so}.  In this range, there are
+% \ncomplete\ candidates, which follow a mass function $\alpha=\plaw\pm\plawerr$
+% \footnote{Computed using the \citet{Clauset2009} MLE as implemented at
+% \url{http://code.google.com/p/agpy/wiki/PowerLaw}}.  If these candidates represent proto-clusters, they should
+% follow a Schechter function with a cutoff near $10^4$ \msun\
+% \citep{PortegiesZwart2010}.  However, the distribution is more consistent with
+% a power law $\alpha=2$ than a Schechter function with a cutoff $M<5\times{10^5}
+% \msun$.  Above this cutoff, the Schecter function and power-law are
+% indistinguishable for our sample.  \todome{Discuss implications?  Not if
+% chopped}
+
+
+
+% unnecessary comment 
+% The mass function of \emph{all} of our candidates independent of
+% mass and distance is consistent with a power-law with $\alpha=1.8\pm0.1$ and
+% completeness cutoff 800 \msun, but we don't believe this is a fair description
+% of the observations because of the varying sensitivity with distance.
+
+\subsection{Cluster formation rate}
+\label{sec:cfr}
+
+The massive clumps in Table \ref{tab:candidates} can be used to constrain the
+Galactic formation rate of massive clusters (MCs) above \mmin\ if we assume
+that the number of observed proto-clusters is a representative sample. The region
+surveyed covers a fraction of the surface area of the Galaxy
+$f_{observed}=A_{survey} / A_{Galaxy} \approx \obsfrac\%$ assuming the star
+forming disk has a radius of 15 kpc\footnote{The observed fraction of the
+galaxy changes to 21\% if we only include the area within the solar
+circle as discussed in \S \ref{sec:discussion}.}.
+%The fraction observed is also
+%about 28\% if we assume the star-forming disk
+%truncates at 13.5 instead of 15 kpc \citep{Kennicutt2012}.}.  
+The cumulative
+cluster formation rate above a cluster mass ${\rm M}_{cl}$ is given by $$CFR(>{\rm M}_{cl})
+= \frac{N_{MPC}}{\tau_{SF} f_{observed}}$$ where $ \tau_{SF} \approx 2$\ Myr is
+the assumed cluster formation timescale \footnote{$\tau_{SF}$, the time from the start of star formation
+until gas expulsion, is a poorly understood
+quantity, but is reasonably constrained to be $\gtrsim1$~Myr from the age
+spread in the Orion Nebula cluster \citep{Hillenbrand1997} and $\lesssim10$~Myr
+because the most massive stars will go supernova by that time.}.
+% $v_{esc}$ is the escape speed from radius $R$ and $f_A \sim 0.1$ is the
+% projected area filling-factor of dense star-forming gas in the clump.  Dense
+% cores may survive for $f_A$ crossing-times before colliding.
+%The cumulative
+%cluster formation rate is given by
+%$$
+%CFR (>M_{cl}) = 
+%{{f_A N_{MPC}(>M) [SFE ]V_{esc}  } 
+%        \over 
+% { 2 R f_{observed} }}
+%$$
+%where $f_A = 0.1$, $V_{esc} $= 10
+%\kms , $R = \rcluster$ pc, and  $\tau_{SF} = 2$ Myr.  
+With the measured
+$N_{MPC}({\rm M}_{\rm cluster}>10^4\msun) = \nMPC $\ proto-clusters, we infer a Galactic formation rate 
+$$CFR \lesssim \CFR \left(\frac{\tau_{SF}}{2
+~\textrm{Myr}}\right)^{-1} \textrm{~Myr}^{-1}$$  This cluster formation rate is
+statistically weak, with Poisson error of about 3.5 
+\permyr\ and can be improved with more complete surveys \citep[e.g., Hi-Gal,][]{Molinari2010}.  This
+formation rate is an upper limit because all of the estimated
+masses are upper limits as discussed in Section \ref{sec:selection}.
+
+
+\subsection{Comparison to Clusters in Andromeda}
+%Comparison to Andromeda or direct measurements should provide a prediction of
+%the number of clusters in the largest (two?) mass bins.  Do our observations
+%agree with such a prediction?
+%
+%If YES, the implication is that cluster formation proceeds rapidly and
+%forms massive, dense, proto-cluster "cores" before actually forming the
+%cluster.
+
+%If NO, cluster formation is SLOW and accretion onto the cluster after the
+%initial formation may continue and increase cluster mass by factors $>2$ (less
+%than that, it doesn't really matter).  In this case, predicting the cluster
+%formation rate from protoclusters requires completeness down to smaller mass - 
+%i.e., we need to be able to observe the cluster `seeds' in addition to the dense
+%pre-clusters.
+
+We use cluster observations in M31 from \citet{Vansevicius2009} to infer the
+massive cluster formation rate in M31.  They observe 2 clusters with
+${\rm M}_{\rm cluster}>10^4\msun$ and ages $<10$ Myr in 15\% of the M31 star-forming
+disk.  The implied cluster formation rate in Andromeda is $\dot{N_{cl}} =
+N_{cl}/0.15 / (10 ~\mathrm{Myr}) \approx 1.3$ \permyr.  Given M31's total star
+formation rate $\sim 5\times$ lower than the Galactic rate \citep[Andromeda
+$\mdot=0.4$, Milky Way $\mdot=2$ \msun \permyr;][]{Barmby2006,Chomiuk2011}, the
+predicted Galactic cluster formation rate is $\dot{N_{cl}}(MW) = 5~
+\dot{N_{cl}}(M31) = 6.5$ \permyr \citep[assuming the CFR scales linearly with
+the SFR; ][]{Bastian2008}.  
+%Given our assumed star formation timescale $\tau_{SF}$, the expected
+%present-day number of clusters $N_{cl}(MW) = (6.5 \textrm{~MC~}\permyr) (\tau_{SF}) = 13$
+%clusters in the Galaxy.  Using the mass cutoff of $3\times10^4$ \msun, we
+%detect \nMPC\ MPCs, implying there are \nMPCtot\ MPCs in the galaxy.  
+The scaled-up Andromeda cluster formation rate matches the observed Galactic
+cluster formation rate.  The samples are small, but as a sanity check, the
+agreement is comforting.
+
+% \choppingblock
+% The agreement between the M31-based
+% prediction and our observations is (un?) remarkable, considering that Poisson
+% statistics alone imply a $>50\%$ uncertainty in each of the cluster counts
+% produced above.
+
+% We present a CFR function dependent on the local surface density of gas in a 
+% galaxy $\Sigma_{\rm gas}$ (normalized by $\Sigma_0 = Value$), the survival time 
+% of the cluster $\tau$, and the initial mass of the cluster, $M_{init}$. We assume 
+% that it has a functional form 
+% $$ CFR = A \biggr[ {{\tau} \over {t_{10}}} \biggr] ^{\alpha} \biggr[ {{M_{init}} \over {M_3}} \biggr] ^{\beta} \biggr[ {{\Sigma_{\rm gas}} \over {\Sigma_0}} \biggr] ^{\gamma} $$ 
+% in units of number of clusters forming per $10^6$ years (= 1 Myr) per square kpc. 
+% Here $t_{10}$ is in units fo 10 Myr, and $M_3$ is in units of $10^3$ \msun . From 
+% a fit to Galactic and extra-galactic cluster catalogs approximate values are $A = 2$ 
+% to $5$ clusters per square kpc per Myr, $\alpha = -1.0$, $\beta = -1.5$, and 
+% $\gamma = 1.5$. This implies a one square kpc region around the Sun contains 
+% about 20 to 50 short-lived ($<$ 1 Myr) clusters or expanding associations ($\sim3*10^4$ 
+% Galaxy wide), and forms only 0.2 to 0.5 open clusters (such as the Pleiades) per kpc$^{-2}$ that last 100 Myr.
+
+% \subsubsection{Comparison to observed Galactic clusters}
+% 
+% \choppingblock
+% 
+% % Better to use Piskunov 2008 numbers
+% %Given a cluster birth rate of 0.2-0.5 $\permyr \perkpc$ (Battinelli \&
+% %Capuzzo-Dolcetta 1991, Piskunov et al. 2006), the expected number of clusters
+% %between the CMZ (cut off at a Galactic radius of 1 kpc) and the solar circle at
+% %8.5 kpc is 14-36 \permyr. However, the measured clusters in the reported
+% %surveys are only $\sim 500 \msun$, while we are interested in more massive ($M
+% %> 10^4\msun$) clusters. Assuming a power-law distribution with $\beta=2$ and
+% %that the Piskunov sample measures a CFR for clusters in the range $100 < M_C <
+% %1000 \msun$, we derive a CFR of $2-5\times10^{-4} \permyr \perkpc$. Assuming
+% %these live $\sim 20$ Myr, corresponding to the longest lifetime in Portegies
+% %Zwart et al's MC list, the expected number of massive clusters is
+% %$\sim0.3-0.8$ within the solar circle. 
+% % This number is FAR too low, considering that simply counting MCs gets you at least 7 XXXX 
+% 
+% 
+%  \citet{Piskunov2008} claim a cluster formation rate
+% of 0.4 \perkpc \permyr\ integrated over all local ($d<850$ pc) clusters.  Integrated over the Galactic 
+% plane, this implies $CFR = 281 \permyr$.  However, the clusters observed in this 
+% local sample all have large radii ($r>10$ pc) or small masses ($M<10^3 \msun$), 
+% and therefore it is difficult to place constraints on the massive CFR from this data.
+% 
+% Given our observed cluster counts, there was only a 5\% probability
+% of finding an $M>3\times10^4$ \msun\ proto-cluster and 17\% probability of an $M>10^4\msun$
+% proto-cluster within the 850 pc completeness zone of \citet{Piskunov2008}.  Multiplying
+% by the ratio of a MC / MP lifetime (about an order of magnitude) suggests that
+% we were likely to find 1-2 objects with $M>10^4$ \msun\ in the Piskunov sample.
+% None were found.  \todome{What are the chances of finding 0 in the local sample given
+% the ``measured'' rate?}
+% 
+% \citet{Piskunov2008} also observe a steepening of the cluster mass function
+% with age, from $\alpha\sim1$ to $\alpha\sim2$.  Our observed proto-cluster mass
+% function is steep, with $\alpha\sim2$.  This contradiction suggests
+% either a selection effect in the \citet{Piskunov2008} sample avoiding low-mass
+% young clusters, that our sample \emph{under}estimates the cluster masses particularly
+% on the high-mass end, or that low-mass proto-clusters live longer than
+% high-mass proto-clusters.  The latter explanation would result in an excess of
+% observable low-mass protoclusters compared to the cluster
+% mass function (i.e., observable protoclusters should have $\alpha>2$).  It is also expected in theory since, for fixed radius,
+% $t_{ff} \propto M^{-1/2}$.
+
+\subsection{Star Formation Activity}
+
+In the sample of potential proto-clusters, all have formed massive stars based
+on a literature search and IRAS measurements.  A few of the low mass sources,
+G012.209-00.104, G012.627-00.016, G019.474+00.171, and G031.414+00.307 have
+relatively low IRAS luminosities ($L_{IRAS} = L_{100}+L_{60} < 10^5 \lsun$) and
+little free-free emission.  However, \emph{all} are detected in the radio as
+H~II regions (some ultracompact) and have luminosities indicating early-B type
+powering stars.
+%The lowest IRAS 100 \um\ luminosity in our sample is
+%$L_{100}(G19.47)\approx6\times10^3 \lsun$; the rest have $L_{100} >
+%2\times10^5 \lsun$.  All of the massive candidates therefore require O-type
+%powering stars.
+
+Non-detection of `starless' proto-cluster clumps implies an upper limit on the
+starless lifetime. For an assumed $\tau_{sf} \sim 2$~Myr, the $1\sigma$ upper
+limit on the starless proto-MC clump is $\tau_{starless} <
+(\sqrt{N_{cl}}/N_{cl}) \tau_{sf} = \tsuplim~\mathrm{Myr}$ assuming Poisson
+statistics and using all 18 sources.  This limit is consistent with massive
+star formation on the clump free-fall timescale ($\tau_{ff}\leq0.65$ Myr).  It
+implies that massive stars form rapidly when these large masses are condensed
+into cluster-scale regions and hints that massive stars are among the first to
+form in massive clusters.
+%, also the crossing time for $c_s=10 \kms$ and $r=1.7$ pc).  
+
+
+%It may indicate that massive stars form simu
+%before all of the proto-cluster mass
+%has been collected into a compact region, i.e. that collapse from molecular
+%cloud to proto-cluster clump proceeds after massive stars have ignited within
+%the proto-cluster, although the small number statistics allow for other
+%explanations.  
+
+\section{Discussion}
+\label{sec:discussion}
+
+Assuming a lower limit 30\% SFE and T$_{dust} = 20 {\rm K}$, \nMPC\ candidates
+in Table \ref{tab:candidates}  will become massive clusters like NGC 3603:
+G010.472+00.026, W51, and W49 (G043.169+00.01).  Even if  T$_{dust} = 40 {\rm
+K}$, W49 is still likely to form a $\sim10^4$ \msun\ MC, although G10.47 would
+be too small.  W51, which is within the spatial-filtering incompleteness zone,
+passes the cutoff and is likely to form a pair of massive clusters.  However,
+if the dust in W51 is warm and the free-free contamination is considered, the
+total mass in each of the W51 clumps is below the 3\ee{4} \msun\ cutoff.
+% \todocara{Do massive clusters in the galactic center affect this discussion?
+% Eli's comment: No, different physics in the GC mean we should not be
+% concerned.}
+% IGNORED unless the referee says otherwise
+
+The BGPS covers about \obsfrac\% of the Galactic star-forming disk in the range
+1 kpc $< R_{gal}<15$ kpc.  We can extrapolate our \nMPC\ detections to predict
+that there are $\leq$\nMPCtot\ ($\pm \nMPCtoterr$) proto-clusters in the Galaxy
+outside of the Galactic center.
+The agreement between the SFR-based prediction
+from M31 and our observations implies that we have selected genuine massive
+proto-clusters (MPCs).  
+
+These most massive sources have escape speeds greater than the sound speed in
+ionized gas, indicating that they can continue to accrete gas even after the
+formation of massive stars.  Assuming they are embedded in larger-scale gas
+reservoirs, we are measuring lower bounds on the `final' clump plus cluster
+mass. 
+
+% Additionally, in the 15\% of the galaxy within the 5.8 kpc
+% radius in which the survey is incomplete due to spatial filtering, we predict
+% that there should be $2\pm1$ MPCs.  
+% it's actually 41%, we probably predict more like a few....
+
+%\subsection{Lifetimes}
+%In order to estimate the formation rate from our candidate source counts, we 
+%need to include a 
+
+%\begin{figure}
+%\includegraphics[width=8.5cm]{figures/mass_vs_omega.pdf}
+%\label{fig:m_vs_o}
+%\caption{The mass of the young massive proto-clusters (MPCs) versus their respective $\Omega$ value ($V_{esc} / C_{s}$). We present MPC candidates that have $\Omega > 1$ and clump masses greater than $10^3$ \msun. The candidates are graded based on their potential to forming a high mass stellar cluster regarding their assumed temperature and star formation efficiency (SFE). For the grading scheme we assume that $T_{dust}=40$K and a SFE of 30\%, essentially a worst case scenario for cluster forming conditions as the mass of the gas clumps is reduced by 42\%. The candidates are ranked on how much stellar mass they will have after gas dissipation. The red triangles represent grade {\bf A} candidates where their stellar mass will be greater than $10^4$ \msun\. Green squares represent grade {\bf B} candidates where their stellar mass will be greater than $10^3$ \msun. The blue diamonds are grade {\bf C} candidates that will have less the $10^3$ \msun\ in stellar mass.}
+%\end{figure}
+
+%this paragraph is somewhat in contradiction to Piskunov2008
+% Open clusters generally have masses $<10^4$~\msun\ with a lifetime of $<1$~Gyr
+% and their disruption can start early in life from their local environment
+% \citep{PortegiesZwart2010}. MCs ($>10^4$~\msun) on the other hand are less
+% sensitive to the surrounding environment than open clusters and typically
+% remain bound for 1 $<$ t $<$ 10  Gyr \citep{PortegiesZwart2010}.
+
+
+% look at Piskunov Figure 5 - Cluster Mass Functino
+
+%Assuming that we have indeed acquired a complete sample of MPCs
+%over their $\sim2 $ Myr lifetimes, this implies that clusters form within highly
+%condensed clumps of gas and dust, rather than slowly accreting from large-scale
+%mass reservoirs.  
+
+
+%What of the locations of proto-clusters?  
+All of the young massive proto-clusters candidates observed are within the
+solar circle despite our survey covering more area outside of
+the solar circle.  
+%In other galaxies, e.g. M33, the most massive
+%cluster (NGC 604) is found in the outer disk; this situation appears not to
+%occur in the Milky Way.  
+%Since both shear and density are higher in the inner
+%galaxy, it appears that gas density is a more important factor than shear
+%forces in determining where massive clusters form within the Galaxy.
+%
+The outer radius limit for massive cluster formation is consistent with the
+observed metallicity shift noted at the same radius by \citet{Lepine2011}.
+They identify the solar circle as the corotation radius of pattern speed and
+orbits within the Galaxy (within this radius, stars orbit faster than the
+spiral pattern).  The fact that this radius also represents a cutoff between
+the inner, massive-cluster-forming disk and the outer, massive-cluster-free
+disk hints that gas crossing spiral arms may be the triggering mechanism for
+massive cluster formation.  However, given the small numbers, the detected
+clusters are consistent with a gaussian + exponential disk distribution
+following that described by \citet{Wolfire2003}.  
+%Outside of 8.5 kpc, the open cluster metallicity is approximately flat out to
+%20 kpc.  Inside 8.5 kpc, the metallicity increases.  If gas is prevented from
+%mixing at the spiral arm corotation radius, a higher average gas density within
+%that radius would lead to increased star and cluster formation.
+% Our observations are consistent with \citet{Lepine2011}
+%\todojohn{Please help me expand this: Where is NGC 604 in M33 ($R_{gal}$)?
+%Are there other (classes of?) galaxies that have clusters in the outer disk?  
+%What defines outer disk?}
+
+% EXPLAIN MORE IF YOU INCLUDE (didn't make sense on a second reading)
+% % See Portegies-Zwart section 4.4
+% The presence of massive clusters exclusively in the inner galaxy ($R_{gal} <
+% 8.5 kpc$) is a strong indication that these clusters form from giant molecular
+% clouds (although this hypothesis was never really in question) because GMCs
+% destroy lower-mass clusters \citep{PortegiesZwart2010}.  The survival time of a
+% cluster is proportional to its density and inversely proportional to the GMC
+% density.   Statistics on proto-clusters may therefore present a new tool for
+% the study of cluster disruption.
+
+%, in which case the BGPS surveys just
+%shy of half the potential-cluster-forming region. Then we should see three
+%MPCs amongst the candidates we detected. The CFR estimates best agree with the
+%conditions that our MPC candidates have T$_{dust} = 20 {\rm K}$ and SFE of
+%30\% to 50\% (2 or 4 MPCs). 
+%Regarding the lower mass candidates (10$^3$ \msun), we would expect to find $\sim 10$ open cluster progenitors. We have 14 such candidates, which is within a factor of two of the CFR estimate. 
+
+
+Future work should include a census for MPCs within $D\lesssim5$ kpc using the
+Herschel Hi-Gal survey \citep{Molinari2010} and in the Southern plane with
+ATLASGAL \citep{Schuller2009}.  Some surveys have already identified
+proto-clusters in these regions \citep[e.g.][]{Faundez2004,Battersby2011}, but
+they are not complete.  A complete survey of distances will be essential for
+continuum surveys to be used.
+
+% Added as per Referee's comments
+There are two modes of massive cluster formation consistent with our
+observations that can be observationally distinguished.  Either a compact
+starless massive proto-cluster phase does occur and is short, or the mass to be
+included in the cluster is accumulated from larger volumes over longer
+timescales.  Extending our proto-cluster survey to the Southern sky, e.g. using
+the ATLASGAL and Hi-Gal surveys, will either discover starless MPCs or
+strengthen the arguments that there is no starless MPC phase.  If instead
+massive clusters form by large scale ($r>2.5$ pc) accretion, substantial
+reservoirs of gas should surround these most massive regions and be flowing
+into them.  Signatures of this accretion process should be visible: MPCs should
+contain molecular filamentary structures feeding into their centers
+\citep[e.g.][]{Correnti2012,Hennemann2012,Liu2012}.  Alternatively, lower mass
+clumps may merge to form massive clusters \citep{Fujii2012}, in which case
+clusters of clumps - which should be detectable in extant galactic plane
+surveys - are the likely precursors to massive clusters.  Finally, massive
+clusters may form from the global collapse of structures on scales larger than
+we have probed, which could also produce clusters of clumps.
+
+
+\section{Conclusions}
+\label{sec:ympcconclusions}
+
+Using the BGPS, we have performed the first flux-limited census of massive
+proto-cluster candidates.  We found \ncandidates\ candidates that will be part
+of the next generation of open clusters and \nMPC\ that could form massive
+clusters similar to NGC 3603 (${\rm M}_{\rm cluster} > 10^4$ \msun).   We have
+measured a Galactic massive cluster formation rate $CFR({\rm M}_{\rm
+cluster}>10^4) \lesssim \CFR\  \permyr$\ assuming that clusters are equally
+likely to form everywhere within the range 1 kpc $ < R_{gal} < $ 15   kpc. 
+%however, we think formation limited to 1<r<8.5; what does this imply?
+%(the CFR is the same if we assume, as observed, that all massive cluster formation occurs within the solar circle).  
+The observed MPC counts are
+consistent with observed cluster counts in Andromeda scaled up by $SFR_{M31} /
+SFR_{MW}$ assuming a formation timescale of 2 Myr.  
+%A lack of massive clusters
+%detected in the local neighborhood \citep[$d_{max}\sim 850$ pc]{Piskunov2008} is also
+%consistent with the MPC detection rate and assumed lifetime.
+
+Despite this survey being the first sensitive to pre-star-forming MPC clumps, none
+were detected.  This lack of detected pre-star-forming MPCs suggests a
+timescale upper limit of about $\tau_{starless}<\tsuplim$ Myr for the pre-massive-star phase of
+massive cluster formation, and hints that massive clusters may never form
+highly condensed clumps ($\bar{n}\gtrsim10^4~\percc$) prior to forming massive
+stars.
+It leaves open the possibility that massive clusters form from large-scale
+($\gtrsim 10$ pc) accretion onto smaller clumps over a prolonged ($\tau > 2$
+Myr) star formation timescale.
+
+
+Observations are needed to distinguish competing models for MC formation:
+Birth from isolated massive proto-cluster clumps, either compact and rapid
+or diffuse and slow, or from smaller clumps that
+never have a mass as large as the final cluster
+mass.  
+This sample of the \ncandidates\ most massive proto-cluster clumps in the first
+quadrant (where they can be observed by both the VLA and ALMA) presents an ideal
+starting point for these observations.
+
+% \section{Acknowledgements}
+% We thank the referee for thorough and very helpful comments that strengthened
+% this Letter.  This work was supported by NSF grant AST 1009847.
+
+
+%\bibliography{boundhii}
+
+\input{tables_chboundhii/boundhiitable}
+
+
+\section{Follow-up work}
+In order to get a complete census of massive proto-clusters in the Galactic
+plane, it is necessary to examine the southern plane as well.
+\citet{Urquhart2013a} began this examination using ATLASGAL data and identified
+6 new candidates in the southern sky.  In principle, the detectin of more
+sources in the South indicates either some incompleteness in the BGPS or a
+genuinely higher cluster formation rate in the southern sky (which, with such
+small numbers, is easily consistent with uniform sampling from a disk
+distribution).
+
+However, we note that two of the candidates in \citet{Urquhart2013a} are
+assigned the wrong kinematic distance - they are placed at the far distance
+when strong evidence exists putting them instead at the near.
+
+\subimport{/Users/adam/work/boundhii/distance_massiveclumps/}{solo}
+
+\input{solobib}
+\end{document}

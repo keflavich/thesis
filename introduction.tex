@@ -1,0 +1,402 @@
+\input{preface}
+\chapter{Introduction}
+\section{Preface}
+This thesis describes
+the research I have performed with a wide variety of collaborators, mostly
+centered on the Bolocam Galactic Plane Survey team led by John Bally and Jason
+Glenn.  The BGPS data reduction process, at the core of this work, was done in 
+collaboration with James Aguirre and Erik Rosolowsky.
+
+However, the work proceeded somewhat haphazardly: I came into the BGPS team as
+a (perhaps foolish) student enthusiastic about data reduction.  I never planned to take
+over the BGPS data, but it happened a few years into my time at CU.  This
+thesis is therefore somewhat scattered: some of the observations reported here
+were taken as `follow-up' to the BGPS before it was completed.
+
+This document primarily consists of a number of published papers centered
+around a common theme of radio and millimeter observations of the Galaxy, with
+the common driving question being `How do stars form?'  I have therefore added
+thesis-specific introductions to each section to describe where they fit in to
+the bigger picture of this document.  I've also included sections describing
+work that is not yet published but (hopefully) soon will be.
+
+\section{Star Formation in the Galaxy}
+It has been known for at least half a century that stars form from the
+gravitational collapse of clouds of cool material.  The gas that will
+eventually form stars is typically observed as dark features obscuring
+background stars.  The brighter nebulae, which have been studied for far longer
+\citep{Messier1764}, contain hot and diffuse gas.  These nebulae, while
+spectacular, are not the construction materials of new stars.  However,
+they mark the locations where new stars have formed - nebulae are often
+stellar nurseries.
+
+To track down the cool star-forming material, it is necessary to observe at
+longer wavelengths.  Infrared observations can pierce through obscuring
+material, as dust becomes more transparent at longer wavelengths.  With near-
+and mid-infrared observations, such as those enabled by HgCdTe detectors like
+those in the NICFPS and TripleSpec instruments at Apache Point Observatory and
+the InSb detectors used on the Spitzer Space Telescope, it is possible to
+observe obscured young stars.  These objects have just ignited fusion in their
+cores and represent the youngest generation of new stars.
+
+But this material has already formed stars.  To see the truly cold material, that
+which still has potential to form new stars, we need to examine gas that is not
+heated at all by stars.  Assuming we want to look for gas that can form a star
+like our sun and that the density of the gas to form is $\sim10^4$ \hh particles
+per cubic centimeter (an assumption left unjustified for now), the Jeans scale
+requires a temperature $T\sim10$ K, which means we need to look at wavelengths
+$\lambda \gtrsim 100 \um$ in order to observe this gas.
+
+Gas at these densities turns out to be quite rare.  While there are thousands
+of stars within 100 pc of the sun, the closest known star-forming globules are
+at distances greater than 100 pc.  While this sparsity is explained in part by
+our current position in the Galaxy (we're buzzing along its outskirts at 250
+\kms), it reflects the reality that star formation in the present epoch is
+dispersed and rare.
+
+Even more rare are the massive stars that end their lives in supernovae.  While there
+are hundreds of stellar nurseries within a few hundred parsecs, the nearest
+region of massive star formation is the Orion Molecular Cloud at a distance of
+400 pc.  Out to 1000 pc, though, there are still only a handful of massive star
+forming regions, including Monoceros R2 and Cepheus A.
+
+These massive stars in many ways are the most important to study in order to
+understand the evolution of gas and dust in the universe and our own origins.
+In their deaths, they produce the heavy elements required to form dust,
+planets, and life.  Throughout their lives and deaths, massive stars dump
+energy into the interstellar medium and effectively control the motions and
+future of the gas around them.
+
+The bigger the star, the shorter it lives, so massive stars are nearly as rare
+as their birth regions.  They also tend to be found nearby or within these
+birth regions.  Since they can be found near large globs of dust, finding these
+globs can help us discover new groups of massive stars.
+
+This thesis summarizes surveys within our Galaxy to discover and examine
+regions forming new massive stars and clusters.  The largest body of work
+described here is the Bolocam Galactic Plane Survey, the first dust continuum
+survey of a significant fraction of the Galactic Plane.
+
+With that broad overview in place, the next sections describe a few of the
+specific problems addressed in this thesis in greater detail.
+
+\subsection{Gas Flow and Collapse}
+Stars form as the end state of the collapse of gas cores.  The classic analysis
+used to determine when stars will form from a gas cloud is the Jeans analysis, which
+determines under what conditions an overdensity in a uniform isothermal medium
+becomes unstable to gravitational collapse.  Jeans analysis defines a length scale
+$$L_J = \left( \frac{\pi c_s^2}{G \rho_0} \right)^{1/2}$$
+and a mass scale
+$$M_J = \left(\frac{2 \pi k T}{G \mu}\right)^{3/2} \rho_0^{-1/2} = \left(\frac{\pi}{G \mu}\right)^{3/2} c_s^3 \rho_0^{-1/2}$$
+which defines the typical mass at which a core should form.  In this equation,
+$c_s$ is the sound speed in the gas, $\rho_0$ is the density of the medium, $T$
+is the gas temperature, $\mu$ is the mean mass per particle in proton masses, and $G$ is
+the gravitational constant.  More careful analyses including other factors,
+e.g. external pressure on the core, yield similar values.
+
+The Jeans instability growth time scale $\tau_{J}$ is within a factor of a few
+of the free-fall collapse time $\tau_{ff}$,
+$$\tau_J = \left(\frac{1}{4 \pi G \rho_0}\right)^{1/2}$$
+$$\tau_{ff} = \left(\frac{3\pi}{32 G \rho_0}\right)^{1/2} =  \pi\sqrt{\frac{3}{8}} \tau_J$$
+implying a typical mass infall rate for an isothermal core of
+$$\dot{M}_J = M_J/\tau_J =  \frac{1}{2} \pi^2 \frac{c_s^3}{G}$$
+$$\dot{M}_{ff} = \pi \sqrt{\frac{3}{32}} \frac{c_s^3}{G}$$
+Under free-fall collapse at 10 K, then, a 1 $\msun$ star takes only $\sim10^4$
+years to form, but a 100 \msun star takes $\sim1$ Myr.
+
+Real stars do not form so quickly, but initial accretion rates may be as high
+as $10^{-4} \msun \peryr$ in cores, and the accretion must be at least that
+fast for massive stars to form in times shorter than the lifetimes of their
+parent clouds.  
+
+Low-mass stars go through subsequent phases of collapse, from the initial
+unstable core to a hydrostatic core in which collapse no longer proceeds
+isothermally because the dust becomes optically thick to its own radiation.
+Eventually a protostar forms, surrounded by a disk and a core.  The core
+continues to accrete onto the star through the disk until all the material is
+either accreted or blown away in outflows.  The disk both accretes on to the
+star and forms planets.
+
+This process is well-understood for low-mass stars in the broad strokes
+outlined here, and each phase in this process has been observationally
+confirmed.  For massive stars, the picture is far less clear.  It is still
+actively debated whether active stars ever have a ``core'' analogous to 
+low-mass pre-stellar cores, since a 100 \msun gas cloud unstable to collapse
+would also be unstable at smaller scales and would therefore be likely to fragment
+into many lower-mass cores.
+
+The two main competing theoretical extremes to get around this problem are
+known as the ``turbulent core''
+\citep{McKee2003a,Krumholz2005a,Krumholz2009a,Tan2006a,McKee2007a} and
+``competitive accretion''
+\citep{Klessen2000a,Bonnell2002a,Bonnell2004a,Bonnell2006a,Bonnell2008a}
+models.  In the former, an additional support mechanism, turbulence, prevents
+fragmentation in massive cores, allowing a single core with
+$M_{core}>M_J(thermal)$ to form into a single stellar system.  By contrast, the
+competitive accretion model, in its most extreme form, asserts that all stars
+start their lives as $\sim M_J$ cores which exist within a collapsing cloud.
+They are then able to accrete additional material from the cloud and grow from
+their minimum mass to populate the initial mass function (see Section
+\ref{sec:massfunctions}).
+
+Neither theory is presently able to account for feedback from the formed stars.
+Massive stars drastically affect their environment when they turn on, which can
+be long before they are done accreting.  Massive stars probably go through
+phases similar to low-mass stars, but they may look quite different.  They are
+likely to ignite fusion while still accreting within a dense core; feedback
+will begin while most of the matter that will eventually reach the star is still
+in the `core' phase.
+
+If this happens, the massive star will begin to
+illuminate a hypercompact \hii region, in which the extremely high surrounding
+densities trap the ionizing radiation.  Over time, the star's luminosity will
+grow and the surrounding density decrease, either by accreting or being
+ejected, and the \hii region will expand, going through an ultracompact (UC)
+\hii phase, then a diffuse \hii region, then ending its observable phase as it
+blends into the low-density warm interstellar medium.
+
+Understanding these early phases is important for understanding what sets a star's
+final mass.  In a core accretion model, $\sim2/3$ of the gas in the original
+`core' may accrete, and the other $\sim1/3$ blow out, but the mass of the star
+should be very near the core mass.  In the competitive accretion model, the core
+mass may have little influence on the final star mass, as most of the stellar mass
+will be Bondi-Hoyle accreted from the surrounding medium.
+
+In order for Bondi-Hoyle (BH) accretion to be effective, though, the surrounding `clump'
+medium must have a very high density.  The BH accretion rate is strongly dependent on the 
+mass of the accreting star and the sound speed of the gas:
+$$\dot{M}_{BH} = \frac{4 \pi \rho G^2 M^2}{c_s^3} $$
+For a low-mass star in a low-density medium and a high-mass star in a high-density medium,
+the values are
+$$\dot{M}_{BH} = 1.6\times10^{-7} \left(\frac{M}{M_\odot}\right)^2 \left(\frac{n}{10^4 \mathrm{cm}^{-3}}\right) \left(\frac{c_s}{1 \mathrm{km s}^{-1}}\right)^{-3} \msun \peryr$$
+$$\dot{M}_{BH} = 1.6\times10^{-4} \left(\frac{M}{10 M_\odot}\right)^2 \left(\frac{n}{10^5 \mathrm{cm}^{-3}}\right) \left(\frac{c_s}{1 \mathrm{km s}^{-1}}\right)^{-3} \msun \peryr$$
+The timescale for a 10\msun star to double its mass in a $n\sim10^5\percc$
+medium is $\sim50$ kyr, but drops to only $5$ kyr for density
+$n\sim10^6\percc$.  
+It is therefore crucial that we measure the density of the bulk of the gas
+around massive stars - the mass and density of the surrounding medium are
+essential parameters for determining whether competitive accretion is a viable
+model for growing massive stars.
+
+Throughout the thesis, I examine the local gas density on parsec scales via
+line ratios and simpler column-density based estimates.  I also examine tracers
+of infall and outflow to determine accretion properties of forming stars.
+
+\subsection{Turbulence}
+Turbulence is one of the defining features of the interstellar medium.
+Turbulence is thought to govern many properties of the ISM, rendering it
+scale-free and defining the distribution of velocities, densities,
+temperatures, and magnetic fields in the gas between stars.
+
+Turbulence forms in fluids when the inertial force greatly exceeds the
+viscosity.  It creates instabilities in the fluid that start on large scales
+and ``cascade'' energy to smaller scales.  Once a small enough size-scale is
+reached, the viscosity exceeds the interial force and the energy heats the
+fluid on local scales.
+
+Turbulence is most easily modeled by a Kolmogorov spectrum, in which $\Delta v
+\propto \ell^{1/3}$, i.e. the typical velocity dispersion is greatest at the
+largest size scales.  Kolmogorov turbulence strictly only describes
+incompressible fluids without magnetic fields, while the ISM is compressible
+and threaded by magnetic fields.  Nonetheless, Kolmogorov turbulence is nearly
+consistent with some observed properties of the ISM.  The Larson size-linewidth
+relation ($\sigma_{\kms}\approx1.1 L_{pc}^{0.38}$), in particular, is similar
+to that predicted by Kolmogorov turbulence.
+
+Turbulence is often quoted as a source of \emph{pressure} based on the
+Kolmogorov description.  At size scales much smaller than the driving scale of
+the turbulence (the ``box size'' in a simulation), turbulence becomes isotropic
+and can add support against gravitational collapse.  
+
+However, turbulence decays rapidly.  The turbulent decay timescale
+$\tau_{decay}\propto \ell / v$, where $\ell$ is the turbulent length scale and $v$ is
+the velocity scale.  It therefore increases with size scale as
+$\tau_{decay}\propto \ell^{2/3}$.  Turbulence decays most quickly on the smallest
+sizescales.
+
+We are therefore left with two conditions: Turbulence must be driven at large
+scales for turbulence to provide support against gravity\footnote{Once stars form
+in a cloud and stellar feedback becomes significant, turbulence can be driven at all
+scales, but the turbulent support needed to slow or prevent the initial
+collapse of starless cores cannot be driven by local stars.}, and it must be
+constantly driven to resupply the turbulence that is transferred to heat on the
+smallest scales.
+
+Once stars form, however, large-scale driving of turbulence may not be the
+dominant shaping mechanism for the gas.  Outflows from low-mass stars, soft UV
+from B stars, and ionizing UV and strong winds from OB stars can drive gas
+motions, disrupting gas or replenishing turbulent energy.  Once stars have
+formed in a cloud, local feedback rather than the turbulent cascade is likely
+to govern the future evolution of the cloud.
+
+Because the ISM is compressible, interacting flows within the turbulent medium
+will result in density enhancements and voids.  Many simulation studies have
+determined that the resulting density distribution, and correspondingly the
+column-density distribution, should be log-normal.  Observational
+studies agree that in regions not yet significantly affected by gravity, the 
+column-density distribution is log-normal.  In regions where stars are actively
+forming, i.e. regions in which gas self-gravity has affected a significant fraction
+of the gas, a high-density power-law tail forms.
+
+One theory of star formation holds that the initial mass function of stars is
+determined entirely by turbulence \citep{Padoan2002,Padoan2007,Krumholz2005c}.  In this
+description, the highest overdensities in the turbulent medium become
+gravitationally unstable and separate from the turbulent flow as they collapse
+into proto-stellar cores.  This idea has been a hot topic in the past few
+years, but it may be an overly simplistic view.
+
+Turbulence is appealing to theorists as it is a difficult problem to address
+directly with observations, but it may have great predictive power.  If turbulence
+is the dominant governing process of the ISM, then it is possible to derive a
+reasonably robust star-formation theory based on the excursion set theory
+successfully applied to cosmological structure formation
+\citep{Hopkins2012b,Hennebelle2011a,Hopkins2012d}.  
+
+However, in reality, turbulence is just one of many processes governing the ISM
+and star formation.  Stellar feedback, in the form of radiation, winds,
+supernovae, and outflows imposes a preferred driving scale on any individual
+region, and in many cases these processes will happen faster than turbulent
+processes.  The notion of \emph{initial conditions} for star formation,
+while theoretically appealing, may prove too strong an oversimplification
+when searching for a complete theory of star formation.
+
+Throughout this thesis, I consider and measure the drivers, effects and
+properties of turbulence on a few different scales. 
+
+In the W5 and IRAS 05358 regions (Chapter \ref{ch:w5} and
+\citet{Ginsburg2009}), I examined outflows as potential drivers of turbulence.
+In IRAS 05358, I concluded that the outflows could provide the observed
+turbulence in the $\sim$pc-scale `clump', but that the central core had energy
+dissipation much faster than turbulence could be resupplied.  In W5, I rule out
+protostellar outflows as a significant driver of turbulence.
+
+In Chapter \ref{ch:h2co}, I examine the density probability distribution
+function (PDF) in giant molecular clouds (GMCs).  Because \formaldehyde is
+uniquely capable of measuring local volume density, I was able to place
+interesting constraints on the density PDFs in non-star-forming GMCs, namely
+that they are unlikely to be the simple log-normal distributions expected from
+isothermal incompressible turbulence.
+
+
+\subsection{Mass Functions}
+\label{sec:massfunctions}
+Perhaps the most fundamental goal of star formation studies is to determine the
+Initial Mass Function (IMF) of stars and what, if anything, causes it to vary.
+It is also one of the most challenging statistically and observationally.
+
+The IMF defines the probability distribution function of stellar masses at
+birth, and therefore differs greatly from the present-day stellar mass function
+that is very strongly affected by stellar death at the highest masses.  In
+order to determine the mass function for the most massive stars, it is
+necessary to look at their birth places.  These birth places are dusty, dense,
+and rare.  
+
+It remains somewhat unclear whether the IMF is a universal function or is sampled
+independently for individual clusters.  If it is universal, there is a possibility of
+forming massive stars anywhere stars form.  If cluster-dependent, then a massive star
+must form with a surrounding cluster.
+
+Some groups now claim that the initial mass function is decided in the gas
+phase by the formation of cores.  The Core Mass Function (CMF) measures the
+probability distribution function of core masses, where cores are generally
+identified observationally as column-density peaks in millimeter/submillimeter
+emission maps.  The CMF has a similar functional form to the IMF, but its mean
+is higher by a factor $\sim3$ in local star forming regions, leading to the claim
+that star formation proceeds from CMF $\rightarrow$ IMF with 30\% efficiency.
+This idea has recently been explored theoretically by \citet{Chabrier2010a} and
+\citet{Hopkins2012b} and observationally by the Herschel Gould's Belt team
+\citep{Arzoumanian2011a,Andre2010a}.
+
+Gas clouds follow a mass function that extends up to the largest
+possible coherent scales, giant molecular clouds with scales $\sim50-100$ pc
+that are limited by the scale-height of the ISM in Galactic disks.
+Between `cores' and GMCs, intermediate scale blobs are often called `clumps'. 
+The mass function of these clumps has yet to be determined.  
+
+The mass function of GMCs was determine from CO emission towards the Galactic
+plane and in nearby galaxies (e.g., M33) where they can be resolved.  The CMF
+was measured in nearby ($D<500$ pc) clouds where 30\arcsec\ beams easily resolve $\sim0.1$
+pc cores.  However, clumps are only found in large numbers in the Galactic
+plane, where distances are uncertain.  They cannot be resolved in other
+galaxies (or at least, could not prior to ALMA).
+
+To understand star formation on a galactic scale, it is necessary to understand
+the transition from large-scale giant molecular clouds and proto-stellar cores.
+Clouds follow a shallow mass function, with the largest clouds containing most
+of the gas.  Cores and stars are both drawn from steep mass functions in which
+most of the mass is near some peak in the distribution.  Presumably there must be
+some intermediate state of the gas that is drawn from an intermediate
+distribution, shallower than `cores' but steeper than `clouds'.  
+
+The BGPS (Chapter \ref{ch:v2}) presents the first real opportunity to explore
+the mass function of clumps on scales intermediate between cores and giant
+clouds.   While I do not explicitly examine core or clump mass functions in this
+thesis, their measurement is an important motivation for the large-area surveys
+we have performed.
+
+\subsubsection{Star Clusters}
+Star clusters are also drawn from a mass function comparable to stars, but
+their distribution is better measured than for stars.  Clusters are
+easily visible - and resolvable - in other galaxies, and massive clusters are
+less likely to be embedded than massive stars, since a bound cluster will outlive its few most
+massive stars.  In normal galaxies, cluster
+populations are consistent with a Schechter distribution: a power-law
+$\alpha\sim2$ with an exponential cutoff at large masses.
+
+$$N(M)dM = C \left(\frac{M}{M_*}\right)^{-2} e^{-(M/M_*)} dM$$
+
+Since clusters are not drawn from the same parent distribution as GMCs (which
+have $\alpha\sim1$, so $N(M) dM \sim C M^{-1} dM$), it is plausible that their
+precursors are, instead, the intermediate-scale `clumps' observed in the
+millimeter continuum.  However, the clump mass function has yet to be measured,
+so even this first step of determining plausibility is incomplete.
+
+Clusters are an important observational tool in astrophysics.  For stellar
+studies, they have been used to select populations of co-eval stars.  In
+extragalactic studies, they are frequently the smallest observable individual
+units.  However, many recent works have pointed out that clusters may be
+short-lived, transient phenomena
+\citep{Kruijssen2011a,Whitehead2013a,Gieles2011a,Whitmore2009a}.  Any study of
+their populations must take in to account their dissolution.  The most massive
+clusters, however, are both the most easily observed and the longest lived, and
+therefore provide some of the most useful tools for understanding stars.
+
+As with massive stars, massive clusters are rare.  Only a handful of young
+massive clusters (YMCs) are known within our Galaxy, the most prominent being NGC
+3603, the Arches cluster, and Westerlund 1 \citep{PortegiesZwart2010}.  These
+are the only locations in the galaxy known to be forming multiple stars near
+the (possible) upper stellar mass limit.  Despite their importance, 
+the population of such clusters
+is effectively unconstrained.  The incomplete knowledge of clusters is due to
+extinction and confusion within the Galactic plane at wavelengths where
+the stars are directly observable.
+
+In Chapter \ref{ch:ympc}, I search the BGPS for candidate proto-massive star
+clusters.  Because the Galactic disk is optically thin at 1.1 mm, a complete
+census of proto-clusters is possible.  I use the detected candidates to infer
+features about the population of Galactic YMCs, including their formation
+timescales and rates.
+
+%\subsection{Galactic Plane Surveys}
+%The idea to observe the plane of the Galaxy is not new.
+
+%\subsection{Statistics and Data Processing}
+%This is a data-rich thesis, and as such has some emphasis on data statistics.
+
+% \section{Observational Tools: Molecular Line Spectroscopy}
+
+\section{Outline}
+This thesis includes 6 chapters.
+Chapter \ref{ch:w5} describes observations of the W5 star-forming region to identify outflows;
+this chapter is somewhat tangential to the rest.
+Chapter \ref{ch:v2} describes the BGPS data reduction process and data pipeline.
+Chapter \ref{ch:ympc} is a Letter identifying massive proto-clusters in the BGPS.
+Chapter \ref{ch:h2co} is the pilot study of \formaldehyde towards previously-known UCHII regions.
+It includes the methodology and analysis of turbulent properties of Galactic GMCs.
+Chapter \ref{ch:h2colarge} expands upon Chapter \ref{ch:h2co}, detailing the expansion of the \formaldehyde survey
+to BGPS-selected sources.
+Chapter \ref{ch:software} summarizes software development for this thesis and beyond.
+Chapter \ref{ch:conclusion} concludes.
+
+\input{solobib}
+\end{document}

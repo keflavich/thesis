@@ -1,0 +1,1477 @@
+\input{preface}
+\chapter{Using outflows to track star formation in the W5 HII region complex}
+\label{ch:w5}
+\section{Preface}
+Only a few months after arriving at CU, I was given the opportunity to visit
+the peak of Mauna Kea to perform observations with the JCMT.  I spend about 3
+weeks at the telescope over the course of two years primarily mapping the W5
+complex.  A side-project done during these observations resulted in my Comps II
+project on IRAS 05358+3543.  These data were taken using Jonathan Williams'
+Hawaii time allocation with the HARP receiver.  The data were taken with
+essentially no plan for how they would be used.  The paper may have diminished
+our group's overall interest in the W5 region: it turns out that star formation
+is probably at its end here, being quenched by massive-star feedback.  However,
+there is a largely ignored cloud to the northwest of the well-studied W5 bubbles
+that has significant potential to form new stars.  
+
+The W5 study was originally intended to include a Bolocam census of cores, but
+the data in this region turned out to be the most problematic and contained
+little signal.  We acquired additional data in 2009, but never got around to
+performing a joint analysis of the CO and continuum data.  In part, at least,
+this is because W5 is so faint in the millimeter continuum compared to many
+Galactic Plane sources.
+
+
+
+% This work is essentially a very detailed study of a star-forming region with
+% minimal implications for star forming theories at the moment.
+
+\section{Introduction}
+
+
+Galactic-scale shocks such as spiral density waves promote the formation of
+giant molecular clouds (GMCs) where massive stars, star clusters, and OB
+associations form.  The massive stars in such groups can either disrupt the
+surrounding medium or promote further star formation.  While ionizing and soft
+UV radiation, stellar winds, and eventually supernova explosions destroy clouds
+in the immediate vicinity of massive stars, as the resulting bubbles age and
+decelerate, they can also trigger further star formation.  In the ``collect and
+collapse'' scenario
+\citep[e.g.][]{elmegreen:sequential:1977}, gas swept-up by expanding bubbles
+can collapse into new star-forming clouds.  In the ``radiation-driven
+implosion'' model \citep{bertoldi:cometary:1990,klein:implosion:1983},
+pre-existing clouds may be compressed by photo-ablation pressure or by the
+increased pressure as they are overrun by an expanding shell.  In some
+circumstances, forming stars are simply exposed as low-density gas is removed
+by winds and radiation from massive stars.  These processes may play significant roles in
+determining the efficiency of star formation in clustered environments
+\citep{elmegreen1998}.
+
+
+% Shortly after igniting, young massive stars may either provide the additional
+% pressure needed to collapse neighboring gas clumps into stars, or they may
+% simply disperse and destroy their natal environments.  The former phenomenon,
+% known as triggered star formation, may play a significant role in determining
+% the efficiency of star formation in clustered environments
+% \citet{elmegreen1998}.  In addition, triggering from external processes
+% asynchronous with star formation by direct collapse (e.g.  supernovae, spiral
+% density waves) are thought to be partly responsible for the evenutal collapse
+% of parent molecular clouds, but it is not yet known on what scales triggering
+% is important, nor how strongly each mechanism contributes.  
+
+Feedback from low mass stars may also control the shape of the stellar initial
+mass function in clusters \citep{adams1996,Peters2010}.  Low mass young stars
+generate high velocity, collimated outflows that contribute to the turbulent
+support of a gas clump, preventing the clump from forming stars long enough
+that it is eventually blown away by massive star feedback.  It is therefore
+important to understand the strength of low-mass protostellar feedback relative
+to other feedback mechanisms.
+
+Outflows are a ubiquitous indicator of the presence of ongoing star formation
+\citep{reipurth2001}.  CO outflows are an indicator of ongoing embedded star
+formation at a younger stage than optical outflows because shielding from the
+interstellar radiation field is required for CO to survive.  Although Herbig-
+Haro shocks and \hh\ knots reveal the locations of the highest-velocity
+segments of these outflows, CO has typically been thought of as a
+``calorimeter'' measuring the majority of the mass and momentum ejected from
+protostars or swept up by the ejecta \citep{Bachiller1996}.
+
+%\subsection{W5}
+
+The W5 star forming complex in the outer galaxy is a prime location to study
+massive star formation and triggering.  The bright-rimmed clouds in W5 have
+been recognized as good candidates for ongoing triggering by a number of groups
+\citep{lefloch:cometary:1997,thompson:searching:2004,karr:triggered:2003}.  The
+clustering properties were analyzed by \citet{koenig:clustered:2008} using
+Spitzer infrared data, and a number of significant clusters were discovered.
+The whole W5 complex may be a product of triggering, as it is located on one
+side of the W4 chimney thought to be created by multiple supernovae during the
+last $\sim$10 MYr \citep[][Figure \ref{fig:color_overview}]
+{oey:hierarchical:2005}.  
+
+Following \citet{koenig:clustered:2008}, we adopt a distance to W5 of 2 kpc
+based on the water-maser parallax distance to the neighboring W3(OH) region
+\citep{Hachisuka2006}.  As with W3, the W5 cloud is substantially
+($\approx1.5\times$) closer than its kinematic distance would suggest
+($v_{LSR}(-40~\kms)\approx3$ kpc).  Given this distance,
+\citet{koenig:clustered:2008} derived a total gas mass of 6.5\ee{4} \msun\ from
+a 2 \um\ extinction map.
+
+The W5 complex was mapped in the $^{12}$CO 1-0 emission line by the Five
+College Radio Astronomy Observatory (FCRAO) using the SEQUOIA receiver array
+\citep{heyer:ogs:1998}.  The same array was used to map W5 in the \thirteenco\
+1-0 line (C. Brunt, private communication).  Some early work searched for
+outflows in W5 \citep{bretherton:unbiased:2002}, but the low-resolution CO 1-0
+data only revealed a few, and only one was published.  The higher resolution
+and sensitivity observations presented here reveal many additional outflows.
+
+\begin{figure*}
+  % Generated by GIMP
+  \includegraphics[angle=90,width=5in]{figures_chw5/w345mos_brightened_labeled}
+  \caption{An overview of the W3/4/5 complex (also known as the ``Heart and
+  Soul Nebula'') in false color. Orange shows 8 \um\ emission from the Spitzer
+  and MSX satellites.  Purple shows 21 cm continuum emission from the DRAO CGPS
+  \citep{Taylor2003:CGPS}; the DSS R image was used to set the display opacity
+  of the 21 cm continuum as displayed (purely for aesthetic purposes).  The
+  green shows JCMT \twelveco\ 3-2 along with FCRAO \twelveco\ 1-0 to fill in 
+  gaps that were not observed with the JCMT.  The image spans
+  $\sim7\arcdeg$ in galactic longitude.  This overview image shows the
+  hypothesized interaction between the W4 superbubble and the W3 and W5
+  star-forming regions \citep{oey:hierarchical:2005}.}
+  \label{fig:color_overview}
+\end{figure*}
+
+%\subsection{Neighboring Regions}
+While W5 is thought to be associated with the W3/4/5 complex, there are other
+infrared sources in the same part of the sky that are not obviously associated
+with W5.  Some of these have been noted to be in the outer arm (several kpc
+behind W5) by \citet{Digel1996} and \citet{Snell2002}.
+
+\par
+\par In section 2, we present the new and archival data used in our study.  In
+section 3, we discuss the outflow detection process and compare outflow
+detectability in W5 to that in Perseus.  In section 4, we discuss the physical
+properties of the outflows and their implications for star formation in the W5
+complex.  In section 5, we briefly describe the outer-arm outflows discovered.
+
+\section{OBSERVATIONS}
+\subsection{JCMT HARP CO 3-2}
+CO J=3-2 345.79599 GHz data were acquired at the 15 m James Clerk Maxwell
+Telescope (JCMT) using the HARP array on a series of observing runs in 2008.
+On 2-4 January, 2008, $\sim$ 800 square arcminutes were mapped.  During the
+run, $\tau_{225}$, the zenith opacity at 225 GHz measured using the Caltech
+Submillimeter Observator tipping radiometer, ranged from 0.1 to 0.4
+($0.4<\tau_{345
+GHz}<1.6$\footnote{\url{http://docs.jach.hawaii.edu/JCMT/SCD/SN/002.2/node5.html}}).
+Additional areas were mapped on 4-7 August, 16-20 and 31 October, and 1 and
+12-15 Nov 2008 in similar conditions.  A total of $\sim$ 3 square degrees (12000
+arcmin$^2$) in the W5 complex were mapped (a velocity-integrated mosaic is
+shown in Figure \ref{fig:outflows_on_co32}).
+
+HARP is a 16 pixel SIS receiver array acting as a front-end to the ACSIS
+digital auto-correlation spectrometer.  In January 2008, 14 of the 16 detectors
+were functional.  In the 2nd half of 2008, 12 of 16 were functional,
+necessitating longer scans to achieve similar S/N.
+
+In January 2008, a single spectral window centered at 345.7959899 with bandwidth 1.0
+GHz and channel width 488 kHz (0.42 \kms) was used.  In August 2008 and later, we used 250 MHz
+bandwidth and 61 kHz (0.05 \kms) channel width.  At this frequency, the beam
+FWHM is 14\arcsec\ (0.14 pc at a distance of 2 kpc)
+\footnote{\url{http://docs.jach.hawaii.edu/JCMT/OVERVIEW/tel_overview/}}.
+
+A raster mapping strategy was used.  In 2008, the array was shifted by 1/2 of
+an array spacing (58.2\arcsec) between scans.  Data was sampled at a rate of
+$0.6 s$ per integration.  Two perpendicular scans were used for each field
+observed.  Most fields were 10$\times$10\arcmin\ and took $\sim45$ minutes.
+When only 12 receptors were available, 1/4 array stepping (29.1\arcsec) was
+used with a sample rate of $0.4 s$ per integration.
+
+Data were reduced using the SMURF package within the STARLINK software distribution
+\footnote{\url{http://starlink.jach.hawaii.edu/}}.  The SMURF command {\sc makecube} was used to
+generate mosaics of contiguous sub-fields.  The data were gridded on to cubes
+with 6\arcsec\ pixels and smoothed with a $\sigma=2$-pixel gaussian, resulting
+in a map FWHM resolution of 18\arcsec (0.17 pc).  A linear fit was subtracted from each
+spectrum over emission-free velocities (generally -60 to -50 and -20 to -10
+\kms) to remove the baseline.  The final map RMS was $\sigma_{T_A^*}\sim
+0.06-0.11 K$ in 0.42 \kms\ channels.
+
+The sky reference position (off position) in January 2008 was J2000 2:31:04.069 +62:59:13.81.
+In later epochs, off positions closer to the target fields were selected from blank sky regions
+identified in January 2008 in order to increase observing efficiency.  A
+main-beam efficiency $\eta_{mb}=0.60$ was used as per the JCMT website to
+convert measurements to $T_{mb}$, though maps and spectra are presented in the
+original $T_A^*$ units.
+
+\subsection{FCRAO Outer Galaxy Survey}
+The FCRAO Outer Galaxy Survey (OGS)
+observed the W5 complex in \twelveco\  \citep{heyer:ogs:1998} and \thirteenco\
+1-0 (C. Brunt, private communication).  The \thirteenco\ data cube achieved a
+mean sensitivity of 0.35 K per 0.13 \kms\ channel, or 0.6 K \kms\ integrated.
+The \thirteenco\ cube was integrated over all velocities and resampled to match
+the BGPS map using the {\sc montage}\footnote{\url{http://montage.ipac.caltech.edu/}}
+package.  The FWHM beam size was  $\theta_{B}=$50\farcs (0.48 pc).  The integrated
+\twelveco\ data cube, with a sensitivity $\sigma= 1 K$ \kms, is displayed with 
+region name identifications in Figure \ref{fig:regionboxes_on_CO}.
+
+\subsection{Spitzer}
+Spitzer IRAC and MIPS 24 \um\ images from \citet{koenig:clustered:2008} were
+used for morphological comparison.  The reduction and extraction techniques are
+detailed in their paper.
+
+\begin{figure*}
+  %\epsscale{1.0}
+  %CODE: cutouts.py
+  \includegraphics[angle=90,width=5in]{figures_chw5/outflows_ostars_on_CO32}
+  \caption{A mosaic of the CO 3-2 data cube integrated from -20 to -60 \kms.
+  The grayscale is linear from 0 to 150 K \kms.  The red and blue X's mark the
+  locations of redshifted and blueshifted outflows.  Dark red and dark blue
+  plus symbols mark outflows at outer arm velocities.  Green circles mark the
+  location of all known B0 and earlier stars in the W5 region from SIMBAD.}
+  \label{fig:outflows_on_co32}
+\end{figure*}
+
+\Figure{figures_chw5/regionboxes_on_CO}
+{Individual region masks overlaid on the FCRAO \twelveco\ integrated image.
+The named regions, S201, AFGL4029, LWCas, W5NW, W5W, W5SE, W5S, and W5SW, were all
+selected based on the presence of outflows within the box.
+The inactive regions were selected from regions with substantial CO emission
+but without outflows.  The `empty' regions have essentially no CO emission within
+them and are used to place limits on the molecular gas within the east and west
+`bubbles'.  W5NWpc is compared directly to the Perseus molecular cloud in 
+Section \ref{sec:percompare}
+%Finally, W5All is used in Section \ref{sec:covsbgps} to compute
+%global properties of the complex.  
+}{fig:regionboxes_on_CO}{0.5}{0}
+
+
+\section{Analysis}
+\subsection{Outflow Detections}
+Outflows were identified in the CO data cubes by manually searching through
+position-velocity space for line wings using STARLINK's GAIA display software.  Outflow
+candidates were identified by high velocity wings inconsistent with the local
+cloud velocity distribution, which ranged from a width of 3 \kms\ to  7 \kms.
+Once an outflow candidate was identified in the position-velocity diagrams, the
+velocity range over which the wing showed emission in the position-velocity
+diagram (down to $T_A^*=0$) was integrated over to create a map from which the
+approximate outflow size and position was determined (e.g. Figures
+\ref{fig:outflow1} and \ref{fig:pv2b}). 
+%The integration limits for computing physical
+%properties were also set from the position-velocity diagram limits, not the
+%averaged spectra: in some cases, emission at higher velocities away from the
+%outflow was included in the aperture that is not part of the outflow.
+
+Unlike \citet{curtis2010} and \citet{hatchell2009}, we did not use an
+`objective' outflow identification method because of the greater velocity complexity
+and poorer spatial resolution of our observations.  The outflow selection
+criteria in these papers requires the presence of a sub-mm clump in order to
+identify a candidate driving source (and therefore a targeted region in which to search for
+outflows), making a similar objective identification impossible for
+our survey.
+As discussed later in 
+Section \ref{sec:subregions}, the regions associated with outflows have wide
+lines and many are double-peaked.  Additionally, many smaller areas associated
+with outflows have collections of gaussian-profiled clumps that are not connected to
+the cloud in position-velocity diagrams but are not outflows.  In particular,
+W5 is pockmarked by dozens of small cometary globules that are sometimes
+spatially coincident with the clouds but slightly offset in velocity.
+
+While \citet{arce2010} described the benefits of 3D visualization using
+isosurface contours, we found that the varying signal-to-noise across
+large-scale ($\sim500$ pixel$^2$) regions with significant extent in RA/Dec and
+limited velocity dynamic range made this method diffult for W5.  There
+were many low-intensity outflows that were detectable by careful searches
+through position-velocity space that are not as apparent using isosurface
+methods.  Out of the 55 outflows reported here, only 14 \footnote{
+Outflows 15, 20, 24, the cluster of outflows 26-32, 47, 48, 52, and 53 could 
+all have readily been detected by pointed single-dish measurements.} would be
+considered obvious, high-intensity, high-velocity flows from their spectra
+alone; the rest could not be unambiguously detected without a search through
+position-velocity space.
+
+In the majority of sources, the individual outflow lobes were
+unresolved, although some showed hints of position-velocity gradients at low
+significance and in many the red and blue flows are spatially separated.    Only
+Outflow 1's lobes were clearly resolved (Figure \ref{fig:outflow1}).  Some of the
+most suggestive gradients occurred where the outflow merged with its host
+molecular cloud in position-velocity space, making the gradient difficult to
+distinguish (e.g., Outflow 12, Figure \ref{fig:pv12}).  Bipolar pairs were
+selected when there were red and blue flows close to one another.  The
+classification of a bipolar flow was either `yc' (yes - confident), `yu' (yes -
+unconfident), or `n' (no) in Table \ref{tab:outflows}.  This identification is
+discussed in the captions for each outflow figure in the online
+supplement. The AFGL 4029 region has many red and blue lobes but confusion
+prevented pairing.  
+
+\FigureFour{figures_chw5/pvdiagrams/pvdiagram_rotate_of1}{figures_chw5/OutflowOverlay_4.5_1}{figures_chw5/OutflowSpectra1}{figures_chw5/OutflowOverlay_8um_1}
+{Position-velocity diagrams (a), spectra (c), and contour overlays of Outflow 1 on Spitzer 4.5 \um\ (b)
+and 8 \um\ (d) images.  
+This outflow is clearly resolved and bipolar.
+{\it (a)}: Position-velocity diagram of the blue flow displayed in arcsinh stretch
+from $T_A^*=$0 to 3 K.  Locations of the red and blue flows are indicated by vertical dashed lines.
+The location of the position-velocity cut is indicated by the orange dashed line in panels (b) and
+(d), although the position-velocity cut is longer than those cut-out images.
+{\it (b)} Spitzer 4.5 \um\ image displayed in logarithmic stretch from 30 to 500 MJy \persr.    
+{\it (c)}: Spectrum of
+the outflow integrated over the outflow aperture and the velocity range
+specified with shading.  The velocity center (vertical dashed line) is
+determined by fitting a gaussian to the \thirteenco\ spectrum in an aperture
+including both outflow lobes.  In the few cases in which \thirteenco\ 1-0 was 
+unavailable, a gaussian was fit to the \twelveco\ 3-2 spectrum.
+{\it (d)}: Contours of the red and blue outflows superposed on the 
+Spitzer 8 \um\ image displayed in logarithmic stretch.  The contours are
+generated from a total intensity image integrated over the outflow
+velocities indicated in panel (c).  The contours in both panels (b) and (d) are displayed at levels of
+0.5,1,1.5,2,3,4,5,6 K \kms\ ($\sigma\approx0.25$ K \kms).
+The contour levels and stretches specified in this caption apply to all of the
+figures in the supplementary materials except where otherwise noted.
+}
+{fig:outflow1}
+
+
+\FigureFour{figures_chw5/pvdiagrams/pvdiagram_rotate_of2}{figures_chw5/OutflowOverlay_4.5_2}{figures_chw5/OutflowSpectra2}{figures_chw5/OutflowOverlay_8um_2}
+{Position-velocity diagram, spectra, and contour overlays of Outflow 2 (see
+Figure \ref{fig:outflow1} for a complete description).  While the two lobes are
+widely separated, there are no nearby lobes that could lead to confusion, so we
+regard this pair as a reliable bipolar outflow identification.  
+}
+{fig:pv2b}
+
+\FigureFour{figures_chw5/pvdiagrams/pvdiagram_rotate_of12}{figures_chw5/OutflowOverlay_4.5_12}{figures_chw5/OutflowSpectra12}{figures_chw5/OutflowOverlay_8um_12}
+{Position-velocity diagram, spectra, and contour overlays of Outflow 12.  Much of the red outflow
+is lost in the complex velocity profile of the molecular cloud(s), but it is high enough velocity
+to still be distinguished. }
+{fig:pv12}
+
+In cases where only the red- or blue-shifted lobe was visible, the
+surrounding pixels were searched for lower-significance and lower-velocity
+counterparts.  For cases in which emission was detected, a
+candidate counterflow was identified and incorporated into the catalog.
+However, in 12 cases, the counterflow still evaded detection, either because of
+confusion or because the counterflow is not present in CO.
+
+The outflow positions are overlaid on the CO 3-2 image in Figure
+\ref{fig:outflows_on_co32} to provide an overview of where star formation is
+most active.  The figures in Section \ref{sec:sfactivity}  show outflow
+locations overlaid on small-scale images.
+
+Because our detection method involved searching for high-velocity outflows
+by eye, there should be no false detections.  However, it is possible
+that some of these outflows are generated by mechanisms other than
+protostellar jets and winds since we have not identified their driving sources.
+
+One possible alternative driving mechanism is a photoevaporation flow,
+which could be accelerated up to the sound speed of the ionized medium,
+$c_{II} \approx 10$~\kms.
+Gas accelerating away from the cloud would not be detected as an outflow
+because it would be rapidly ionized.
+However, gas driven inward would be accelerated and remain molecular.  It
+could exhibit red and / or blue flows depending on the line of
+sight orientation.  While there are viable candidates for this form of outflow
+impersonator, such flows can only have peak velocities $v\lesssim c_{II}/4
+\approx 2.5$~\kms\ in the strong adiabatic shock limit, so that any gas
+seen with higher velocity tails are unlikely to be radiation-driven.  
+
+Another plausible outflow impostor is the high-velocity tail in a
+turbulent distribution.  However, for a typical molecular cloud, the low
+temperatures would require very high mach-number shocks ($\mathcal{M}\gtrsim10$
+assuming $T_{cloud}\sim20 $ K and $v_{flow} \sim 3$ \kms) that in idealized
+turbulence should be rare and short-lived.  It is not known how frequent such
+high-velocity excursions will be in non-ideal turbulence with gravity (A.
+Goodman, P. Padoan, private communication).  Finally, it is less likely for
+turbulent intermittency to have nearly coincident red and blue lobes, so
+intermittency can be morphologically excluded in most cases. 
+
+
+\subsubsection{Comparison to Perseus CO 3-2 observations}  % may not need subsub...
+\label{sec:percompare}
+We used the HARP CO 3-2 cubes from \citet{hatchell2007} to evaluate our ability
+to identify outflows.  We selected an outflow that was
+well-resolved and unconfused, L1448, and evaluated it at both the native
+sensitivity of the \citet{hatchell2007} observations and degraded in resolution
+and sensitivity to match our own.  We focus on L1448 IRS2,
+labeled Outflow 30 in \citet{hatchell2007}. Figure \ref{fig:l1448} shows a
+comparison between the original quality and degraded data.  
+
+Integrating over the outflow velocity range, we measure each lobe to be
+about $1.6\arcmin\times0.8\arcmin$ ($0.14\times0.07$pc).  Assuming a distance
+to Perseus of 250 pc \citep[e.g.][]{Enoch2006},  we smooth by a factor of 8 by convolving
+the cube with a FWHM = 111\arcsec\ gaussian, then downsample by the same factor of 8
+to achieve 6\arcsec\ square pixels at 2 kpc.  The resulting noise was reduced
+because of the spatial and spectral smoothing and was measured to be $\approx 0.05$ K in
+0.54 \kms\ channels, which is comparable to the sensitivity in our
+survey.  It is still possible to distinguish the outflows
+from the cloud in position-velocity space.  Each lobe is individually
+unresolved (long axis $\sim12\arcsec$ compared to our beam FWHM of 18\arcsec),
+but the two are separated by $\gtrsim 20\arcsec$ and therefore an overall
+spatial separation can still be measured.  Because they are just barely
+unresolved at this distance, the lobes' surface brightnesses are approximately
+the same at 2 kpc as at 250 pc; if this outflow were seen at a greater distance
+it would appear fainter.
+
+\citet{hatchell2007} detected 4 outflows within this map, plus an additional
+confused candidate.  We note an additional grouping of outflowing material in
+the north-middle of the map (centered on coordinate 150$\times$150 in Figure
+\ref{fig:l1448}).  In the smoothed version, only three outflows are detected in
+the blue and two in the red, making flow-counterflow association difficult.
+The north-central blueshifted component appears to be the counterpart of the
+red flow when smoothed, although it is clearly the counterpart of the northwest
+blue flow in the full-resolution image.
+
+We are therefore able to detect any outflows comparable to L1448 (assuming a
+favorable geometry), but are likely to see clustered outflows as single or
+possibly extended lobes and will count fewer lobes than would be detected at
+higher resolution.  Additionally, it is clear from this example that two
+adjacent outflows with opposite polarity are not necessarily associated, and
+therefore the outflows' source(s) may not be between the two lobes.  
+
+\Figure{figures_chw5/hatchell_l1448_compare}
+{Comparison of L1448 seen at a distance of 250 pc (left) versus 2 kpc (middle) with
+sensitivity 0.5 K and 0.05K per 0.5 \kms\ channel respectively.  {\it Far
+Left}: Position-velocity diagram (log scale) of the outflow L1448 IRS2 at its
+native resolution and velocity.  L1448 IRS2 is the rightmost outflow in the contour 
+plots.  The PV diagram is rotated 45\arcdeg\ from RA/Dec axes to go along the outflow
+axis.
+{\it Middle Left}: Position-velocity diagram (log scale) of the same outflow smoothed
+and rebinned to be eight times more distant.
+{\it Top Right}: The integrated map is displayed at its native resolution (linear scale).
+The red contours are of the same data integrated from 6.5 to 16 \kms\ and the blue from 
+-6 to 0 \kms.  Contours are at 1,3, and 5 K \kms\ ($\sim 6, 18, 30 \sigma$).  Axes
+are offsets in arcseconds.  Because we are only examining the relative detectability of
+outflows at two distances, we are not concerned with absolute coordinates.
+{\it Bottom Right}: The same map as it would be observed at eight times greater
+distance.  Axes are offsets in arcseconds assuming the greater distance.
+Contours are integrated over the same velocity range as above, but are
+displayed at levels 0.25,0.50,0.75,1.00 K \kms\ ($\sim 12, 24, 48, 60 \sigma$).
+The entire region is detected at high significance, but dominated by confusion.
+It is still evident that the red and blue lobes are distinct, but they are each
+unresolved. 
+}
+{fig:l1448}{0.5}{0}
+
+In order to determine overall detectability of outflows compared to Perseus, we
+compare to \citet{curtis2010} in Figure \ref{fig:lengthhist}.  Out of 29
+outflows in their survey with measured `lobe lengths', 22 (71\%) were smaller
+than 128\arcsec\, which would be below our 18\arcsec\ resolution if 
+observed at 2 kpc.  Even the largest lobes (HRF26R,
+HRF28R, HRF44B) would only extend $\sim60\arcsec$ at 2 kpc.  Each lobe in the
+largest outflow in our survey, Outflow 1, is $\sim80\arcsec$ (660\arcsec\ at
+250pc), but no other individual outflow lobes in W5 are clearly resolved.
+However, as seen in Figure \ref{fig:lengthhist}, many bipolar lobes are
+\emph{separated} by more than the telescope resolution, and the overall lobe
+separation distribution (as opposed to the lobe length, which is mostly unmeasured
+in our sample) in W5 is quite similar to the separation distribution in
+Perseus.  The 2-sample KS test gives a 25\% probability that they are drawn
+from the same distribution (the null hypothesis that they are drawn from the
+same distribution cannot be rejected).  
+%However, \citet{Yu1999} discovered a CO 1-0 outflow in Barnard 5 that extended
+%$\sim12\arcmin$, substantially larger than the largest detected in our survey 
+%even at a distance of 2 kpc.
+
+\Figure{figures_chw5/OutflowLengthHistogram}
+{Histogram of the measured outflow lobe separations.  The grey hatched region shows
+\citet{curtis2010} values.  The vertical dashed line represents the spatial
+resolution of our survey.  The two distributions are similar.}
+{fig:lengthhist}{0.5}{0}
+
+On average, the \citet{curtis2010} outflow velocities are similar to ours
+(Figure \ref{fig:widthhist}).   We detect lower velocity outflows because we do
+not set a strict lower velocity limit criterion.  We do not detect the highest
+velocity outflows most likely because of our poorer sensitivity to the faint
+high-velocity tips of outflows, although it is also possible that no
+high-velocity ($v>20$ \kms) flows exist in the W5 region.  Note that the
+histogram compares quantities that are not directly equivalent: the outflows in
+\citet{curtis2010} and our own data are measured out to the point at which the
+outflow signal is lost, while the `region' velocities are full-width half-max
+(FWHM) velocities.  
+
+Finally, we use the detectability of outflows in Perseus to inform our
+expectations in W5.  Since it appears that we can detect outflows from low-mass
+protostars with sub-stellar to $\sim30L_\odot$ luminosities
+at the distance of W5 and these objects should be the most numerous in a
+standard initial mass function, the distribution of physical properties in W5
+outflows should be similar to those in Perseus.  However, because W5 is a
+somewhat more massive cloud ($M_{W5}\approx 5 M_{Perseus}$ \footnote{$M_{W5}$
+is estimated from \thirteenco.  We also estimate the total molecular mass in W5 using
+the X-factor and acquire $M_{W5}=5.0\ee{4}$ \msun, in agreement with
+\citet{karr:triggered:2003}, who estimated a molecular mass of 4.4\ee{4} from
+\twelveco\ using the same X-factor.  \citet{koenig:clustered:2008} estimated a
+total gas mass of 6.5\ee{4} from a 2MASS extinction map.   The total molecular mass
+in Perseus is $M_{Perseus} \sim 10^4$ \citep{bally-perseus2008}}), we might expect the
+high-end of the distribution to extend to higher values of outflow mass,
+momentum, and energy.  Since we will likely see clustered outflows confused
+into a smaller number of distinct lobes, we expect a bias towards higher values
+of the derived quantities but a lower detection rate.
+
+\subsubsection{Velocity, Column Density, and Mass Measurements}
+\label{sec:measurements}
+Throughout this section, we assume that the CO
+lines are optically thin and thermally excited.   The measured properties
+are presented in Table \ref{tab:outflows}.  These assumptions are
+likely to be invalid, so we also discuss the consequences of applying `typical'
+optical depth corrections to the derived quantities.   Because we do
+not measure optical depths and the optical depth correction for CO 3-2 is less
+well quantified than for CO 1-0 \citep{curtis2010,Cabrit1990}\footnote{In
+\citet{curtis2010}, this correction factor ranged from 1.8 to 14.3;
+\citet{arce2010} did not enumerate the optical depth correction they
+used but it is typically around 7 \citep{Cabrit1990}.  }, we only present the
+uncorrected measurements in Table \ref{tab:outflowsderived}.
+
+The outflow velocity ranges were measured by examining
+both RA-velocity and Dec-velocity diagrams interactively using the STARLINK
+GAIA data cube viewing tool.  The velocity limits are set to include
+all outflow emission that is distinguishable from the cloud (i.e. the velocity
+at which outflow lobes dominate over the gaussian wing of the cloud
+emission) down to zero emission.  An outflow size \citep[or lobe size,
+following ][]{curtis2010} was determined by integrating over the blue and red
+velocity ranges and creating an elliptical aperture to include both peaks; the
+position and size therefore have approximately beam-sized ($\approx18\arcsec$)
+accuracy.  The integrated outflow maps are shown as red and blue contours in
+Figure \ref{fig:pv2b}.  The velocity center was computed by fitting a
+gaussian to the FCRAO \thirteenco\ spectrum averaged over the elliptical
+aperture.
+
+\Figure{figures_chw5/WidthHistogram}
+{Histogram of the outflow line widths. {\it Black lines}: histogram of the measured
+outflow widths (half-width zero-intensity, measured from the fitted central
+velocity of the cloud to the highest velocity with non-zero emission).  {\it
+Blue dashed lines}: outflow half-width zero-intensity (HWZI) for the outer arm (non-W5) sample.
+{\it Solid red shaded}: The measured widths (HWHM) of the sub-regions as
+tabulated in Table \ref{tab:regionspectra}.   
+{\it Gray dotted}: Outflow $v_{max}$ (HWZI) values for Perseus
+from \citet{curtis2010}. }
+{fig:widthhist}{0.5}{0}
+
+
+The column density is estimated from \twelveco\ J=3-2  assuming local thermal
+equilibrium (LTE) and optically thin emission using the equation 
+$ N(\hh) =
+5.3\ee{18}\eta_{mb}^{-1} \int T_A^*(v) dv $ for $T_{ex}=20$ K. 
+The derivation is given in the Appendix.
+The column density in the lobes is likely to be dominated by low-velocity gas
+and therefore our dominant uncertainty may be missing low-velocity emission
+rather than poor assumptions about the optical depth.
+
+The scalar momentum and energy were computed from
+\begin{equation}
+      p = M \frac{\sum T_A^*(v) (v-v_{c}) \Delta v}{ \sum T_A^*(v) \Delta v}
+\end{equation}
+\begin{equation}
+      E = \frac{M}{2} \frac{\sum T_A^*(v) (v-v_{c})^2 \Delta v}{ \sum T_A^*(v) \Delta v}
+\end{equation}
+where $v_c$ is the \thirteenco\ 1-0 centroid velocity.  The same 
+assumptions used in determining column density are applied here.
+
+We
+estimate an outflow lifetime by taking half the distance between the red and
+blue outflow centroids divided by the maximum measured velocity difference
+($\Delta v_{max} = (v_{max,red}-v_{max,blue})/2$), $\tau_{flow} = L_{flow} / ( 2 \Delta
+v_{max})$, where $L_{flow}$ refers to the length of the flow.  This method
+assumes that the outflow inclination is 45\arcdeg; if it is more parallel to
+the plane of the sky, we overestimate the age, and vice-versa.  The momentum
+flux is then $\dot{P} = p / \tau$.  Similarly, we compute a mass loss rate by
+dividing the total outflow mass by the dynamical age, which yields what is
+likely a lower limit on the mass loss rate (if the lifetime is underestimated,
+the mass loss rate is overestimated, but the outflow mass is always a lower
+limit because of optical depth and confusion effects).    
+
+The dynamical ages are highly suspect since the red and blue lobes are often
+unresolved or barely resolved, and diffuse emission averaged with the lobe
+emission can shift the centroid position.  Additionally, it is not clear what
+portion of the outflow corresponds to the centroid: the bow shock or the jet could both potentially
+dominate the outflow emission.  \citet{curtis2010} discuss the many ways in
+which the dynamical age can be in error.  
+Our mass loss rates are similar to those in Perseus \emph{without} correcting our 
+measurements for optical depth, while our outflow masses are an order of magnitude lower.
+It therefore appears that our dynamical age estimates must be too low, since we have no 
+reason to expect protostars in W5 to be undergoing mass loss at a greater rate than those in
+Perseus.
+However, given more reliable
+dynamical age estimates from higher resolution observations of shock tracers,
+the mass loss rates could be corrected and compared to other star-forming
+regions.
+
+Because the emission was assumed to be optically thin, the mass, column,
+energy, and momentum measurements we present are strictly lower limits.  While
+some authors have computed correction factors to \twelveco\ 1-0 optical depths
+\citep[e.g.][]{Cabrit1990},  the corrections are different for the 3-2
+transition \citep[1.8 to 14.3,][]{curtis2010}.  Additionally, CO 3-2 may
+require a correction for sub-thermal excitation because of its higher critical
+density (the CO 3-2 critical density is 27 times higher than CO 1-0; see
+Appendix \ref{appendix:dipole} for modeling of this effect).
+
+Additionally, most of the outflow mass is at the lowest distinguishable
+velocities in typical outflows \citep[e.g.][]{arce2010}.  It is therefore
+plausible that in the more turbulent W5 region, a greater fraction of the
+outflow mass is blended (velocity confused) with the cloud and therefore not
+included in mass, momentum, and energy measurements.  This omission could be
+greater than the underestimate due to poor opacity assumptions.
+
+The total mass of the W5 outflows is $M_{tot}\approx1.5 \msun$,
+substantially lower, even with an optical depth correction of $10\times$, than
+the 163 \msun\ reported in Perseus \citep{arce2010}.  \citet{arce2010} also include
+a correction factor of 2.5 to account for higher temperatures in outflows and a
+factor of 2 to account for emission blended with the cloud.  The temperature
+correction is inappropriate for CO 3-2 (see Appendix \ref{appendix:dipole},
+Figure \ref{fig:approx}), but the resulting total outflow mass in W5 with an
+optical depth correction and a factor of 2 confusion correction is about 30
+\msun.  In order to make our measurements consistent with a mass of 160 \msun\ , a density
+upper limit in the outflowing gas of $n(\hh) < 10^{3.5} \percc$ is required,
+since a lower gas density results in greater mass for a given intensity (see
+Appendix \ref{appendix:dipole}, Figure \ref{fig:coradex}).  However, we
+expect the total outflow mass in W5 to be greater than in Perseus because 
+of the greater cloud mass, implying that the density in the flows must be even
+lower, or additional corrections are needed.
+
+The total outflow momentum is $p_{tot}\approx10.9 \msun$ \kms, versus a quoted
+517 \msun \kms\ in Perseus \citep{arce2010}.  \citet{arce2010} included
+inclination and dissociative shock corrections for the momentum measurements
+on top of the correction factors already applied to the mass.  If these
+corrections are removed from the Perseus momentum total (except for optical depth,
+which is variable in their data and therefore cannot be removed), the uncorrected outflow
+momentum in Perseus would be about 74 \msun \kms. The W5 outflow momentum, if
+corrected with a `typical' optical depth in the range 7-14, would match or exceed
+this value.  If an additional CO 3-2 excitation correction (in the range 1-20)
+is applied, the W5 outflow momentum would significantly exceed that in Perseus.
+
+Assuming a turbulent line width $\Delta v \sim 3$ \kms\ (approximately the
+smallest FWHM line-width observed), the total turbulent momentum in the ambient
+cloud is $p = M_{tot} \Delta v = 1.3\ee{5} \msun$ \kms, which is $\sim10^5$
+times the measured outflow momentum - the outflows detected in our
+survey cannot be the sole source of the observed turbulent line widths, even if
+corrected for optical depth and missing mass.  
+
+Table \ref{tab:regionspectra} presents the turbulent momentum for each
+sub-region computed by multiplying the measured velocity width by the
+integrated \thirteenco\ mass.  Even if the outflow measurements are 
+orders of magnitude low because of optical depth, cloud blending, sub-thermal
+excitation, and other missing-mass considerations, outflows contribute
+negligibly to the total momentum of high velocity gas in W5.  This result is
+unsurprising, as there are many other likely sources of energy in the region
+such as stellar wind bubbles and shock fronts between the ionized and molecular
+gas.  Additionally, in regions unaffected by feedback from the HII region (e.g.
+W5NW), cloud-cloud collisions are a possible source of energy.
+
+Figure \ref{fig:outflowhist} displays the distribution of measured properties
+and compares them to those derived in the COMPLETE \citep{arce2010} and
+\citet{curtis2010} HARP CO 3-2 surveys of Perseus.  Our derived masses are
+substantially lower than those in \citet{arce2010} even if corrected for
+optical depth, but our momenta are similar to the CPOC (COMPLETE Perseus
+Outflow Candidate) sample and our energies are higher, indicating a bias
+towards detecting mass at high velocities.  The bias is more heavily towards
+high velocities than the CO 1-0 used in \citet{arce2010}.  The discrepancy
+between our values and those of \citet{arce2010} and \citet{curtis2010} can be
+partly accounted for by the optical depth correction applied in those works:
+\thirteenco\ was used to correct for opacity at low velocities, where most of
+the outflow mass is expected.  Those works may also have been less affected by
+blending because of the smaller cloud line widths in Perseus.
+
+%\Figure{OutflowHistograms}{Histograms of outflow properties.}{fig:outflowhist}{1.0}
+\FigureFour{figures_chw5/OutflowMassHistogram_legend}{figures_chw5/OutflowEnergyHistogram}{figures_chw5/OutflowMomentumHistogram}{figures_chw5/OutflowColumnHistogram}
+{Histograms of outflow physical properties.  
+%All display a peak at low values in addition
+%to a high excess.  None are obviously well-fit by power-law or gaussian distributions.
+The solid unfilled lines are the W5 outflows (this paper), the forward-slash
+hashed lines show \citet{arce2010} CPOCs , the dark gray
+shaded region shows \citet{arce2010} values for known outflows in Perseus, and
+the light gray, backslash-hashed regions show \citet{curtis2010} CO 3-2 outflow
+properties.  The outflow masses measured in Perseus are systematically higher
+partly because both surveys corrected for line optical depth using \thirteenco.
+The medians of the distributions are 0.017, 0.044, 0.33, and 0.14 \msun\ for
+W5, Curtis, Arce Known, and Arce CPOCs respectively, which implies that an
+optical depth and excitation correction factor of 2.5-20 would be required to
+make the distributions agree (although W5, being a more massive region, might
+be expected to have more massive and powerful outflows).  It is likely that CO
+3-2 is sub-thermally excited in outflows, and CO outflows may be destroyed by
+UV radiation in the W5 complex while they easily survive in the lower-mass
+Perseus region, which are other factors that could push the W5 mass
+distribution lower.
+}
+{fig:outflowhist}
+
+The momentum flux and mass loss rate are compared to the values derived in
+Perseus by \citet{hatchell2007} and \citet{curtis2010} in Figures
+\ref{fig:outflowPflux} and \ref{fig:outflowmdot}.  Both of our values are
+computed using the dynamical timescale $\tau_d$ measured from outflow lobe
+separation, while the \citet{hatchell2007} values are derived using a more
+direct momentum-flux measurement in which the momentum flux contribution 
+of each pixel in the resolved outflow map is considered.  
+The derived
+momentum fluxes (Figure \ref{fig:outflowPflux}) are approximately consistent
+with the \citet{curtis2010} Perseus momentum fluxes; \citet{curtis2010} measure
+momentum fluxes in a range $1\ee{-6}<\dot{P}<7\ee{-4}$ \msun \kms \peryr,
+higher than our measured $6\ee{-7}<\dot{P}<1\ee{-4}$ \msun \kms \peryr\ by
+approximately the opacity correction they applied.  As seen in Figure
+\ref{fig:outflowPflux}, the \citet{hatchell2007} momentum flux measurements in
+Perseus cover a much lower range $6\ee{-8}<\dot{P}<2\ee{-5}$ \msun \kms \peryr\
+and are not consistent with our measurements.  This disagreement is most likely
+because of the difference in method.  The W5 outflows exhibit
+substantially higher mass-loss rates and momentum fluxes if we assume a factor
+of 10 opacity correction, as expected from our bias toward higher-velocity,
+higher-mass flows.
+
+\Figure{figures_chw5/OutflowMomentumFluxHistogram}
+{Histogram of the measured outflow momentum fluxes.  The black thick line shows
+our data, the grey shaded region shows the \citet{hatchell2007} data, and the
+hatched region shows \citet{curtis2010} values.  Our measurements peak squarely
+between the two Perseus JCMT CO 3-2 data sets, although the \citet{curtis2010}
+results include an opacity correction that our data do not, suggesting that our
+results are likely consistent with \citet{curtis2010} but inconsistent with the
+\citet{hatchell2007} direct measurement method.}
+{fig:outflowPflux}{0.5}{0}
+
+\Figure{figures_chw5/OutflowMassLossRateHistogram}
+{Histogram of the measured mass loss rate.  The black thick line shows our
+data, while the grey shaded region shows the \citet{hatchell2007} data, which
+is simply computed by $\dot{M} = \dot{P} \times 10 / 5$ \kms, where the factor
+of 10 is a correction for opacity.  Our mass loss rates are very comparable to
+those of \citet{hatchell2007}, but different methods were used so the
+comparison may not be physically meaningful.  \citet{curtis2010} (hatched) used
+a dynamical time method similar to our own and also derived similar mass loss
+rates, although their mass measurements have been opacity-corrected using the
+\thirteenco\ 3-2 line.  Because our mass loss rates agree reasonably with
+Perseus, but our outflow mass measurements are an order of magnitude low, we
+believe our dynamical age estimates to be too small.
+}
+{fig:outflowmdot}{0.5}{0}
+
+
+\subsection{Structure of the W5 molecular clouds: A thin sheet?}
+The W5 complex extends $\sim 1.6\arcdeg \times 0.7 \arcdeg$ within 20\arcdeg\
+of parallel with the galactic plane.  At the assumed distance of 2 kpc, it has
+a projected length of $\sim60$ pc (Figure \ref{fig:outflows_on_co32}).
+%% In the far-infrared (Figure\ref{fig:outflows_on_IRAS100}) and %%
+In the 8 \um\ band (Figure \ref{fig:color_overview}), the region appears to
+consist of two blown-out bubbles with $\sim 10-15$ pc radii centered on
+$\ell=138.1, b=1.4$ and $\ell=137.5,b=0.9$.  While the bubbles are filled in
+with low-level far-infrared emission, there is no CO detected down to a
+$3-\sigma$ limit of 3.0 K \kms\ (\twelveco\ 1-0), 2.4 K \kms\ (\twelveco\ 3-2,
+excepting a few isolated clumps), and 1.5 K \kms\ (\thirteenco\ 1-0).  Using the 
+X-factor (the CO-to-\hh\ conversion factor) for \twelveco\, $N(\hh) =
+3.6\ee{20} \persc / (\mathrm{K}~\kms)$, we derive an upper limit $N(\hh) <
+1.1\ee{21}\persc$, or $A_V \lesssim 0.6$.  Individual `wisps' and `clumps' of
+CO can sometimes be seen, particularly towards the cloud edges, but in general
+the bubbles are absent of CO gas.
+
+% The 
+% strictest column limit comes from the \twelveco\ 3-2 observations (assuming
+% LTE, $\tau<<1$, and T$_{ex}=20K$), with a $3-\sigma$ column limit $N_{\hh} <
+% 7.8\ee{18}$ within an 18\arcsec\ beam, or $A_V \lesssim 0.1$ magnitudes
+% \citep[using the][conversion $A_V=1.9\ee{21} \persc$]{Bohlin1978}\footnote{ The
+% \twelveco\ 1-0 line gives a limit of 3.8\ee{19} \persc\ or $A_V=0.02$ in a
+% 45\arcsec\ FWHM beam.  This limit may be more restrictive than the CO 3-2 limit
+% if CO 3-2 is sub-thermally excited, though at this resolution the CO 3-2 limit
+% is $N(\hh) < 3.1\ee{18}$.}.  
+
+Given such low column limits,  the W5 cloud must be much smaller along the line
+of sight than its $\sim50$ pc size projected on the sky.  Alternately, along
+the line-of-sight, the columns of molecular gas are too low for CO to
+self-shield, and it is therefore destroyed by the UV radiation of W5's O-stars.
+In either case, there is a significant excess of molecular gas in the plane of
+the sky compared to the line of sight, which makes W5 an excellent location to
+perform unobscured observations of the star formation process.  The implied
+thin geometry of the W5 molecular cloud may therefore be similar to the bubbles
+observed by \citet{Beaumont2009}, but on a larger scale.
+
+There is also morphological evidence supporting the face-on
+hypothesis.  In the AFGL 4029 region (Section \ref{sec:afgl4029}) and all along
+the south of W5, there are ridges with many individual cometary `heads'
+pointing towards the O-stars that are unconfused along the line of sight.  This
+sort of separation would not be expected if we were looking through the clouds
+towards the O-stars.  W5W, however, presents a counterexample in which there
+are two clouds along the line of sight that may well be masking a more complex
+geometry.
+
+% \subsection{\thirteenco\ 1-0}
+% The \thirteenco\ integrated intensity was used to compute the \hh\ column using
+% \begin{equation}
+%     N_{\hh} = 1.694\ee{20} / (1-e^{(-5.3/T_{ex})}) \int T_{A}^* (v)
+%     dv\ \persc,
+% \end{equation} 
+% where we have assumed the excitation temperature is the gas kinetic temperature
+% $T_{ex} = T_K = 20$ K.  We do not include a main-beam efficiency correction
+% because the factor was unknown; this omission may introduce a systematic
+% underestimate of up to $\sim40\%$ (based on the \twelveco\ 1-0 $\eta_{MB}$).
+% The 1-$\sigma$ column sensitivity limit is 4.4\ee{20} \persc\ or 0.16 \msun for
+% an assumed 2 kpc distance in 22\farcs5 square pixels.
+
+\section{Sub-regions}
+\label{sec:subregions}
+
+Individual regions were selected from the mosaic for comparison.  All regions
+with multiple outflows and indicators of star formation activity were named and
+included as regions for analysis.  Additionally, three ``inactive'' regions were
+selected based on the presence of \thirteenco\ emission but the lack of
+outflows in the \twelveco\ 3-2 data.  Finally, two regions devoid of CO emission
+were selected as a baseline comparison and to place upper limits on the molecular
+gas content of the east and west `bubbles'.  The regions are identified on the
+integrated \thirteenco\ image in Figure \ref{fig:regionboxes_on_CO}. 
+
+%Cloud velocity widths were measured in a range 3-7 \kms (full-width
+%zero-intensity).  This range is inferred from by-eye inspection of
+%position-velocity diagrams and 1d gaussian fits to a few (arbitrary) lines of
+%sight. 
+Average spectra were taken of each ``region'' within the indicated box.
+Gaussians were fit to the spectrum to determine line-widths and centers (Figure
+\ref{fig:regionspectra}, Table \ref{tab:regionspectra}).  Gaussian fits were
+necessary because in many locations there are at least two velocity components,
+so the second moment (the ``intensity-weighted dispersion'') is a poor
+estimator of line width.  Widths ranged from $v_{FWHM} = 2.3$ to 6.2 \kms\
+(Figure \ref{fig:widthhist}).  
+
+
+\include{regionspectratable_mnras} %tab:regionspectra
+\include{regiontable_mnras} % tab:regiontable
+
+\Figure{figures_chw5/regionspectra_grid}
+{Spatially averaged spectra of the individual regions analyzed.  \twelveco\ 3-2
+is shown by thick black lines and \thirteenco\ 1-0 is shown by thin red lines.
+Gaussian fits are overplotted in blue and green dashed lines, respectively.
+The fit properties are given in Table
+\ref{tab:regionspectra}.}{fig:regionspectra}{0.5}{0}
+
+
+\subsection{Sh 2-201}
+Sh 2-201 is an HII region and is part of the same molecular cloud as the
+bright-rimmed clouds in W5E, but it does not share a cometary shape with these
+clouds (Figure \ref{fig:S201}).  Instead, it is internally heated and has its
+own ionizing source \citep{Felli1987}.  The AFGL 4029 cloud edge is at a projected
+distance of $\sim7$ pc from the nearest exposed O-star, and the closest
+illuminated point in the Spitzer 8 and 24 \um\ maps is at a projected distance
+of $\sim 5$ pc.  The star forming process must therefore have begun before
+radiation driven shocks from the W5 O-stars could have impacted the cloud.  
+%There are 4 bipolar CO outflows
+%associated with this region.  The outflows come primarily from the 8 \um- faint
+%part of the region, perhaps because the 8 \um\ emission traces the edges of a
+%blown out gas-poor cavity.
+
+\Figure{figures_chw5/S201_CO32on8UM} %{regionoverlays/S201_BGPSon24UM}
+{Small scale map of the Sh 2-201 region plotted with CO 3-2 contours integrated
+from -60 to -20 \kms\ at levels 3,7.2,17.3,41.6, and 100 K \kms.  
+% (left) The MIPS 24 \um\ image is
+% displayed inverted in log scale from \lowmips\ to \highmips\ MJy \persr.
+The IRAC 8 \um\ image is displayed in inverted log scale from \lowirac\
+to \highirac\ MJy \persr. Contours of the CO 3-2 cube integrated from
+-60 to -20 \kms\ are overlaid at logarithmically spaced levels from 3 to 100 K
+\kms\ (3.0,7.2,17.3,41.6,100; $\sigma\approx0.7$ K \kms).  The
+ellipses represent the individual outflow lobe apertures mentioned in Section
+\ref{sec:measurements}.
+}{fig:S201}{0.5}{0}
+
+\subsection{AFGL 4029}
+\label{sec:afgl4029}
+% do I actually add any interesting information about AFGL 4029?
+AFGL 4029 is a young cluster embedded in a cometary cloud (Figure
+\ref{fig:afgl4029}).  There is one clear bipolar outflow and 6 single-lobed
+flows that cannot be unambiguously associated with an opposite direction
+counterpart.  The cluster is mostly unresolved in the data presented here and
+is clearly the most active CO clump in W5.  It contains a cluster of at least 30 B-stars
+\citep{Deharveng1997}.  The outflows from this region have a full width $\Delta
+v \approx 30$ \kms, which is entirely inconsistent with a radiation-driven
+inflow or outflow since it is greater than the sound speed in the ionized
+medium.
+
+The northeast cometary cloud is strongly affected by
+the W5 HII region.  It has an outflow in the head of the cloud (Figure
+\ref{fig:necomet}), and the cloud shows a velocity gradient with distance from
+the HII region.  The polarity of the gradient suggests that the cometary cloud
+must be on the far side of the ionizing O-star along the line of sight assuming
+that the HII region pressure is responsible for accelerating the cloud edge.
+
+\Figure{figures_chw5/AFGL4029_CO32on8UM}%{regionoverlays/AFGL4029_BGPSon24UM}
+{Small scale map of the AFGL 4029 region plotted with CO 3-2 contours integrated
+from -60 to -20 \kms\ at levels 3,7.2,17.3,41.6, and 100 K \kms.  
+The IRAC 8 \um\ image is displayed in inverted log scale from \lowirac\ to
+\highirac\ MJy \persr. Contours of the CO 3-2 cube integrated from -60 to -20
+\kms\ are overlaid at logarithmically spaced levels from 3 to 100 K \kms\
+(3.0,7.2,17.3,41.6,100; $\sigma\approx0.7$ K \kms).  Outflows 26-32 are ejected
+from a forming dense cluster.  A diagram displaying the kinematics of the
+northern cometary cloud is shown in Figure \ref{fig:necomet}. }
+{fig:afgl4029}{0.5}{0}
+
+
+\Figure{figures_chw5/NECometContours}
+{The northeast cometary cloud.  Contours are shown at 0.5,1,2, and 5 K \kms\
+integrated over the ranges -44.0 to -41.9 \kms\ (blue) and -38.1 to -35.6 \kms\
+(red).  There is a velocity gradient across the tail, suggesting that the front
+edge is being pushed away along the line of sight.}
+{fig:necomet}{0.5}{0}
+
+\subsection{W5 Ridge}
+\label{sec:w5ridge}
+The W5 complex consists of two HII region bubbles separated by a ridge of
+molecular gas (Figure \ref{fig:lwcas}).  This ridge contains the LW Cas optical
+nebula, a reflection nebula around the variable star LW Cas, on its east side
+and an X-shaped nebula on the west.  The east portion of LW Cas Nebula is
+bright in both the continuum and CO J=3-2 but lacks outflows (see Figure
+\ref{fig:lwcas}).  The east portion also has the highest average peak antenna
+temperature, suggesting that the gas temperature in this region is
+substantially higher than in the majority of the W5 complex (higher spatial
+densities could also increase the observed $T_A$, but the presence of nearby heating
+sources make a higher temperature more plausible).  It is possible
+that high gas temperatures are suppressing star formation in the cloud.
+Alternately, the radiation that is heating the gas may destroy any outflowing
+CO, which is more likely assuming the two Class I objects identified in this
+region by \citet{koenig:clustered:2008} are genuine protostars.
+
+\Figure{figures_chw5/LWCas_CO32on24UM} %{regionoverlays/LWCas_BGPSon8UM}
+{Small scale map of the LW Cas nebula plotted with CO 3-2 contours integrated
+from -60 to -20 \kms\ at levels 3,7.2,17.3,41.6, and 100 K \kms.  The feature containing outflows 20 and
+21 is the X-shaped ridge referenced in Section \ref{sec:w5ridge}.  This
+sub-region is notable for having very few outflows associated with the most
+significant patches of CO emission.   The gas
+around it is heated on the left side by the O7V star HD 18326 ($D_{proj}=8.5$
+pc), suggesting that this gas could be substantially warmer than the other
+molecular clouds in W5.
+}{fig:lwcas}{0.5}{0}
+
+The ridge is surprisingly faint in HI 21 cm emission compared to the two HII regions
+(Figure \ref{fig:HIridge}) considering its 24 \um\ surface brightness.  The
+integrated HI intensity from -45 to -35 \kms\ is $\sim800$ K \kms, whereas in
+the HII region bubble it is around 1000 K \kms.  The CO-bright regions show
+lower levels of emission similar to the ridge at 700-800 K \kms.  However, the
+ridge contains no CO gas and very few young stars \citep[Figure 7 in
+][]{koenig:clustered:2008}.  It is possible that the ridge contains cool HI but
+has very low column-densities along the direction pointing towards the O-stars,
+in which case the self-shielding is too little to prevent CO dissociation.
+This ridge may therefore be an excellent location to explore the transition
+from molecular to atomic gas under the influence of ionizing radiation in
+conditions different from high-density photodissociation (photon-dominated)
+regions.
+
+\FigureTwo{figures_chw5/HI_IRAS100_overlay}{figures_chw5/24micron_21cmcontOverlay}
+{{\it Top:} The DRAO 21 cm HI map integrated from -45 to -35 \kms\ displayed in grayscale
+from 700 (black) to 1050 (white) K \kms\ with IRAS 100 \um\ contours (red, 40 MJy sr$^{-1}$) and
+\twelveco\ 1-0 contours integrated over the same range (white, 4 K \kms)
+overlaid.  The ridge of IRAS 100 \um\ emission at $\ell=138.0$ coincides with a
+relative lack of HI emission at these velocities, suggesting either that there
+is less or colder gas along the ridge.  {\it Bottom:} The Spitzer 24 \um\ map
+with 21 cm continuum contours at 6, 8, and 10 MJy sr$^{-1}$ overlaid.  The IRAS contours
+are also overlaid to provide a reference for comparing the two figures and to demonstrate
+that the HII region abuts the cold-HI area.  The moderate
+excess of continuum emission implies a somewhat higher electron density along the 
+line of sight through the ridge.}
+{fig:HIridge}{1.0}
+
+We examine Outflow 20 as a possible case for pressure-driven implosion
+(radiation, RDI, or gas pressure, PDI) by examining the relative timescales of the outflow
+driving source and the HII-region-driven compression front.  A typical
+molecular outflow source (Class 0 or I) has a lifetime of $\sim5\ee{5}$ years
+\citep{Evans2009}.   Given that there is an active outflow at the head of this
+cloud, we use 0.5 MYr as an upper limit.  The approximate distance from this
+source to the cloud front behind it is $\sim 3.3$ pc.  If we assume the cloud
+front has been pushed at a constant speed $v\leq c_{II} \approx 10 \kms$,  we
+derive a lower limit on its age of 0.3 MYr.  While these limits allow for the
+protostar to be older than the compression front by up to 0.2 MYr, it is likely
+that the compression front moved more slowly (e.g., 3 \kms\ if it was pushed
+by a D-type shock front) and that the protostar is not yet at the end of its
+lifetime - it is very plausible that this soure was born in a radiation-driven
+implosion.
+
+
+\subsection{Southern Pillars}
+\label{sec:pillars}
+There are 3 cometary clouds that resemble the ``elephant trunk'' nebula in IC
+1396 (Figure \ref{fig:comets}).  Each of these pillars contains evidence of at
+least one outflow in the head of the cloud (see the supplementary materials, outflows
+16-19 and 38)
+%Figures \ref{fig:pv16},\ref{fig:pv17}, \ref{fig:pv18}, \ref{fig:pv19}, and \ref{fig:pv38}).  
+These pillars are low-mass and isolated; there is no other outflow activity in
+southern W5.  However, because of the bright illumination on their northern
+edges and robust star formation tracers, these objects present a reasonable 
+case for triggered star formation by the RDI mechanism.
+
+The kinematics of these cometary clouds suggest that they have been pushed in
+different directions by the HII region (Figure \ref{fig:comets}).  The central
+cometary cloud (Figure \ref{fig:comets}b) has two tails.  The southwest tail
+emission peaks around -39.5 \kms\ and the southeast tail peaks at -41.5 \kms,
+while the head is peaked at an intermediate -40.5 \kms.  These velocity shifts
+suggest that the gas is being accelerated perpendicular to the head-tail axis
+and that the southeast tail is on the back side of the cometary head, while the
+southwest tail is on the front side.  The expanding HII region is crushing this
+head-tail system.
+
+The southeast cometary cloud (Figure \ref{fig:comets}a) peaks at -35.0 \kms.
+There are no clearly-separated CO tails as in the central cloud, but there is a
+velocity shift across the tail, in which the west (right) side is blueshifted
+compared to the east (left) side, which is the opposite sense from the central
+cometary cloud.
+
+The southwest cometary cloud (Figure \ref{fig:comets}c) peaks at -40.3 \kms\
+and has weakly defined tails similar to the central cloud.  Both of its tails
+are at approximately the same velocity (-42.5 \kms).
+
+The kinematics of these tails provide some hints of their 3D structure and
+location in the cloud.  Future study to compare the many cometary flows in W5
+to physical models and simulations is warranted.  Since these flows are likely
+at different locations along the line of sight (as required for their different
+velocities), analysis of their ionized edges may allow for more precise
+determination of the full 3D structure of the clouds relative to their ionizing
+sources.
+
+\Figure{figures_chw5/SouthComet_VelocityContours}
+{CO 3-2 contours overlaid on the Spitzer 8 \um\ image of the W5S cometary
+clouds described in Section \ref{sec:pillars}.  Contours are color-coded by velocity
+and shown for 0.84 \kms\ channels at levels of 1 K (a, b) and 0.5 K (c).  The
+velocity ranges plotted are (a) -41.5 to -33.0 \kms (b) -44.7 to -36.7 \kms\
+(c) -43.6 to -35.6 \kms.  The labels show the minimum, maxmimum, and middle
+velocities to guide the eye.  The grey boxes indicate the regions selected for
+CO contours; while there is CO emission associated with the southern 8 \um\
+emission, we do not display it here. The velocity gradients are discussed in
+Section \ref{sec:pillars}.
+}
+{fig:comets}{0.5}{0}
+
+%\Figure{regionoverlays/W5S_CO32on24UM}%{regionoverlays/W5S_BGPSon8UM}
+%{Small scale map of the W5 S region showing BGPS 1.1 mm contours overlaid on
+%the Spitzer 24 \um\ map.  The 1.1 mm sources are significantly brighter in this
+%region than in the W5SE region, suggesting that they are either very significantly
+%more condensed (reducing the impact of Bolocam's effective filter function) or they
+%are hotter.
+%}{fig:w5s}{1.0}
+
+\subsection{W5 Southeast}
+The region identified as W5SE has very little star formation activity despite
+having significant molecular gas (M$_{\thirteenco} \sim 800$\msun).  While
+there are two outflows and two Class I objects \citep{koenig:clustered:2008} in the
+southeast of the two clumps ($\ell=138.15,b=0.77$, Figure \ref{fig:w5SE}), the main clump
+($\ell=138.0,b=0.8$) has no detected outflows.  The CO emission is particularly
+clumpy in this region, with many independent, unresolved clumps both in
+position and velocity.  In the 8 and 24 micron Spitzer images, it is clear that
+these clouds are illuminated from the northwest.  This region represents a case
+in which the expanding HII region has impacted molecular gas but has not
+triggered additional star formation.  The high clump-to-clump velocity
+dispersion observed in this region may be analogous to the W5S cometary clouds
+(Section \ref{sec:pillars}) but without condensed clumps around which to form
+cometary clouds.
+
+\Figure{figures_chw5/W5SE_CO32on8UM}
+{Small scale map of the W5 SE region showing the star-forming clump containing
+outflows 39 and 40 and the non-star-forming clump at $\ell=138.0,b=0.8$. 
+CO 3-2 contours integrated from -60 to -20 \kms\ are displayed at levels
+3,7.2,17.3,41.6, and 100 K \kms.
+}{fig:w5SE}{0.5}{0}
+
+\subsection{W5 Southwest}
+There is an isolated clump associated with outflows in the southwest part of W5
+(Figure \ref{fig:w5SW}) at $v_{LSR} \sim -45~\kms$.  While this clump is likely
+to be associated with the W5 region, it shows little evidence of interaction
+with the HII region.  If it is eventually impacted by the expanding ionization
+front (i.e. if it is within the W5 complex), this clump will be an example of
+``revealed'', not triggered, star formation.  
+
+The other source in W5SW is a cometary cloud with a blueshifted head and
+redshifted tail (Figure \ref{fig:swcomet}; Outflow 13).  The head contains a
+redshifted outflow; no blueshifted counterpart was detected (the velocity
+gradient displayed in Figure \ref{fig:swcomet} is smaller than the outflow
+velocity and is also redshifted away from the head).  The lack of a blueshifted
+counterpart may be because the flow is blowing into ionized gas where the CO is
+dissociated.
+
+Because of its evident interaction with the HII region, this source is an
+interesting candidate for a non-protostellar outflow impersonator.  However,
+because the head is blueshifted relative to the tail, we can infer that the
+head has been accelerated towards us by pressure from the HII region, implying
+that it is in the foreground of the cloud.  Given this geometry, a
+radiation-driven flow would appear blueshifted, not redshifted, as the detected
+flow is.  Additionally, the outflow is seen as fast as 7.5 \kms\ redshifted
+from the cloud, which is a factor of 2 too fast to be driven by radiation in a
+standard D-type shock.  Finally, the outflow velocity is much greater than seen
+in a simulation of a cometary cloud by \citet{Gritschneder2010}, while the
+head-to-tail velocity gradient is comparable.
+
+
+\Figure{figures_chw5/W5SW_CO32on8UM}%{regionoverlays/W5SW_BGPSon24UM}
+{Small scale map of the W5 SW region plotted with CO 3-2 contours integrated
+from -60 to -20 \kms\ at levels 3,7.2,17.3,41.6, and 100 K \kms. Outflow 13 is at the head of a 
+cometary cloud (Figure \ref{fig:swcomet}) and therefore has clearly been
+affected by the expanding HII region, but the region including bipolar Outflow
+10 shows no evidence of interaction with the HII region. 
+}{fig:w5SW}{0.5}{0}
+
+\Figure{figures_chw5/SWComet_VelocityContours}
+{The cometary cloud in the W5 Southwest region (Outflow 13).  Contours are
+shown at 1 K for 0.84 \kms\ wide channels from -37.2 \kms\ (blue) to -30.5
+\kms\ (red).  The head is clearly blueshifted relative to the tail and contains
+a spatially unresolved redshifted outflow.}
+{fig:swcomet}{0.5}{0}
+
+
+\subsection{W5 West / IC 1848}
+\label{sec:i02459}
+There is a bright infrared source seen in the center of W5W (IRAS 02459+6029;
+Figure \ref{fig:w5w}), but the nearest CO outflow lobe is $\approx1$ pc away.
+The nondetection may be due to confusion in this area: there are two layers of
+CO gas separated by $\sim$5 \kms, so low-velocity outflow detection is more
+difficult. % the minimum detectable outflow velocity in this region is $\sim10$ \kms.
+Unlike the rest of the W5 complex, this region appears to have multiple
+independent confusing components along the line of sight (Figure
+\ref{fig:regionspectra}), and therefore the CO data provide much less
+useful physical information (multiple components are also observed in the
+\thirteenco\ data, ruling out self-absorption as the cause of the multiple
+components).
+
+%The presense of two separate sheets confuses the physical association in this
+%region.  A velocity gradient is present in both sheets, but they are less
+%separated in velocity on the side nearest the W5 O-stars, so it is unlikely
+%that the sheets have been blown away from each other.
+
+%The BGPS source G136.828+01.064 ($M_{1.1 mm}\sim220\msun$) is associated with a
+%deeply embedded cluster and 5 Class I objects from
+%\citet{koenig:clustered:2008}.  This location marks the worst velocity
+%confusion in CO but contains hints that there may be outflows.  This region is a
+%good candidate for high-resolution follow-up.
+
+
+\Figure{figures_chw5/W5W_8um_TwoVelocityOverlay}%{regionoverlays/W5W_BGPSon24UM}
+{Small scale map of the W5 W region.  The IRAC 8 \um\ image is displayed in
+inverted log scale from \lowirac\ to \highirac\ MJy \persr.  Contours of the CO
+3-2 cube integrated from -50 to -38 \kms\ (blue) and -38 to -26 \kms\ (red) are
+overlaid at levels 5,10,20,30,40,50,60 K \kms\ $\sigma\approx0.5$ K \kms.  The
+lack of outflow detections is partly explained by the two spatially overlapping
+clouds that are adjacent in velocity.
+}{fig:w5w}{0.5}{0}
+
+
+\subsection{W5 NW}
+The northwest cluster  containing outflows 1-8 is at a
+slightly different velocity ($\sim-35~\kms$) than the majority of the W5 cloud
+complex ($\sim-38~\kms$; Figure \ref{fig:w5pv}), but it shares contiguous
+emission with the neighboring W5W region.  % (see Figure \ref{fig:w5nwpercompare}).     
+It contains many outflows and therefore is actively forming stars  (Figure
+\ref{fig:w5nw}).  However, this cluster exhibits much lower CO brightness
+temperatures and weaker Spitzer 8 \um\ emission than the ``bright-rimmed
+clouds'' seen near the W5 O-stars. We therefore conclude that the region has
+not been directly impacted by any photoionizing radiation from the W5 O-stars.
+
+The lack of interaction with the W5 O-stars implies that the star formation in
+this region, though quite vigorous, has not been directly triggered.  Therefore
+not all of the current generation of star formation in W5 has been triggered on
+small or intermediate scales (e.g., radiation-driven implosion).  Even the
+``collect and collapse'' scenario seems unlikely here, as the region with the
+most outflows also displays some of the smoothest morphology (Figures
+\ref{fig:outflows_on_co32} and \ref{fig:w5nw}); in ``collect and collapse'' the
+expansion of an HII region leads to clumping and fragmentation, and the spaces
+between the clumps should be relatively cleared out.
+
+\Figure{figures_chw5/pvdiagrams/w5_12co_latPV_outflows}
+{Integrated longitude-velocity diagram of the W5 complex from $b=0.25$ to
+$b=2.15$ in \twelveco\ 1-0 from the FCRAO OGS.  The W5NW region is seen at a
+distinct average velocity around $\ell=136.5$, $v_{LSR}=-34$ \kms.  The red and
+blue triangles mark the longitude-velocity locations of the detected outflows.
+In all cases, they mark the low-velocity start of the outflow.}
+{fig:w5pv}{0.5}{0}
+
+
+\Figure{figures_chw5/W5NW_CO32on8UM}%{regionoverlays/W5NW_BGPSon24UM}
+{Small scale map of the W5 NW region plotted with CO 3-2 contours integrated
+from -60 to -20 \kms\ at levels 3,7.2,17.3,41.6, and 100 K \kms. Despite its
+distance from the W5 O-stars, $D_{proj}\approx20$ pc, this cluster is the most
+active site of star formation in the complex as measured by outflow activity.}
+{fig:w5nw}{0.5}{0}
+
+\section{Discussion}
+
+\subsection{Comparison to other outflows}
+\label{sec:comparison}
+The outflow properties we derive are similar to those in the B0-star forming
+clump IRAS 05358+3543 \citep[$M\approx600\msun$][]{Ginsburg2009}, in which CO
+3-2 and 2-1 were used to derive outflow masses in the range 0.01-0.09 \msun.
+However, some significantly larger outflows, up to 1.6 pc in one direction were
+detected, while the largest resolved outflow in our survey was only 0.8 pc (one
+direction).  
+%With 54 detected outflows across a star-forming region that
+%includes many young B-stars (and forming B-stars, like AFGL 4029) and contains
+%an order of magnitude more mass than IRAS 05358+3543, the lack of long outflows
+%is somewhat surprising.
+
+As noted in Section \ref{sec:percompare}, 
+the total molecular mass in W5 is larger than
+Perseus, $M_{W5}\sim 4.5\ee{4} \msun$ while $M_{Perseus}\sim10^4\msun$
+\citep{bally-perseus2008}.  The length distribution of outflows (Figure
+\ref{fig:lengthhist}) is strikingly similar, while other physical properties
+have substantially different mean values with or without correction factors
+included.
+
+The W5NW region is more directly comparable to Perseus, with a total mass of
+$\sim1.5\ee{4}$ \msun\ (Table \ref{tab:regionspectra}) and a similar size.  In
+Figure \ref{fig:regionboxes_on_CO}, we show both the W5NW region, which
+contains all of the identified outflows, and the W5NWpc region, which is a
+larger area intended to be directly comparable in both mass and spatial scale
+to the Perseus molecular cloud.  The W5NWpc region contains more than an order of
+magnitude more turbulent energy than the Perseus complex \citep[$E_{turb,Per} =
+1.6\ee{46}$ ergs,][]{arce2010} despite its similar mass.  Even the smaller W5NW
+region has $\sim5\times$ more turbulent energy than the Perseus complex,
+largely because of the greater average line width ($\sigma_{FWHM,W5NW}\approx
+3.5$ \kms).  As with the whole of W5, there is far too much turbulent energy in
+W5NW to be provided by outflows alone, implying the presence of another driver
+of turbulence.
+
+Figure \ref{fig:w5nwpercompare} shows the W5NWpc region and Perseus molecular cloud
+on the same scale, though in two different emission lines.  The Perseus cloud
+contains many more outflows and candidates (70 in Perseus vs. 13 in W5NWpc)
+despite a much larger physical area surveyed in W5.  While it is likely that
+many of the W5W outflows will break apart into multiple flows at higher
+resolution, it does not seem likely that each would break apart into 5 flows,
+as would be required to bring the numbers into agreement.  Since the highest
+density of outflows in Perseus is in the NGC 1333 cloud, it may be that there
+is no equivalently evolved region in W5NWpc.  The W5W region may be comparably
+massive, but it is also confused and strongly interacting with the W5 HII
+region - either star formation is suppressed in this region, or outflows are
+rendered undetectable.  In the latter case, the most likely mechanisms for
+hiding outflows are molecular dissociation by ionizing radiation and velocity
+confusion.
+
+Another possibility highlighted in Figure \ref{fig:w5nwpercompare} is that the
+W5NW region is interacting with the W4 bubble.  The cloud in the top right of
+Figure \ref{fig:w5nwpercompare} is somewhat cometary, has higher peak
+brightness temperature, and is at a slightly different velocity (-45 \kms) than
+W5NW.  The velocity difference of $\sim8$ \kms could simply be two clouds
+physically unassociated along the line of sight, or could indicate the presence
+of another expanding bubble pushing two sheets of gas away from each other.
+Either way, the northwest portion of the W5NW region is clumpier than the
+area in which the outflows were detected, and it includes no outflow detections.
+
+\FigureTwo{figures_chw5/W5NW_perseuscomparison}{figures_chw5/perseuscomparison_arceellipses}
+{(a) An integrated CO 3-2 image of the W5W/NW region with ellipses overlaid
+displaying the locations and sizes of outflows.  The dark red and blue ellipses
+in the lower right are associated with outer-arm outflows.  W5W is the bottom-left,
+CO-bright region.  W5NW is the top-center region containing the cluster of outflows.
+(b) An integrated CO 1-0 image of the Perseus molecular cloud from the COMPLETE
+survey \citep{arce2010}.  Note that the spatial scale is identical to that of
+(a) assuming that W5 is 8 times more distant than Perseus.  The green ellipses
+represent \citet{arce2010} CPOCs while the orange represent known outflows from
+the same paper.}
+{fig:w5nwpercompare}{1.0}
+
+
+% However, the Perseus molecular cloud contains a total of 4800 \msun\
+% \citep[from near-IR extinction][]{Evans2009}, while many independent clouds
+% within W5 contain a similar mass (Table \ref{tab:regionspetra}), and the total
+% gas mass in W5 is $\sim15\times$ larger \citep[also from near-IR extinction
+% extinction][]{koenig:clustered:2008}.  Assuming a similar level of star
+% formation activity (or star formation efficiency per gas mass), we should see
+% substantially more outflows and more outflowing mass than is observed.  The
+% simplest explanation for the lower outflowing mass in W5 is that the CO we use
+% to trace it is destroyed by UV photons from the O-stars in the region.
+
+\subsection{Star Formation Activity}
+\label{sec:sfactivity}
+%We have divided the W5 region into distinct sub-regions that all show signs
+%of star formation (Section \ref{sec:subregions}).  The AFGL 4029, LW Cas
+%Nebula, IC 1848, W5SE, and southern pillar sub-regions are all along the edge
+%of the diffuse HII regions that shape W5.  In these sub-regions, the
+%radiation-driven ionization front pressure from the O-stars could have led to
+%triggered collapse.  However, there are also outflows in Sh 201 and W5 NW,
+%which are not adjacent to the HII region and do not show signs of external
+%pressure such as illuminated cloud edges in the CO and Spitzer infrared maps.  
+
+CO outflows are an excellent tracer of ongoing embedded star formation
+\citep[e.g.][]{Shu1987}.  We use the locations of newly discovered outflows to
+qualitatively describe the star formation activity within the W5 complex and
+evaluate the hypothesis that star formation has been triggered on small or
+intermediate scales.
+
+Class 0/I objects are nearly always associated with outflows in nearby
+star-forming regions \citep[e.g. Perseus][]{curtis2010,hatchell2007}.  However,
+\citet{koenig:clustered:2008} detected 171 Class I sources in W5 using Spitzer
+photometry.  Since our detection threshold for outflow appears to be similar to
+that in Perseus (Section \ref{sec:percompare}), the lower number of outflow
+detections is surprising, especially considering that some of the detected
+outflows are outside the Spitzer-MIPS field (MIPS detections are required for
+Class I objects, and flows 1-4 are outside that range) or are in the outer arm
+(flows 39-54).  Additionally, we should detect outflows from Class 0
+objects that would not be identified by Spitzer colors.
+
+There are a number of explanations for our detection deficiency.  The Class I
+objects detected within the HII region ``bubble'' most likely have outflows in
+which the CO is dissociated similar to jet systems in Orion \citep[e.g.
+HH46/47, a pc-scale flow in which CO is only visible very near the
+protostar;][]{Chernin1991,Stanke1999}.  This hypothesis can be tested by
+searching for optical and infrared jets associated with these objects, which
+presumably have lower mass envelopes and therefore less extinction than
+typical Class I objects.  Additionally, there are many outflow systems that are
+are likely to be associated with clusters of outflows rather than individual
+outflows as demonstrated in Section \ref{sec:percompare}, where we were able to identify
+fewer outflows when `observing' the Perseus objects at a greater distance.  There
+are 24 sources in the \citet{koenig:clustered:2008} Class I catalog within
+15\arcsec\ (one JCMT beam at 345 GHz) of another, and in many cases there are
+multiple \citet{koenig:clustered:2008} Class I sources within the contours of a
+single outflow system.
+
+
+
+\subsection{Evaluating Triggering}
+In the previous section, we discussed in detail the relationship between each
+sub-region and the HII region.  Some regions are observed to be star-forming
+but not interacting with the HII region (W5NW, Sh 2-201), while others are
+interacting with the HII region but show no evidence or reduced evidence of
+star formation (W5SE, W5W, LW Cas).  At the very least, there is significant
+complexity in the triggering mechanisms, and no one mechanism or size scale is
+dominant.  If we were to trust outflows as unbiased tracers of star formation,
+we might conclude that the majority of star formation in W5 is untriggered
+(spontaneous), but such a conclusion is unreliable because both radiatively
+triggered star formation and ``revealed'' star formation may not exhibit
+molecular outflows (although ionized atomic outflows should still be visible
+around young stars formed through these scenarios).
+
+In Section \ref{sec:w5ridge}, we analyzed a particular case in which the RDI
+mechanism could plausibly have crushed a cloud to create the observed
+protostar.  
+It is not possible to determine whether interaction with the HII region was a 
+necessary precondition for the star's formation, but it at least accelerated
+the process.  The other cometary clouds share this property,
+but in total there are only 5 cometary clouds with detected outflows at their
+tips, indicating that this mechanism is not the dominant driver of star
+formation in W5.
+
+The `collect and collapse' scenario might naively be expected to produce an
+excess of young stars at the interaction front between the HII region and the
+molecular cloud.  However, because such interactions naturally tend to form
+instabilities, this scenario produces cloud morphologies indistinguishable from
+those of RDI.  There is not an obvious excess of sources associated with cloud
+edges over those deep within the clouds (e.g., Figure
+\ref{fig:outflows_on_co32}).  We therefore cannot provide any direct evidence
+for this triggering scenario.
+
+The overall picture of W5 is of two concurrent episodes of massive-star
+formation that have lead to adjacent blown-out bubbles.  Despite the added
+external pressure along the central ridge, it is relatively deficient in both
+star formation activity and dense gas, perhaps because of heating by the strong
+ionizing radiation field.  The lack of star formation along that central ridge
+implies that much of the gas was squeezed and heated, but it was not crushed
+into gravitationally unstable fragments.  While some star formation may have
+been triggered in W5, there is strong evidence for pre-existing star formation
+being at least a comparable, if not the dominant, mechanism of star formation
+in the complex.
+
+
+\section{Outflow systems beyond W5}
+Fifteen outflows were detected at velocities inconsistent with the local W5
+cloud velocities.  Of these, 8 are consistent with Perseus arm velocities
+($v_{LSR} > -55$ \kms) and could be associated with different clouds within the
+same spiral arm.  The other 7 have central velocities $v_{LSR} < -55$ \kms\ and
+are associated with the outer arm identified in previous surveys
+\citep[e.g.][]{Digel1996}.  The properties of these outflows are given in Tables
+\ref{tab:outeroutflows} and \ref{tab:outeroutflowsderived}; the distances listed are kinematic distances assuming
+$R_0=8.4$ kpc and $v_0=254$~\kms\ \citep{Reid2009}.
+
+Of these outflows, all but one are within 2\arcmin\ of an IRAS point source.
+Outflow 54 is the most distant in our survey at a kinematic distance $d=7.5$
+kpc ($v_{lsr}=-75.6$ \kms) and galactocentric distance $D_G = 14.7$ kpc.  It
+has no known associations in the literature.
+
+Outflows 41 - 44 are associated with a cloud at $v_{LSR}\sim -62$ \kms\ known
+in the literature as LDN 1375 and associated with IRAS 02413+6037.  Outflows 53
+and 55 are at a similar velocity and associated with IRAS 02598+6008 and IRAS
+02425+6000 respectively.  All of these sources lie roughly on the periphery of
+the W5 complex.
+
+Outflows 45 - 52 are associated with a string of IRAS sources and HII regions
+to the north of W5 and have velocities in the range $-55 < v_{LSR} < -45$.
+They therefore could be in the Perseus arm but are clearly unassociated with
+the W5 complex.  Outflows 45 and 46 are associated with IRAS 02435+6144 and
+they may also be associated with the Sharpless HII region Sh 2-194.  Outflows
+47 and 48 are associated with IRAS 02461+6147, also known as AFGL 5085.
+Outflows 49 and 50 are nearby but not necessarily associated with IRAS
+02475+6156, and may be associated with Sh 2-196.  Outflows 51 and 52 are
+associated with IRAS 02541+6208.  
+
+% \subsection{Comparison to other studies}
+% 
+% XXXX:  Use otherpapers compare.txt.  Discuss what the most powerful outflows in each region
+% would look like at 2kpc
+ 
+% \Table{ccccc}{Comparison to other outflow surveys}
+% {{Paper} & {Region} & {Tracer} &  {Distance (pc)} & {Area (arcmin$^2$)}  & {Area (pc$^2$)} 
+% & {Resolution (\arcsec)} & {Resolution (pc)} & {Outflows detected} \\ }
+% {tab:surveys}
+% {
+% \citet{arce2010}                       & CO 1-0 & Perseus  &    250   &   57600     &   305   & 46 & 0.056  &    96 \\
+% \citet{dionatos2010}                   & CO 3-2 & Serpens  &    310   &   29        &   0.24  & 14 & 0.021  &    20 \\
+% \citet{davis:jcmt:2010}                & CO 3-2 & Taurus   &    140   &   2705      &   4.5   & 14 & 0.0095 &    16 \\
+% \citet{hatchell2007} \tablenotemark{a} & CO 3-2 & Perseus  &    250   &   204       &   1.1   & 14 & 0.017  &    37 \\
+% This paper                             & CO 3-2 & W5       &   2000   &   7200      &   2440  & 14 & 0.14   &    38 \\
+% }{
+% \tablenotetext{a}{This survey targeted 51 mm cores, hence its much higher detection rate per unit area.}
+% }
+
+\section{Conclusions}
+
+We have identified \nwfive\ molecular outflow candidates in the W5 star forming
+region and an additional \nouter\ outflows spatially coincident but located in
+the outer arm of the Galaxy.  
+
+\begin{itemize}
+%    \item The majority of the millimeter sources are associated with outflows,
+%      though some of the brightest millimeter sources lack outflows.  These
+%      sources may consist of warmer dust that has not yet become Jeans
+%      unstable.  Millimeter emission is a good tracer of active embedded star
+%      formation, while far-infrared brightness is not.
+%    \item The majority of the gas seen in \thirteenco\ and 1.1 mm emission is
+%      associated with star formation.  There is therefore only a small amount
+%      of
+    \item The majority of the CO clouds in the W5 complex are forming stars.
+      Star formation is not limited to cloud edges around the HII region.
+      Because star formation activity is observed outside of the region of
+      influence of the W5 O-stars, it is apparent that direct triggering by
+      massive star feedback is not responsible for all of the star formation in
+      W5.
+    \item The W5 complex is seen nearly face-on as evidenced by a strict upper
+      limit on the CO column through the center of the HII-region bubbles.  It
+      is therefore an excellent region to study massive star feedback and
+      revealed and triggered star formation.
+    \item Outflows contribute negligibly to the turbulent energy of molecular
+      clouds in the W5 complex.  This result is unsurprising near an HII
+      region, but supports the idea that massive star forming regions are
+      qualitatively different from low-mass star-forming regions in which the
+      observed turbulence could be driven by outflow feedback.  Even in regions
+      far separated from the O-stars, there is more turbulence and less energy
+      injection from outflows than in, e.g., Perseus.
+    \item Despite detecting a significant number of powerful outflows, the
+      total outflowing mass detected in this survey ($\sim 1.5$ \msun\ without
+      optical depth correction, perhaps $10-20$ \msun\ when optical depth is
+      considered) was somewhat smaller than in Perseus, a low to intermediate
+      mass star forming region with $\sim 1/6$ the molecular mass of W5. 
+    \item The low mass measured may be partly because the CO 3-2 line is
+      sub-thermally excited in outflows.  Therefore, while CO 3-2 is an
+      excellent tracer of outflows for detection, it does not serve as a
+      `calorimeter' in the same capacity as CO 1-0.
+    \item Even considering excitation and optical depth corrections, it is
+      likely that the mass of outflows in W5 is less than would be expected
+      from a simple extrapolation from Perseus based on cloud mass. CO is
+      likely to be photodissociated in the outflows when they reach the HII
+      region, accounting for the deficiency around the HII region edges.
+      However, in areas unaffected by the W5 O-stars such as W5NW, the
+      deficiency may be because the greater turbulence in the W5 clouds
+      suppresses star formation or hides outflows.
+    \item Velocity gradients across the tails of many cometary clouds have been
+      observed, hinting at their geometry and confirming that the outflows seen
+      from their heads must be generated by protostars within.
+      %The data presented contain tens of cometary clouds with
+      %precise kinematic information about their molecular gas.
+    \item Outflows have been detected in the Outer Arm at galactocentric
+      distances $\gtrsim12$ kpc.  These represent some of the highest
+      galactocentric distance star forming regions discovered to date.
+    %\item  Feedback in W5 is primarily destroying rather than
+    %  triggering SF.
+\end{itemize}
+
+% \section{Acknowledgements}
+% We thank the two anonymous referees for their assistance in refining this
+% document.  We thank Devin Silvia for a careful proofread of the text. This work
+% has made use of the APLpy plotting package
+% (\url{http://aplpy.sourceforge.net}), the pyregion package
+% (\url{http://leejjoon.github.com/pyregion/}), the agpy code package
+% (\url{http://code.google.com/p/agpy/}) , IPAC's Montage
+% (\url{http://montage.ipac.caltech.edu/}), the DS9 visualization tool
+% (\url{http://hea-www.harvard.edu/RD/ds9/}), the pyspeckit spectrosopic analysis
+% toolkit (\url{http://pyspeckit.bitbucket.org}), and the STARLINK package
+% (\url{http://starlink.jach.hawaii.edu/}).  IRAS data was acquired through IRSA
+% at IPAC (\url{http://irsa.ipac.caltech.edu/}).  DRAO 21 cm data was acquired
+% from the Canadian Astronomical Data Center
+% (\url{http://cadcwww.hia.nrc.ca/cgps/}).  The authors are supported by the
+% National Science Foundation through NSF grant AST-0708403.  This research has
+% made use of the SIMBAD database, operated at CDS, Strasbourg, France
+
+%{\it Facilities:} JCMT, VLA
+
+%\bibliography{w5outflows}
+
+{\tiny
+\clearpage
+\include{outflowtable_mnras} % tab:outflows
+\include{outflowsumtable_mnras} % tab:outflowsums
+
+\clearpage
+\include{outerarm_outflowtable_mnras}
+}
+
+\include{individual_outflows_preface}
+
+%\include{individual_outflows}
+\include{w5_appendix}
+
+
+%\end{document}
+\input{solobib}
+\end{document}
