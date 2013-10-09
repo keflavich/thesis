@@ -1,0 +1,353 @@
+\documentclass[defaultstyle,11pt]{thesis}
+\usepackage{deluxetable}
+\usepackage{xspace}
+%\newcommand{\kms}{\textrm{km~s}\ensuremath{^{-1}}\xspace}	%  km s-1
+\usepackage{latexsym}		% to get LASY symbols
+\usepackage{graphicx}		% to insert PostScript figures
+%\usepackage{deluxetable}
+\usepackage{rotating}		% for sideways tables/figures
+\usepackage{natbib}  % Requires natbib.sty, available from http://ads.harvard.edu/pubs/bibtex/astronat/
+\usepackage{savesym}
+%\savesymbol{singlespace}
+\savesymbol{doublespace}
+%\usepackage{wrapfig}
+%\usepackage{setspace}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{mdframed}
+\usepackage{url}
+\usepackage{aastex_hack}
+%\usepackage{emulateapj}
+\usepackage{lscape}
+
+\input macros.tex		% file containing author's macro definitions
+
+\def\ee#1{\ensuremath{\times10^{#1}}}
+
+\title{Star Formation in the Galaxy}
+\author{Adam G.}{Ginsburg}
+\otherdegrees{B.S., Rice University, 2007\\
+	      M.S., University of Colorado, Boulder, 2009}
+\degree{Doctor of Philosophy}		%  #1 {long descr.}
+	{Ph.D., Rocket Science (ok, fine, astrophysics)}		%  #2 {short descr.}
+
+\dept{Department of}			%  #1 {designation}
+	{Astrophysical and Planetary Sciences}		%  #2 {name}
+
+\advisor{Prof.}				%  #1 {title}
+	{John Bally}			%  #2 {name}
+\reader{Prof.~Jeremy Darling}		%  2nd person to sign thesis
+\readerThree{Prof.~Jason Glenn}		%  3rd person to sign thesis
+\readerFour{Prof.~Michael Shull}	%  4rd person to sign thesis
+\abstract{  \OnePageChapter	% one page only ??
+    I discovered dust in space.  
+	}
+
+
+\dedication[Dedication]{	% NEVER use \OnePageChapter here.
+	To 1, the second number in binary.
+	}
+
+\acknowledgements{	\OnePageChapter	% *MUST* BE ONLY ONE PAGE!
+	All y'all.
+	}
+
+\ToCisShort	% a 1-page Table of Contents ??
+
+\LoFisShort	% a 1-page List of Figures ??
+%	\emptyLoF	% no List of Figures at all ??
+
+\LoTisShort	% a 1-page List of Tables ??
+%	\emptyLoT	% no List of Tables at all ??
+
+
+\def\Table#1#2#3#4#5#6{
+\begin{deluxetable}{#1}
+\tablewidth{0pt}
+\tabletypesize{\footnotesize}
+\tablecaption{#2}
+\tablehead{#3}
+\startdata
+\label{#4}
+#5
+\enddata
+\bigskip
+#6
+\end{deluxetable}
+}
+
+
+\begin{document}
+
+\begin{figure*}[htpb]
+    \hspace{-0.6in}
+  \includegraphics[scale=0.40,clip=true]{figures_ch05358/so5645_on_h2}
+%    \hspace{-0.6in}
+  \includegraphics[scale=0.40,clip=true]{figures_ch05358/SII_outflowvectors}
+  \caption{(a) \hh\ image with \so\ peak flux contours at 0.5-1.4 K in intervals of 0.15 K
+  overlaid.  With a critical density $\sim3.5\ee{6}$ \citep{leidendb}, this
+  transition is a dense gas tracer.  (b) The [S II] image with outflow vectors overlaid.
+  Diffuse emission can be seen at the north ends of Outflows 1, 4, and 6 and around the
+  reflection nebula near source IR 41.} 
+  \label{fig:so_on_h2}
+\end{figure*}
+
+\Figure{figures_ch05358/CO3-2_ellipses}
+{
+The JCMT HARP CO J=3-2 map integrated over all velocities with significant
+emission (-34 \kms\ to -4 \kms) shown in gray log scale from 0 to 150 K \kms.
+The elliptical regions over which line wings were integrated are shown with
+blue and red circles corresponding to blue and red line wings.  The
+measurements are presented in table \ref{tab:comeas}.}{fig:cofig}{1.0}{}
+
+
+\Figure{figures_ch05358/scuba_with_CO21contours}{SCUBA 850\um\ image in linear grayscale from
+-1 to +10 mJy/beam, with a saturated peak of 24 mJy/beam, with \twelveco\ 2-1
+(orange solid, contours at 45,60,85,100,115,130,145 K \kms) and \thirteenco\
+2-1 (green dashed, contours at 20,30,40,45 K \kms) integrated contours.  The
+box shows the region plotted in Figure \ref{fig:co21map}.}{fig:scuba_co21}{1.0}{}
+
+\Figure{figures_ch05358/co21_plotmap}{CO spectra of \necluster\ in \twelveco\ (blue),
+\thirteenco\ (green), and \ceighteeno\ (red).  The top-left plot is the pixel
+centered at J(2000) = 5:39:13.67 +35:46:26.0 and each pixel is 10\arcsec\ on a side. 
+The region mapped here is shown with a box in Figure \ref{fig:scuba_co21}.
+Redshifted self-absorption, a possible infall tracer, is evident in the \twelveco\
+spectra in the outer pixels.  The inner pixels show self-absorption only at
+central velocities: this may be an indication that emission from outflows
+dominates any infall signature, or simply that there is no bulk infall towards
+\necluster.}{fig:co21map}{0.75}{}
+
+\Figure{figures_ch05358/co21_all3_12as}{CO spectra of inner
+12\arcsec\ centered on \necluster\ for all observed CO lines.   The CO 3-2 and
+2-1 beams are not matched, but in both cases the area integrated over is 1-2
+resolution elements across.  The divisions demarcating the red and blue line
+wings are shown with vertical dashed lines at $v_{LSR}=-21$ and -12 \kms.
+}{fig:co21_all3}{1.0}{}
+
+\Figure{figures_ch05358/HA_COcontours_COscale}{The \ha\ image with CO contours at
+redshifted, blueshifted, and middle velocities in red, blue, and green
+respectively.  Contours are at 2,4,8,12,20 K \kms\ for the red and blue, 
+and 20,25,30,40,50,60,70 K \kms\ for the green.  Red is integrated from
+-12 to -4 \kms, Blue from -31 to -21 \kms, and green from -21 to -12 \kms.
+}{fig:HA_with_CO}{1.0}{}
+
+\Table{cccccccc}
+{VLA Observation Program Names, Dates, and Times}
+{\colhead{VLA } &  \colhead{Observation} &  \colhead{Time } &  \colhead{Array} &
+\colhead{Band} & \colhead{Fluxcal} &  \colhead{Phase cal} & \colhead{Phase cal } \\
+Observation & Date &on&&&&& Percent \\
+Name &&Source&&&&& Uncertainty \\}
+{tab:vlatimes}
+{
+AR482 & August 2 2001    & 2580s & B & X &3c286 & 0555+398   & 22  \\
+AR513 & June 21 2003     & 7770s & A & X &3c286 & 0555+398   & 0.8 \\
+AS831 & February 26 2005 & 2640s & B & X &3c286 & 0555+398   & 0.7 \\
+AS831 & August 5 2005    & 2660s & C & X &3c286 & 0555+398   & 0.3 \\
+AS831 & May 11 2006      & 2610s & A & X &3c286 & 0555+398   & 3.0 \\
+AL704 & August 7 2007    & 6423s & A & Q &3c273 & 0555+398   & 18  \\ 
+AL704 & September 1 2007 & 6423s & A & Q &3c273 & 0555+398   & 13  \\ 
+AM697 & November 26 2001 & 2880s & D & Q &3c286 & 0555+398   & 2.2 \\
+AM697 & November 28 2001 & 1530s & D & K &3c286 & 0555+398   & 2.1 \\
+AM697 & November 28 2001 & 1530s & D & U &3c286 & 0555+398   & 5.8 \\
+}{}
+
+
+
+\Table{cccccc}
+{TripleSpec fitted h2 outflow velocities}
+{Outflow Number & Aperture Number &  \tablenotemark{a}v$_{LSR}$ (kms) &\tablenotemark{b}v$_{LSR} (kms)$ }
+{tab:OutflowH2}
+{
+1    & 1 & -33.54 (0.15)    & -31.85 (0.32) \\ %-32 (5)  \\
+1    & 2 & -13.60 (0.57)    & -13.56 (0.96) \\ %-14 (5)  \\
+1    & 3 & -40.51 (0.41)    & -36.13 (0.81) \\ %-36 (5)  \\
+1    & 4 & -88.7  (2.8)     & -83.7  (7.9)  \\ %-83 (10) \\
+2    & 1 & -82.6  (7.6)     & -81    (21)   \\ %-81 (25) \\ % width 64 +/- 20 - wide!
+2    & 2 & -30.41 (0.57)    & -28.9  (1.4)  \\ %-29 (5)  \\
+2    & 3 & -33.89 (0.62)    & -35.2  (3.7)  \\ %-35 (10) \\
+4    & 1 & -73.34 (0.48)    & -70.2  (1.1)  \\ %-70 (10) \\
+4    & 2 & -64.08 (0.61)    & -67.8  (2.2)  \\ %-67 (10) \\
+IR6  & 1 & -39.4  (1.6)     & -39.4  (4.2)  \\ %-39 (10) \\
+IR93 & 2 & -26.07 (0.43)    & -26.85 (0.97) \\ %-27 (5)  \\  % wider than other lines
+IR93 & 3 & -30.6  (1.5)     & -32.0  (2.5)  \\ %-32 (5)  \\  % wider than other lines
+IR93 & 4 & -29.14 (0.77)    & -30.3  (2.1)  \\ %-30 (5)  \\   % wider than other lines
+IR93 & 6 & -47.7  (7.9)     & -71    (37)   \\ %-45 (15) \\   % manual fit - can't be reproduced easily
+}{
+\tablenotetext{a}{Measured from h2 1-0 S(1) 2.1218 um line}% as shown in figure \ref{fig:h2fits}}
+\tablenotetext{b}{Measured from all detected hh lines fit with model described in section }
+}                
+
+\begin{deluxetable}{ccccccccc}
+    \centering
+    \tablewidth{0pt}
+  \tabletypesize{\scriptsize}
+    \tablecaption{Measured properties of hh flows}
+%     \tablehead{
+% 	\colhead{Outflow} & \colhead{Center}\tablenotemark{a} & \colhead{PA}\tablenotemark{b} 
+% 	& \colhead{Length}\tablenotemark{c} & \colhead{Source} \tablenotemark{d} & \colhead{Pos Length} \tablenotemark{e}
+% 	& \colhead{Neg Length} \tablenotemark{e} & \colhead{Time (50\kms)}\tablenotemark{f} & \colhead{LOS} \tablenotemark{g}} 
+    \tablehead{
+    \colhead{Outflow}  & \tablenotemark{a}Center  & \tablenotemark{b}PA  & \tablenotemark{c}Length  & 
+    \tablenotemark{d}Source  & \tablenotemark{e}Flow  & \tablenotemark{e}Counterflow  & \tablenotemark{f}Age  & \tablenotemark{g}LOS  \\
+    & & & & & Length & Length & (50 kms) & Velocity \\
+    }
+\startdata
+1 &        05:39:13.023 +35:45:38.66 & -13.3     &142.3"   &mm2?     &58         &84.2        &1.4e4         &-    \\
+2 &        05:39:13.058 +35:45:51.28 & -47.0     &44.6"    &mm1a     &44.6       &-           &6.6e3         &Blue \\
+3 &        05:39:12.48  +35:45:54.9  & -62       &44"      &mm3?     &44         &-           &6.5e3         &Red  \\
+4 &        ambiguous                 & 17.8-21.8 &141-144" &  ?      &141-144    &-           &2.1e4         &Blue \\
+5 &        05:39:12     +35:45:51    & 170       &38-48    &mm3?     &38-48      &-           &6.5e3         &Blue \\
+6 &        05:39:09.7   +35:45:17    & 14.5      &197      &Q5\tablenotemark{h} &197        &-           &2.9e4         &Blue \\
+8 &        05:39:10.002 +35:45:10.87 & -154.6    &105.5"   &IR41?    &54.7       &52.9        &7.9e3         &-    \\         
+\enddata
+\tablenotetext{a}{Midpoint of bipolar outflow if symmetric, position of jet source candidate if asymmetric}
+
+\end{deluxetable}
+
+\begin{deluxetable}{lccccc}
+    \tablewidth{0pt}
+  \tabletypesize{\footnotesize}
+    \centering
+    \tablecaption{Measured properties of CO flows}
+    %  \label{tab:comeas}
+\tablehead{
+\colhead{\tablenotemark{a}Region Name}  & 
+\colhead{$\int T_{mb}*$}  & 
+\colhead{$M (M)$}  & 
+\colhead{p ($M$ kms)}  & 
+\colhead{N (persc)} & 
+\colhead{E ($10^{42}$ erg)}}
+% & \colhead{redintegrated} & \colhead{redmass} & \colhead{redmomentum} & \colhead{redenergy} } 
+\startdata
+% blue1 - keep, blue only: associated with outflow 4
+\tablenotemark{b}A. Outflow 4a    &      4.27  &     .022  &     .15  &  1.4\ee{19}  & 11 \\
+% blue 4 - keep, associated with outflow 4, blue only
+\tablenotemark{b}B. Outflow 4b   &      4.60 & .032 & .21 &   1.5\ee{19}  & 13 \\
+% blue 9 - keep, blue only, probably outflow 1
+\tablenotemark{b}C. Outflow 1n   &      14.5 & .088 & .71 & 4.8\ee{19} & 66 \\ 
+% blue 2 - keep, associated with outflow 6/7, blue only
+\tablenotemark{b}D. Outflow 6/7  &       4.45 & .045 & .30 & 1.5\ee{19} & 29 \\
+%red7 - keep, no association but same direction as Outflow 2
+\tablenotemark{r}E. CO Region 3      &    1.31 & .016 & .112 & 4.3\ee{18} & 8.5 \\
+% blue3 - remove, not associated with cluster
+% blue3     &       9.525039  &     0.659057  &      3.36178  &  2.12468e+44   &     5.01441  &     0.346957   &     1.80229  &  1.01071e+44  \\
+% blue 6 - keep, red and blue, use for central outflow
+\tablenotemark{b}F. necluster\ &      41.8 & .464 & 3.72 & 1.4\ee{20} & 330 \\
+\tablenotemark{m}F. necluster\ &      132.9& 1.47 & -    & 4.4\ee{20} & -\\
+\tablenotemark{r}F. necluster\ &      30.0 & .333 & 2.03 & 9.9\ee{19} & 135 \\
+% blue 7 - keep, may be outflow 1 south counterflow
+\tablenotemark{b}G. Outflow1s   &      14.6 & .064 & .48 & 4.8\ee{19} & 40 \\
+%red5 - clear red excess, no clear association
+\tablenotemark{r}H. CO Region 2      &    4.54 & .012 & .074 & 1.5\ee{19} & 5 \\
+% blue 5 - keep, associated with outflow 9, blue only
+\tablenotemark{b}I. Outflow 9    &      6.33 & .039 & .39 & 2.1\ee{19} & 43\\
+% blue 8 - keep, blue only, no clear association
+\tablenotemark{b}J. CO Region 1  &     3.61 & .015 & .12 & 1.2\ee{19} & 11\\
+\tablenotemark{r}K. Red S   &     5.26 & .051 & .34  & 1.7\ee{19} & 26 \\
+\tablenotemark{b}L. Blue S  &     3.66 & .053 & .47  & 1.2\ee{19} & 47 \\
+% blue 10 - get rid of it
+%blue10    &       30.399808 &      0.669383 &       4.35128 &   3.40323e+44  &      46.7147 &       1.02863  &       6.0041 &   3.86866e+44  \\
+% blue 11 - remove, no clear association, blue only
+%blue11    &        2.641900 &     0.0865521 &      0.438263 &   3.18589e+43  &     0.984461 &     0.0322523  &     0.233822 &   1.88811e+43  \\
+% red 1 - south red, keep
+% actually, ignore - don't discuss these South Source 1      &    10.6623   &    0.696333    &    4.21276   &  2.9246e+44  \\
+% red 2 - too faint / unclear.  rm
+%red2      &      2.822263   &   0.0320534   &    0.221736   &  1.9821e+43    &    9.40664   &    0.106834    &   0.579233   & 3.61028e+43  \\
+% red 3 - too ambiguous again, not obviously red
+%red3      &      6.267010   &    0.104144   &    0.716924   &  5.6371e+43    &    9.23909   &    0.153533    &   0.733901   & 4.04048e+43  \\
+%red4 - rm, already covered
+%red4      &     38.240242   &     1.97369   &      11.732   & 8.29297e+44    &    64.5034   &      3.3292    &    20.2909   & 1.37858e+45  \\
+%red6 - rm, already covered
+%red6      &     16.685583   &     6.29804   &     36.7241   & 2.56084e+45    &    24.2383   &     9.14886    &      53.33   & 3.47148e+45  \\
+\tablenotemark{b}1arcmin\ aperture\tablenotemark{c}& 15.1 & .96 & 7.6 & 5.0\ee{19} & 670\\
+\tablenotemark{b}3arcmin\ aperture& 2.7  & 1.6 & 12 & 9.0\ee{18} & 1000\\
+\tablenotemark{b}5arcmin\ aperture& 1.7  & 2.7 & 20 & 5.6\ee{18} & 1600 \\
+\tablenotemark{r}1arcmin\ aperture & 11.8 & 0.75 & 4.7 & 3.9\ee{19} & 320\\
+\tablenotemark{r}3arcmin\ aperture & 1.9 & 1.1 & 6.8 & 6.2\ee{18} & 460\\
+\tablenotemark{r}5arcmin\ aperture & 0.96 & 1.5 & 10 & 3.2\ee{18} & 640\\
+\tablenotemark{b}1arcmin\ $^{12}$CO 2-1 & 10.4 & .94 & 7.1 & 4.9\ee{19} & 590 \\
+\tablenotemark{m}1arcmin\ $^{12}$CO 2-1 & 97.78 & 8.83 & - & 4.6\ee{20} & - \\
+\tablenotemark{r}1arcmin\ $^{12}$CO 2-1 & 9.17 & 0.83 & 5.52 & 4.3\ee{19} & 430 \\
+\tablenotemark{m}1arcmin\ $^{13}$CO 2-1 & 41.12 & 211  & - & 1.1\ee{22} & - \\
+\tablenotemark{m}1arcmin\ C$^{18}$O 2-1 & 5.31 & 271 & - & 1.4\ee{22} & - \\
+\enddata
+\tablenotetext{a}{Unless labeled otherwise, regions are extracted from CO 3-2 data as shown in figure \ref{fig:cofig}b }
+\tablenotetext{b}{Blue integration over velocity range -34 to -21 \kms}
+\tablenotetext{c}{Apertures are centered on J(2000) = 05:39:11.238 +35:45:41.80 in necluster}
+\tablenotetext{r}{Red integration over velocity range -13 to -4 \kms}
+\tablenotetext{m}{Middle range integration over -21 \kms\ to -13 \kms.  Assumed not to be outflowing, so no momentum is computed}
+\end{deluxetable}
+
+\begin{deluxetable}{lccccc}
+    \tablewidth{0pt}
+  \tabletypesize{\footnotesize}
+    \centering
+    \tablecaption{Measured properties of CO flows
+      \label{tab:comeas}
+    }
+\tablehead{ \colhead{\tablenotemark{a}Region Name}  & \colhead{$\int T_{mb}*$}  & \colhead{$M (M_\odot)$}  & \colhead{p ($M_\odot$ \kms)}  & \colhead{N (persc)} & \colhead{E ($10^{42}$ erg)}}
+% & \colhead{redintegrated} & \colhead{redmass} & \colhead{redmomentum} & \colhead{redenergy} } 
+\startdata
+% blue1 - keep, blue only: associated with outflow 4
+\tablenotemark{b}A. Outflow 4a    &      4.27  &     .022  &     .15  &  1.4\ee{19}  & 11 \\
+% blue 4 - keep, associated with outflow 4, blue only
+\tablenotemark{b}B. Outflow 4b   &      4.60 & .032 & .21 &   1.5\ee{19}  & 13 \\
+% blue 9 - keep, blue only, probably outflow 1
+\tablenotemark{b}C. Outflow 1n   &      14.5 & .088 & .71 & 4.8\ee{19} & 66 \\ 
+% blue 2 - keep, associated with outflow 6/7, blue only
+\tablenotemark{b}D. Outflow 6/7  &       4.45 & .045 & .30 & 1.5\ee{19} & 29 \\
+%red7 - keep, no association but same direction as Outflow 2
+\tablenotemark{r}E. CO Region 3      &    1.31 & .016 & .112 & 4.3\ee{18} & 8.5 \\
+% blue3 - remove, not associated with cluster
+% blue3     &       9.525039  &     0.659057  &      3.36178  &  2.12468e+44   &     5.01441  &     0.346957   &     1.80229  &  1.01071e+44  \\
+% blue 6 - keep, red and blue, use for central outflow
+\tablenotemark{b}F. \necluster\ &      41.8 & .464 & 3.72 & 1.4\ee{20} & 330 \\
+\tablenotemark{m}F. \necluster\ &      132.9& 1.47 & -    & 4.4\ee{20} & -\\
+\tablenotemark{r}F. \necluster\ &      30.0 & .333 & 2.03 & 9.9\ee{19} & 135 \\
+% blue 7 - keep, may be outflow 1 south counterflow
+\tablenotemark{b}G. Outflow1s   &      14.6 & .064 & .48 & 4.8\ee{19} & 40 \\
+%red5 - clear red excess, no clear association
+\tablenotemark{r}H. CO Region 2      &    4.54 & .012 & .074 & 1.5\ee{19} & 5 \\
+% blue 5 - keep, associated with outflow 9, blue only
+\tablenotemark{b}I. Outflow 9    &      6.33 & .039 & .39 & 2.1\ee{19} & 43\\
+% blue 8 - keep, blue only, no clear association
+\tablenotemark{b}J. CO Region 1  &     3.61 & .015 & .12 & 1.2\ee{19} & 11\\
+\tablenotemark{r}K. Red S   &     5.26 & .051 & .34  & 1.7\ee{19} & 26 \\
+\tablenotemark{b}L. Blue S  &     3.66 & .053 & .47  & 1.2\ee{19} & 47 \\
+% blue 10 - get rid of it
+%blue10    &       30.399808 &      0.669383 &       4.35128 &   3.40323e+44  &      46.7147 &       1.02863  &       6.0041 &   3.86866e+44  \\
+% blue 11 - remove, no clear association, blue only
+%blue11    &        2.641900 &     0.0865521 &      0.438263 &   3.18589e+43  &     0.984461 &     0.0322523  &     0.233822 &   1.88811e+43  \\
+% red 1 - south red, keep
+% actually, ignore - don't discuss these South Source 1      &    10.6623   &    0.696333    &    4.21276   &  2.9246e+44  \\
+% red 2 - too faint / unclear.  rm
+%red2      &      2.822263   &   0.0320534   &    0.221736   &  1.9821e+43    &    9.40664   &    0.106834    &   0.579233   & 3.61028e+43  \\
+% red 3 - too ambiguous again, not obviously red
+%red3      &      6.267010   &    0.104144   &    0.716924   &  5.6371e+43    &    9.23909   &    0.153533    &   0.733901   & 4.04048e+43  \\
+%red4 - rm, already covered
+%red4      &     38.240242   &     1.97369   &      11.732   & 8.29297e+44    &    64.5034   &      3.3292    &    20.2909   & 1.37858e+45  \\
+%red6 - rm, already covered
+%red6      &     16.685583   &     6.29804   &     36.7241   & 2.56084e+45    &    24.2383   &     9.14886    &      53.33   & 3.47148e+45  \\
+\tablenotemark{b}1\arcmin\ aperture\tablenotemark{c}& 15.1 & .96 & 7.6 & 5.0\ee{19} & 670\\
+\tablenotemark{b}3\arcmin\ aperture& 2.7  & 1.6 & 12 & 9.0\ee{18} & 1000\\
+\tablenotemark{b}5\arcmin\ aperture& 1.7  & 2.7 & 20 & 5.6\ee{18} & 1600 \\
+\tablenotemark{r}1\arcmin\ aperture & 11.8 & 0.75 & 4.7 & 3.9\ee{19} & 320\\
+\tablenotemark{r}3\arcmin\ aperture & 1.9 & 1.1 & 6.8 & 6.2\ee{18} & 460\\
+\tablenotemark{r}5\arcmin\ aperture & 0.96 & 1.5 & 10 & 3.2\ee{18} & 640\\
+\tablenotemark{b}1\arcmin\ $^{12}$CO 2-1 & 10.4 & .94 & 7.1 & 4.9\ee{19} & 590 \\
+\tablenotemark{m}1\arcmin\ $^{12}$CO 2-1 & 97.78 & 8.83 & - & 4.6\ee{20} & - \\
+\tablenotemark{r}1\arcmin\ $^{12}$CO 2-1 & 9.17 & 0.83 & 5.52 & 4.3\ee{19} & 430 \\
+\tablenotemark{m}1\arcmin\ $^{13}$CO 2-1 & 41.12 & 211  & - & 1.1\ee{22} & - \\
+\tablenotemark{m}1\arcmin\ C$^{18}$O 2-1 & 5.31 & 271 & - & 1.4\ee{22} & - \\
+\enddata
+\tablenotetext{a}{Unless labeled otherwise, regions are extracted from CO 3-2 data as shown in figure \ref{fig:cofig}b }
+\tablenotetext{b}{Blue integration over velocity range -34 to -21 \kms}
+\tablenotetext{c}{Apertures are centered on J(2000) = 05:39:11.238 +35:45:41.80 in \necluster}
+\tablenotetext{r}{Red integration over velocity range -13 to -4 \kms}
+\tablenotetext{m}{Middle range integration over -21 \kms\ to -13 \kms.  Assumed not to be outflowing, so no momentum is computed}
+\end{deluxetable}
+
+\bibliographystyle{apj_w_etal}
+\bibliography{iras05358}
+
+\end{document}
